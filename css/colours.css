@@ -1,0 +1,11 @@
+/* Colours */
+/* Mixin */
+.shadow {
+  -moz-box-shadow: inset 0px -5px 5px 0px;
+  -webkit-box-shadow: inset 0px -5px 5px 0px;
+  box-shadow: inset 0px -5px 5px 0px #191919;
+}
+.dropShadow {
+  -webkit-box-shadow: 0px 0px 2px 0px #000000;
+  box-shadow: 0px 0px 2px 0px #000000;
+}

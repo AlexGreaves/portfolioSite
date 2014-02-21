@@ -1,0 +1,12 @@
+{
+	"hero":{
+		"copy":
+			{"head":"#API Christmas",
+			"subhead": "Client: HarrimanSteel & Suburb",
+			"link":"http://apichristmas.com",
+			"tidylink": "apichristmas.com",
+			"p":["It’s that festive time of year again, and HarrimanSteel & Suburb have joined forces to bring you a modern Christmas experience. The Nativity Story, remixed through digital media.","Pulling together APIs from the all expansive corners of the internet, we have created a bespoke storytelling experience that will be different every time you interact with it.","This is the digital nativity remix from Instagram that we have blended and stitched together in real-time, to bring you the most up-to-date global response to the story unfolding before your eyes.","Follow the link for your undiluted, one-of-a-kind, storytelling experience, and have a very #API CHRISTMAS."]},
+		"images":
+			["hero/hero1.jpg","hero/hero2.jpg","hero/hero3.jpg","hero/hero4.jpg"]
+	}
+}

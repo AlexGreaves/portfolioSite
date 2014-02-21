@@ -1,0 +1,30 @@
+/* Colours */
+@blue: #2980b9;
+@white: #ffffff;
+@heroColour: #f26a3e;
+@searchBarColour: #ffffff;
+@black:#262626;
+@listBaseColour:#9b59b6;
+@transparentHeader:rgba(255,255,255,0.85);
+
+/* Mixin */
+.gradient (@origin: top, @start: @darkGrey, @stop: @black) {
+	background-color: @start;
+	background-image: -webkit-linear-gradient(@origin, @start, @stop);
+	background-image: -moz-linear-gradient(@origin, @start, @stop);
+	background-image: -o-linear-gradient(@origin, @start, @stop);
+	background-image: -ms-linear-gradient(@origin, @start, @stop);
+	background-image: linear-gradient(@origin, @start, @stop);
+}
+
+.shadow {
+	// @_: .shadow(@black);
+   -moz-box-shadow:    inset 0px -5px 5px 0px darken(@black, 5%;
+   -webkit-box-shadow: inset 0px -5px 5px 0px darken(@black, 5%;
+   box-shadow:         inset 0px -5px 5px 0px darken(@black, 5%);
+}
+
+.dropShadow {
+	-webkit-box-shadow:  0px 0px 2px 0px rgba(0, 0, 0, 1);
+    box-shadow:  0px 0px 2px 0px rgba(0, 0, 0, 1);
+}

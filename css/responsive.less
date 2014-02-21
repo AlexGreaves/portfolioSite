@@ -1,0 +1,251 @@
+@import "colours"; // infers the .less extension
+/* Reset
+------------------------------------------------------------ */
+* { margin: 0; padding: 0; }
+html {overflow-y: scroll; /*  Ensure that the modal is scroll-able */}
+body {background-color:@white; font-size: 22px; color: @black;font-weight: 700; font-family: 'jaf-bernino-sans-condensed', Arial, helvetica, sans-serif; margin:0;overflow:hidden;}
+ol, ul { list-style: none; margin: 0;}
+ul li { margin: 0; padding: 0;}
+h1 {text-transform:uppercase;padding:80px;font-size:2em;text-align:center;margin:auto;max-width:600px;font-family: 'jaf-bernino-sans-condensed';}	
+a {text-transform:uppercase;text-align: center;padding: 5px 15px;border-radius:2px;border-color: #fff;border-style: solid;border-width:2px; display: inline-block;;color: #fff;font-size:.6em;text-decoration: none}
+p {margin:auto;font-size:1em;text-align:center;padding:0 0 60px 0;max-width:600px;}
+p .webdings {font-family: 'webdings'}
+input {padding-left:4px; color:#b3b3b3;width:80%;display:block; margin:0 auto 10px; line-height: 1.4em; font-size: 1em;text-align:left; height:30px;}
+img { display: block; margin-bottom: 10px;}
+aside { font-style: italic; font-size: 0.9em;}
+form {margin-top:30px;}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { 
+    display: block;
+	}
+.header {
+	z-index:99;
+	position:fixed;
+	top:0;
+	left:0;
+	overflow:hidden;
+	height:180px;
+	width:100%;
+	background:@transparentHeader;
+    -webkit-transition: height 0.4s;
+    -moz-transition: height 0.4s;
+    transition: height 0.4s;
+
+    .headerInner{
+    	position:relative;
+    	margin:auto;
+    	max-width:1600px;
+    	width:100%;
+    	height:inherit;
+	    .logo {
+	    	position:absolute;
+	    	height:100%;
+	    	margin:auto;
+	    	
+	    	margin-left: auto;
+			margin-right: auto;
+			left: 0;
+			right: 0;
+			-webkit-transform: scale(.6,.6);
+			-moz-transform: scale(.6,.6);
+			-ms-transform: scale(.6,.6);
+			transform: scale(.6,.6);
+			-webkit-transition: all 0.4s;
+		    -moz-transition: all 0.4s;
+		    transition: all 0.4s;
+
+			img{
+				margin:auto;
+				height:100%;
+			}
+	    }
+	    .logoShrink{
+			/*left: -92.5%;*/
+			-webkit-transform: scale(.8,.8);
+			-moz-transform: scale(.8,.8);
+			-ms-transform: scale(.8,.8);
+			transform: scale(.8,.8);
+		}
+		.socialList {
+			position:absolute;
+			height:32px;
+			top:20px;
+			right:20px;
+			list-style:none;
+		    -webkit-transition: all 0.4s;
+		    -moz-transition: all 0.4s;
+		    transition: all 0.4s;
+
+		    li {  
+			    position:relative;
+				width:32px;
+				height:32px;
+				cursor:pointer;
+				background-image: url('../img/socialSprite.png');
+				background: -webkit-image-set( url('../img/socialSprite.png') 1x, url('../img/socialSprite@2x.png') 2x);
+			    display:inline-block;
+			}  
+		}  
+
+		.socialListShrink{
+			top:24px;
+		}
+	}
+
+}
+
+	/*header shrink class*/
+.headerShrink {
+	height:80px;
+	background:@transparentHeader;
+}
+#mainBackground{
+	top:180px;
+	position:relative;
+	#heroCarousel {
+		height:640px;
+		background:@black;
+		background-image: url("http://www.lorempixum.com/g/1665/640/city");
+		background-position:center;
+		margin:auto;
+
+		#navigation {
+			display:none;
+			height:100%;
+			.left {
+				position:absolute;
+				margin:180px 20px;
+				height:40px;
+				width:40px;
+				background:@black;
+			}
+
+			.right {
+				float:right;
+				margin:180px 20px;
+				height:40px;
+				width:40px;
+				background:@black;
+			}
+		}
+	}
+
+
+
+
+	.workSection {
+		height:auto;
+		margin-top:-250px;
+		-webkit-transition: all 0.4s;
+	    -moz-transition: all 0.4s;
+	    transition: all 0.4s;
+		#searchBar {
+			height:40px;
+			background:@searchBarColour;
+		}
+
+
+		#workTiles{
+			max-width:1200px;
+			margin:auto;
+			height:auto;
+			.tile{
+				overflow:hidden;
+				position:relative;
+				display:inline-block;
+				background:@blue;
+				width:400px;
+				height:400px;
+				-webkit-transition: -webkit-all .4s;
+				-moz-transition: -moz-all .4s;
+				transition: all .4s;	
+
+				figure {
+					height:auto;
+					width:100%;
+					top:0;
+					left:0;
+					cursor:pointer;
+					-webkit-transition: -webkit-all .4s;
+					-moz-transition: -moz-all .4s;
+					transition: all .4s;				
+
+					img {
+						position:absolute;
+						height:auto;
+						width:100%;
+						top:0;
+						left:0;
+						-webkit-transition: -webkit-all .4s;
+						-moz-transition: -moz-all .4s;
+						transition: all .4s;
+					}
+
+					figcaption {
+						z-index:2;
+						position: absolute;
+					    top: 0;
+					    left: 0;
+					    display:table;
+					    height: 100%;
+					    width: 100%;
+					    opacity: 0;
+					    background-color:rgba(44,63,82,0.4);
+					    text-align: center;
+					    -webkit-transform: scale(1.5, 1.5);
+						-moz-transform: scale(1.5, 1.5);
+						-ms-transform: scale(1.5, 1.5);
+						transform: scale(1.5, 1.5);
+
+						-webkit-backface-visibility: hidden;
+						-moz-backface-visibility: hidden;
+						backface-visibility: hidden;
+						-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+						-moz-transition: -moz-transform 0.5s, opacity 0.5s;
+						transition: transform 0.5s, opacity 0.5s;
+
+					    span {
+					    	display:table-cell;
+					    	text-transform: uppercase;
+					    	vertical-align: middle;
+					    	color:#fff;
+					    	text-align:center;
+					    	margin:auto;
+					    	padding:40px;
+					    	line-height: 1.2em;
+					    	width:80%;
+					    	font-size: 2em;
+					    	margin-top:110px;
+
+							-webkit-transition: -webkit-all 0.4s;
+							-moz-transition: -moz-all 0.4s;
+							transition: all 0.4s;
+					    }
+					}
+				}
+				figure:hover {
+					img {
+						-webkit-transform: scale(1.2, 1.2);
+						-moz-transform: scale(1.2, 1.2);
+						-ms-transform: scale(1.2, 1.2);
+						transform: scale(1.2, 1.2);
+					}
+					figcaption {
+					    opacity: 1;
+						-webkit-transform: scale(1, 1);
+						-moz-transform: scale(1, 1);
+						-ms-transform: scale(1, 1);
+						transform: scale(1, 1);
+					}
+				}
+			}
+		}
+	}
+	.workSectionDrop {
+		margin-top: 0;
+	}
+}
+
+
+
+
