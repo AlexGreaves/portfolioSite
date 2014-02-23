@@ -4,20 +4,15 @@
 * { margin: 0; padding: 0; }
 html {overflow-y: scroll; /*  Ensure that the modal is scroll-able */}
 body {background-color:@white; font-size: 22px; color: @black;font-weight: 700; font-family: 'jaf-bernino-sans-condensed', Arial, helvetica, sans-serif; margin:0;overflow:hidden;}
-ol, ul { list-style: none; margin: 0;}
-ul li { margin: 0; padding: 0;}
-h1 {text-transform:uppercase;padding:80px;font-size:2em;text-align:center;margin:auto;max-width:600px;font-family: 'jaf-bernino-sans-condensed';}	
-a {text-transform:uppercase;text-align: center;padding: 5px 15px;border-radius:2px;border-color: #fff;border-style: solid;border-width:2px; display: inline-block;;color: #fff;font-size:.6em;text-decoration: none}
-p {margin:auto;font-size:1em;text-align:center;padding:0 0 60px 0;max-width:600px;}
-p .webdings {font-family: 'webdings'}
-input {padding-left:4px; color:#b3b3b3;width:80%;display:block; margin:0 auto 10px; line-height: 1.4em; font-size: 1em;text-align:left; height:30px;}
-img { display: block; margin-bottom: 10px;}
-aside { font-style: italic; font-size: 0.9em;}
-form {margin-top:30px;}
+h1 {text-transform:uppercase;padding:80px;font-size:2em;text-align:center;margin:auto;max-width:600px;font-family: 'jaf-bernino-sans-condensed';}
+p {font-family: 'jaf-bernino-sans-condensed';margin:auto;font-size:1em;text-align:center;padding:0 0 60px 0;max-width:600px;}
+img { display: block;margin:0}
+.btn {height: 40px;background:@btnColour; width:auto;cursor:pointer;}
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section { 
     display: block;
 	}
+
 .header {
 	z-index:99;
 	position:fixed;
@@ -26,7 +21,7 @@ footer, header, hgroup, menu, nav, section {
 	overflow:hidden;
 	height:180px;
 	width:100%;
-	background:@transparentHeader;
+	background:@transparentWhite;
     -webkit-transition: height 0.4s;
     -moz-transition: height 0.4s;
     transition: height 0.4s;
@@ -97,10 +92,10 @@ footer, header, hgroup, menu, nav, section {
 	/*header shrink class*/
 .headerShrink {
 	height:80px;
-	background:@transparentHeader;
+	background:@transparentWhite;
 }
-#mainBackground{
-	top:180px;
+#mainContent{
+	margin-top:180px;
 	position:relative;
 	#heroCarousel {
 		height:640px;
@@ -130,30 +125,26 @@ footer, header, hgroup, menu, nav, section {
 		}
 	}
 
-
-
-
 	.workSection {
+		position:relative;
 		height:auto;
+		margin:auto;
 		margin-top:-250px;
+		max-width:1200px;
 		-webkit-transition: all 0.4s;
 	    -moz-transition: all 0.4s;
 	    transition: all 0.4s;
-		#searchBar {
-			height:40px;
-			background:@searchBarColour;
-		}
 
 
 		#workTiles{
-			max-width:1200px;
+			width:auto;
 			margin:auto;
 			height:auto;
 			.tile{
 				overflow:hidden;
 				position:relative;
 				display:inline-block;
-				background:@blue;
+				background:@black;
 				width:400px;
 				height:400px;
 				-webkit-transition: -webkit-all .4s;
@@ -190,7 +181,7 @@ footer, header, hgroup, menu, nav, section {
 					    height: 100%;
 					    width: 100%;
 					    opacity: 0;
-					    background-color:rgba(44,63,82,0.4);
+					    background-color:@transparentBlack;
 					    text-align: center;
 					    -webkit-transform: scale(1.5, 1.5);
 						-moz-transform: scale(1.5, 1.5);
@@ -208,7 +199,7 @@ footer, header, hgroup, menu, nav, section {
 					    	display:table-cell;
 					    	text-transform: uppercase;
 					    	vertical-align: middle;
-					    	color:#fff;
+					    	color:@white;
 					    	text-align:center;
 					    	margin:auto;
 					    	padding:40px;
@@ -244,8 +235,57 @@ footer, header, hgroup, menu, nav, section {
 	.workSectionDrop {
 		margin-top: 0;
 	}
+	.btn {
+		max-height:40px;
+	    display:table;
+	    margin:40px auto;
+	    background-color:@btnColour;
+	    text-align: center;
+
+		-webkit-transition: -webkit-all 0.2s;
+		-moz-transition: -moz-all 0.2s;
+		transition: all 0.2s;
+
+	    span {
+	    	display:table-cell;
+	    	text-transform: uppercase;
+	    	vertical-align: middle;
+	    	color:@white;
+	    	text-align:center;
+	    	margin:auto;
+	    	padding:5px 15px;
+	    	width:auto;
+	    	height:auto;
+	    	font-size: 1em;
+	    }
+	}
+	.gravitar {
+		// height:80px;
+		// width:80px;
+		// margin:auto;
+		// clip-path: url(#clipping);
+	}
+    //Hover Effects
+    .btn:hover {
+    	background-color: darken(@btnColour,20%);
+
+    }
 }
-
-
-
-
+@media screen and (min-width: 821px) and (max-width: 1220px) {
+	#mainContent {
+		.workSection{
+			#workTiles {
+				width:800px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 820px) {
+	#mainContent {
+		.workSection{
+			#workTiles {
+				width:400px;
+			}
+		}
+	}
+}

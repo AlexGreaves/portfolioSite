@@ -7,34 +7,24 @@
         <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'/>
         <title>Wassup!</title>
         <meta name='description' content=''/>
-        <!-- <meta name="google-site-verification" content="x7cglqC4HmE3zBeN8BDHwwo2K9HrbfF0P02FBAvS7cg" /> -->
         <meta name='viewport' content='width=device-width, minimum-scale=1.0, maximum-scale=1.0'/>
         <link rel='stylesheet' href='css/responsive.css'>
 
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
         
-        <script type="text/javascript" src="//use.typekit.net/bev2hzo.js"></script>
+        <script type="text/javascript" src="//use.typekit.net/bev2hzo.js">
+        </script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-        <script src='js/plugins.js'></script>
         <script src='js/classie.js'></script>
         <script type='text/javascript' src='js/main.js'></script>
 
         <script type='text/json' src='content.json'></script>
-         <!-- <script type='text/javascript' src='js/vendor/modernizr-2.6.2.min.js'></script>
-         <script type='text/javascript' src='js/vendor/respond.min.js'></script> -->
-        <script type='text/javascript' src="js/masonry.pkgd.min.js"></script>
+
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class='chromeframe'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> or <a href='http://www.google.com/chromeframe/?redirect=true'>activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-
-        <!-- Add your site or application content here -->
-                <!-- sprite -->
-        <div class='header'>
+     <div class='header'>
             <div class='headerInner'>
                 <div class='logo'>
                     <img class='arg-logo' src='../img/argLogo.png' alt='arg-logo'>
@@ -51,7 +41,7 @@
                 </ul>
             </div>
         </div>
-        <div id='mainBackground'>
+        <div id='mainContent'>
             <div id='heroCarousel'>
                 <div id='navigation'>
                     <div class='left'></div>
@@ -62,18 +52,24 @@
             <div class= 'workSection'>
                 <div id="workTiles">
                 </div>
+            </div>
+            <div id='aboutMe'>
+                <h1>Who am i?</h1>
+                <svg viewBox="0 0 80 80" width='80px' height='80px' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                    <defs>
+                        <clipPath id="circle">
+                            <circle cx="40" cy="40" r="40" />
+                        </clipPath>
+                    </defs>
+                    <image class='gravitar' xlink:href='http://www.gravatar.com/avatar/742c3308a036b36bd3b54ba3b2af2380.png' clip-path='#circle' height='100%' width= '100%'></image>
+                </svg>
 
-            </div> 
-            <h1>my work</h1>
+                    
+                
+                <div class='column'>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                </div>
+            </div>
         </div>
-    </div>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
     </body>
 </html>

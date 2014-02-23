@@ -20,22 +20,13 @@ html {
   /*  Ensure that the modal is scroll-able */
 }
 body {
-  background-color: #ffffff;
+  background-color: #fafafa;
   font-size: 22px;
   color: #262626;
   font-weight: 700;
   font-family: 'jaf-bernino-sans-condensed', Arial, helvetica, sans-serif;
   margin: 0;
   overflow: hidden;
-}
-ol,
-ul {
-  list-style: none;
-  margin: 0;
-}
-ul li {
-  margin: 0;
-  padding: 0;
 }
 h1 {
   text-transform: uppercase;
@@ -46,50 +37,23 @@ h1 {
   max-width: 600px;
   font-family: 'jaf-bernino-sans-condensed';
 }
-a {
-  text-transform: uppercase;
-  text-align: center;
-  padding: 5px 15px;
-  border-radius: 2px;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 2px;
-  display: inline-block;
-  color: #fff;
-  font-size: .6em;
-  text-decoration: none;
-}
 p {
+  font-family: 'jaf-bernino-sans-condensed';
   margin: auto;
   font-size: 1em;
   text-align: center;
   padding: 0 0 60px 0;
   max-width: 600px;
 }
-p .webdings {
-  font-family: 'webdings';
-}
-input {
-  padding-left: 4px;
-  color: #b3b3b3;
-  width: 80%;
-  display: block;
-  margin: 0 auto 10px;
-  line-height: 1.4em;
-  font-size: 1em;
-  text-align: left;
-  height: 30px;
-}
 img {
   display: block;
-  margin-bottom: 10px;
+  margin: 0;
 }
-aside {
-  font-style: italic;
-  font-size: 0.9em;
-}
-form {
-  margin-top: 30px;
+.btn {
+  height: 40px;
+  background: #148df3;
+  width: auto;
+  cursor: pointer;
 }
 article,
 aside,
@@ -179,63 +143,62 @@ section {
   height: 80px;
   background: rgba(255, 255, 255, 0.85);
 }
-#mainBackground {
-  top: 180px;
+#mainContent {
+  margin-top: 180px;
   position: relative;
 }
-#mainBackground #heroCarousel {
+#mainContent #heroCarousel {
   height: 640px;
   background: #262626;
   background-image: url("http://www.lorempixum.com/g/1665/640/city");
   background-position: center;
   margin: auto;
 }
-#mainBackground #heroCarousel #navigation {
+#mainContent #heroCarousel #navigation {
   display: none;
   height: 100%;
 }
-#mainBackground #heroCarousel #navigation .left {
+#mainContent #heroCarousel #navigation .left {
   position: absolute;
   margin: 180px 20px;
   height: 40px;
   width: 40px;
   background: #262626;
 }
-#mainBackground #heroCarousel #navigation .right {
+#mainContent #heroCarousel #navigation .right {
   float: right;
   margin: 180px 20px;
   height: 40px;
   width: 40px;
   background: #262626;
 }
-#mainBackground .workSection {
+#mainContent .workSection {
+  position: relative;
   height: auto;
+  margin: auto;
   margin-top: -250px;
+  max-width: 1200px;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
-#mainBackground .workSection #searchBar {
-  height: 40px;
-  background: #ffffff;
-}
-#mainBackground .workSection #workTiles {
-  max-width: 1200px;
+#mainContent .workSection #workTiles {
+  width: auto;
   margin: auto;
   height: auto;
 }
-#mainBackground .workSection #workTiles .tile {
+#mainContent .workSection #workTiles .tile {
   overflow: hidden;
   position: relative;
   display: inline-block;
-  background: #2980b9;
+  background: #262626;
   width: 400px;
   height: 400px;
   -webkit-transition: -webkit-all 0.4s;
   -moz-transition: -moz-all 0.4s;
   transition: all .4s;
 }
-#mainBackground .workSection #workTiles .tile figure {
+#mainContent .workSection #workTiles .tile figure {
   height: auto;
   width: 100%;
   top: 0;
@@ -245,7 +208,7 @@ section {
   -moz-transition: -moz-all 0.4s;
   transition: all .4s;
 }
-#mainBackground .workSection #workTiles .tile figure img {
+#mainContent .workSection #workTiles .tile figure img {
   position: absolute;
   height: auto;
   width: 100%;
@@ -255,7 +218,7 @@ section {
   -moz-transition: -moz-all 0.4s;
   transition: all .4s;
 }
-#mainBackground .workSection #workTiles .tile figure figcaption {
+#mainContent .workSection #workTiles .tile figure figcaption {
   z-index: 2;
   position: absolute;
   top: 0;
@@ -277,11 +240,11 @@ section {
   -moz-transition: -moz-transform 0.5s, opacity 0.5s;
   transition: transform 0.5s, opacity 0.5s;
 }
-#mainBackground .workSection #workTiles .tile figure figcaption span {
+#mainContent .workSection #workTiles .tile figure figcaption span {
   display: table-cell;
   text-transform: uppercase;
   vertical-align: middle;
-  color: #fff;
+  color: #fafafa;
   text-align: center;
   margin: auto;
   padding: 40px;
@@ -293,19 +256,54 @@ section {
   -moz-transition: -moz-all 0.4s;
   transition: all 0.4s;
 }
-#mainBackground .workSection #workTiles .tile figure:hover img {
+#mainContent .workSection #workTiles .tile figure:hover img {
   -webkit-transform: scale(1.2, 1.2);
   -moz-transform: scale(1.2, 1.2);
   -ms-transform: scale(1.2, 1.2);
   transform: scale(1.2, 1.2);
 }
-#mainBackground .workSection #workTiles .tile figure:hover figcaption {
+#mainContent .workSection #workTiles .tile figure:hover figcaption {
   opacity: 1;
   -webkit-transform: scale(1, 1);
   -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   transform: scale(1, 1);
 }
-#mainBackground .workSectionDrop {
+#mainContent .workSectionDrop {
   margin-top: 0;
+}
+#mainContent .btn {
+  max-height: 40px;
+  display: table;
+  margin: 40px auto;
+  background-color: #148df3;
+  text-align: center;
+  -webkit-transition: -webkit-all 0.2s;
+  -moz-transition: -moz-all 0.2s;
+  transition: all 0.2s;
+}
+#mainContent .btn span {
+  display: table-cell;
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: #fafafa;
+  text-align: center;
+  margin: auto;
+  padding: 5px 15px;
+  width: auto;
+  height: auto;
+  font-size: 1em;
+}
+#mainContent .btn:hover {
+  background-color: #085799;
+}
+@media screen and (min-width: 821px) and (max-width: 1220px) {
+  #mainContent .workSection #workTiles {
+    width: 800px;
+  }
+}
+@media screen and (max-width: 820px) {
+  #mainContent .workSection #workTiles {
+    width: 400px;
+  }
 }

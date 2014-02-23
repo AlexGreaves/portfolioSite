@@ -1,34 +1,66 @@
+var totalProjects;
+var projectsLoaded = 0;
+var projectsRemaining;
+var noProjectsToLoad = 9;
+var projectToLoad;
+
+
 var main = {
 	content:null,
+
 	init: function(data) {
-		// main.importProjects(content.json);
-		// $(document).ready(function () {
-		// 	main.init();
-		// 	main.importProjects(content.json);
-		// });
-		
 		animatedScroll();
 		main.loadWork(data);
-
-		// $('#workTiles').masonry({
-		// 	itemSelector: '.tile',
-		// });
-
 	},
 
 	loadWork:function(data) {
-	main.content = data;
-	trace(Object.keys(main.content).length + ' tiles loaded');
+		main.content = data;
+		totalProjects = Object.keys(main.content).length - 1;
+		projectsRemaining = totalProjects - projectsLoaded;
+		trace(projectsRemaining + ' remaining');
+		projectToLoad = Object.keys(main.content)[totalProjects-projectsRemaining+1];
+		var k = Object.keys(main.content)[totalProjects];
 
-		for(var i in main.content) {
-			if(main.content[i].tile) main.addTile(i,main.content[i].tile);
-		}
+			for(var i in main.content) {
+				trace('projectToLoad ' + projectToLoad);
+				if (i!='hero' && noProjectsToLoad>0 && i == projectToLoad) {
+					if(main.content[i].tile) {
+						trace(i)
+						projectsLoaded++;
+						projectsRemaining = totalProjects - projectsLoaded;
+						main.addTile(i,main.content[i].tile);
+					}
+					noProjectsToLoad --;
+					projectToLoad = Object.keys(main.content)[totalProjects-projectsRemaining+1];					
+				}
+			}
+			if (projectsRemaining > 0) {
+				//add loadMore Button
+				$span = $('<span>').html('load more');
+				$loadMore = $('<div>').addClass('btn').addClass('loadMore').append($span);
 
+				$('.workSection').append($loadMore)
+				$('.loadMore').click(function(){
+					main.loadWork(data);
+				});
+			} else {
+				//transition
+				// $('.loadMore').
+				setTimeout(function(){
+					//show one at a time at random scale from 0 to
+					$( ".loadMore" ).remove();
+				},2000);
+				
+			}
+			noProjectsToLoad = projectsRemaining;
+			trace('how many projects left ' + projectsRemaining);
+			trace('how many projects to load ' + noProjectsToLoad);
+			trace('projects loaded ' + projectsLoaded);
 	},
 
 	addTile: function(name, tile) {
 
-		$image = $('<img>').addClass('tile').addClass('name').attr('src', 'http://placekitten.com/g/400/400');
+		$image = $('<img>').addClass('tile').attr('src', 'http://placekitten.com/g/400/400');
 		
 		$figCaption = $('<figcaption>').addClass('project'+ name);
 
@@ -39,19 +71,11 @@ var main = {
 		$figure = $('<figure>').append($image,$figCaption);;
 
 		$tile = $('<div>').addClass('tile').data('name',name).append($figure);
-
-		// $('project'+name).click(function(){
-		// 	location.href='https://www.facebook.com/jessicamaryyork';
-		// });
 		$('#workTiles').append($tile);
-		trace('appended');
+		
 
 	}
-	// importProjects:function(data) {
-	// 	for(i wk = 0; i < data.length; i++) {
-	// 		trace('imported ' + data[i]);
-	// 	}
-	// }
+
 }
 
 function animatedScroll() {
@@ -116,21 +140,17 @@ function trace(s) {
 if ('console' in self && 'log' in console) console.log(s); 
 };
 
+
+//Ready function, load content
 $(document).ready(function () {
 
 		$.getJSON('content.json',main.init);
 			$('.tile').hide();
-			// $('h1#ourwork').hide();
-			// $('.aboutpanel').hide();
-			// $('.clientcloud').hide();
-			// $('.legal').hide();
+
 			setTimeout(function(){
 				//show one at a time at random scale from 0 to
 				$('.tile').show();
-				// $('h1#ourwork').show();
-				// $('.aboutpanel').show();
-				// $('.clientcloud').show();
-				// $('.legal').show();
+
 
 			},500);
 });
