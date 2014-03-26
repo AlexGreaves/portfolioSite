@@ -42,7 +42,7 @@ p {
   margin: auto;
   font-size: 1em;
   text-align: center;
-  padding: 0 0 60px 0;
+  padding: 0 0 80px 0;
   max-width: 600px;
 }
 img {
@@ -269,6 +269,13 @@ section {
   -ms-transform: scale(1, 1);
   transform: scale(1, 1);
 }
+#mainContent #aboutMe {
+  background: #f4f4f4;
+}
+#mainContent #aboutMe .gravitar {
+  margin: auto;
+  clip-path: url(#clipPath1);
+}
 #mainContent .workSectionDrop {
   margin-top: 0;
 }
@@ -296,6 +303,38 @@ section {
 }
 #mainContent .btn:hover {
   background-color: #085799;
+}
+#footer {
+  position: relative;
+  overflow: hidden;
+  height: 72px;
+  width: 100%;
+  margin: auto;
+  max-width: 1600px;
+}
+#footer .socialList {
+  position: absolute;
+  height: 32px;
+  top: 20px;
+  right: 20px;
+  list-style: none;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+#footer .socialList li {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background-image: url('../img/socialSprite.png');
+  background: -webkit-image-set(url('../img/socialSprite.png') 1 x, url('../img/socialSprite@2x.png') 2 x);
+  display: inline-block;
+}
+@media screen and (min-width: 821px) and (max-width: 1280px) {
+  #mainContent #heroCarousel {
+    height: 500px;
+  }
 }
 @media screen and (min-width: 821px) and (max-width: 1220px) {
   #mainContent .workSection #workTiles {

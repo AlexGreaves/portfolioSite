@@ -5,7 +5,7 @@
 html {overflow-y: scroll; /*  Ensure that the modal is scroll-able */}
 body {background-color:@white; font-size: 22px; color: @black;font-weight: 700; font-family: 'jaf-bernino-sans-condensed', Arial, helvetica, sans-serif; margin:0;overflow:hidden;}
 h1 {text-transform:uppercase;padding:80px;font-size:2em;text-align:center;margin:auto;max-width:600px;font-family: 'jaf-bernino-sans-condensed';}
-p {font-family: 'jaf-bernino-sans-condensed';margin:auto;font-size:1em;text-align:center;padding:0 0 60px 0;max-width:600px;}
+p {font-family: 'jaf-bernino-sans-condensed';margin:auto;font-size:1em;text-align:center;padding:0 0 80px 0;max-width:600px;}
 img { display: block;margin:0}
 .btn {height: 40px;background:@btnColour; width:auto;cursor:pointer;}
 article, aside, details, figcaption, figure,
@@ -232,6 +232,19 @@ footer, header, hgroup, menu, nav, section {
 			}
 		}
 	}
+	#aboutMe{
+		background:@green;
+
+		.gravitar {
+			
+			// height:80px;
+			// width:80px;
+			margin:auto;
+			clip-path: url(#clipPath1);
+			// clip-path: circle(40px,40px,40px, 40px);
+		}
+	}
+	//animation classes
 	.workSectionDrop {
 		margin-top: 0;
 	}
@@ -259,17 +272,48 @@ footer, header, hgroup, menu, nav, section {
 	    	font-size: 1em;
 	    }
 	}
-	.gravitar {
-		// height:80px;
-		// width:80px;
-		// margin:auto;
-		// clip-path: url(#clipping);
-	}
+
     //Hover Effects
     .btn:hover {
     	background-color: darken(@btnColour,20%);
 
     }
+}
+#footer {
+		position:relative;
+		overflow:hidden;
+		height:72px;
+		width:100%;
+    	margin:auto;
+    	max-width:1600px;
+    	.socialList {
+			position:absolute;
+			height:32px;
+			top:20px;
+			right:20px;
+			list-style:none;
+		    -webkit-transition: all 0.4s;
+		    -moz-transition: all 0.4s;
+		    transition: all 0.4s;
+
+		    li {  
+			    position:relative;
+				width:32px;
+				height:32px;
+				cursor:pointer;
+				background-image: url('../img/socialSprite.png');
+				background: -webkit-image-set( url('../img/socialSprite.png') 1x, url('../img/socialSprite@2x.png') 2x);
+			    display:inline-block;
+			}  
+		}  
+
+}
+@media screen and (min-width: 821px) and (max-width: 1280px) {
+	#mainContent {
+		#heroCarousel {
+			height:500px;
+		}
+	}
 }
 @media screen and (min-width: 821px) and (max-width: 1220px) {
 	#mainContent {
