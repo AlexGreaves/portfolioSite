@@ -6,15 +6,20 @@ var projectToLoad;
 
 
 var main = {
+
 	content:null,
 
 	init: function(data) {
 		animatedScroll();
 		main.loadWork(data);
+		console.log('hello world');
 	},
 
 	loadWork:function(data) {
 		main.content = data;
+		main.caseStudies = Object.keys(main.content)[0];	// this should change to look for case studies
+		console.log("keys are " + main.caseStudies);
+		main.skills = Object.keys(main.content)[1];		//this should change to look for skills
 		totalProjects = Object.keys(main.content).length - 1;
 		projectsRemaining = totalProjects - projectsLoaded;
 		trace(projectsRemaining + ' remaining');
