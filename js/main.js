@@ -11,56 +11,59 @@ var main = {
 
 	init: function(data) {
 		animatedScroll();
-		main.loadWork(data);
-		console.log('hello world');
+		main.loadWork(Object.keys(data));
 	},
 
 	loadWork:function(data) {
+		var totalProjects;
+		var projectsLoaded = 0;
+		var projectsRemaining;
+		var projectToLoad;
+
 		main.content = data;
-		main.caseStudies = Object.keys(main.content)[0];	// this should change to look for case studies
-		console.log("keys are " + main.caseStudies);
-		main.skills = Object.keys(main.content)[1];		//this should change to look for skills
-		totalProjects = Object.keys(main.content).length - 1;
+		console.log("case studies are " + Object.keys(main.content));
+
+		totalProjects = main.content.length;
 		projectsRemaining = totalProjects - projectsLoaded;
 		trace(projectsRemaining + ' remaining');
-		projectToLoad = Object.keys(main.content)[totalProjects-projectsRemaining+1];
-		var k = Object.keys(main.content)[totalProjects];
 
 			for(var i in main.content) {
-				trace('projectToLoad ' + projectToLoad);
-				if (i!='hero' && noProjectsToLoad>0 && i == projectToLoad) {
+				projectToLoad = main.content[i];
+				trace('loading ' + projectToLoad);
+				// if (i == projectToLoad) {
+				// if(main.content[i].tag) {
+					trace("found a match at " + projectToLoad);
 					if(main.content[i].tile) {
-						trace(i)
+
+						trace("found i at " + i)
 						projectsLoaded++;
 						projectsRemaining = totalProjects - projectsLoaded;
 						main.addTile(i,main.content[i].tile);
 					}
-					noProjectsToLoad --;
-					projectToLoad = Object.keys(main.content)[totalProjects-projectsRemaining+1];					
-				}
+				// }
+				// 	trace("error at project to load")
+				// }
 			}
-			if (projectsRemaining > 0) {
-				//add loadMore Button
-				$span = $('<span>').html('load more');
-				$loadMore = $('<div>').addClass('btn').addClass('loadMore').append($span);
+			// if (projectsRemaining > 0) {
+			// 	//add loadMore Button
+			// 	$span = $('<span>').html('load more');
+			// 	$loadMore = $('<div>').addClass('btn').addClass('loadMore').append($span);
 
-				$('.workSection').append($loadMore)
-				$('.loadMore').click(function(){
-					main.loadWork(data);
-				});
-			} else {
-				//transition
-				// $('.loadMore').
-				setTimeout(function(){
-					//show one at a time at random scale from 0 to
-					$( ".loadMore" ).remove();
-				},2000);
+			// 	$('.workSection').append($loadMore)
+			// 	$('.loadMore').click(function(){
+			// 		main.loadWork(data);
+			// 	});
+			// } else {
+			// 	//transition
+			// 	// $('.loadMore').
+			// 	setTimeout(function(){
+			// 		//show one at a time at random scale from 0 to
+			// 		$( ".loadMore" ).remove();
+			// 	},2000);
 				
-			}
-			noProjectsToLoad = projectsRemaining;
-			trace('how many projects left ' + projectsRemaining);
-			trace('how many projects to load ' + noProjectsToLoad);
-			trace('projects loaded ' + projectsLoaded);
+			// }
+			// trace('how many projects left ' + projectsRemaining);
+			// trace('projects loaded ' + projectsLoaded);
 	},
 
 	addTile: function(name, tile) {
