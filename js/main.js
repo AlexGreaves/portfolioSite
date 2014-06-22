@@ -33,14 +33,14 @@ var main = {
 						trace("case study found i at " + i)
 						projectsLoaded++;
 						projectsRemaining = totalProjects - projectsLoaded;
-						main.addTile(i,main.content[i].tile, 'project');
+						main.addTile(i,main.content[i], 'project');
 					}
 				} else if(main.content[i].tag == 'skill') {
 					if(main.content[i].tile) {
 						trace("skill found i at " + i)
 						projectsLoaded++;
 						projectsRemaining = totalProjects - projectsLoaded;
-						main.addTile(i,main.content[i].tile, 'skill');
+						main.addTile(i,main.content[i], 'skill', main);
 					}
 				}
 				// 	trace("error at project to load")
@@ -68,11 +68,14 @@ var main = {
 			// trace('projects loaded ' + projectsLoaded);
 	},
 
-	addTile: function(name, tile, addTo) {
+	addTile: function(name, content, addTo) {
 
-		$image = $('<img>').addClass('img').attr('src', tile.image);
+		// $link = $('<a>').onClick
+
+
+		$image = $('<img>').addClass('img').attr('src', content.tile.image);
 		
-		$figCaption = $('<figcaption>').addClass('project'+ name);
+		$figCaption = $('<figcaption>').addClass(name);
 
 		$span = $('<span>').html(name);
 
@@ -80,14 +83,32 @@ var main = {
 
 		$figure = $('<figure>').append($image,$figCaption);;
 
-		$tile = $('<div>').addClass('tile').data('name',name).append($figure);
-		
+		$tile = $('<div>').addClass('tile').data('project',content).append($figure);
+				
 		if(addTo == 'project'){
 			trace('addTo is ' + addTo);
 			$('#projectTiles').append($tile);	
 		} else if(addTo == 'skill'){
 			$('#skillTiles').append($tile);
 		}
+		$tile.click(main.projectModal);
+		// $tile.click('#workModal');
+	},
+
+	projectModal: function(){
+		var p;
+		p = $(this).data('project');
+		// $( this ).click(function(){
+		switch (p){
+			case 'Shelter':
+				trace ('bingoooooOO!');
+				break;
+		}
+			// if($(this).data('project')){
+			// 	p = $(this).data('project');
+			// 	trace('word up ' + p.copy.head);
+			// }
+		// });
 	}
 
 }
@@ -159,12 +180,11 @@ if ('console' in self && 'log' in console) console.log(s);
 $(document).ready(function () {
 
 		$.getJSON('content.json',main.init);
-			$('.tile').hide();
+		$('.tile').hide();
+		
 
 			setTimeout(function(){
 				//show one at a time at random scale from 0 to
 				$('.tile').show();
-
-
 			},500);
 });
