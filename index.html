@@ -8,7 +8,9 @@
         <title>Wassup!</title>
         <meta name='description' content=''/>
         <meta name='viewport' content='width=device-width, minimum-scale=1.0, maximum-scale=1.0'/>
+        <!-- <link rel='stylesheet' href='css/reset.css'> -->
         <link rel='stylesheet' href='css/responsive.css'>
+
 
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="js/vendor/jquery-1.9.1.min.js"></script>
@@ -28,17 +30,15 @@
     <body>
      <div class='header'>
             <div class='headerInner'>
-                <div class='logo'>
+                <!-- <div class='logo'>
                     <img class='arg-logo' src='../img/argLogo.png' alt='arg-logo'>
-                </div>
+                </div> -->
                 <ul class='socialList'>
-                    <li class='tab_1' id='facebook' onclick=location.href='https://www.facebook.com/jessicamaryyork'>
+                    <li class='tab_1' onclick=location.href=''><h1>work</h1>
                     </li>
-                    <li class='tab_2' id='twitter' onclick=location.href='https://twitter.com/jessicamaryyork'>
+                    <li class='tab_1' onclick=location.href=''><h1>contact</h1>
                     </li>
-                    <li class='tab_3' id='youtube' onclick=location.href='http://www.youtube.com/user/JessicaMaryYork'>
-                    </li>
-                    <li class='tab_4' id='soundcloud' onclick=location.href='https://soundcloud.com/jessicamaryyork'>
+                    <li class='tab_1' onclick=location.href=''><h1>hire me</h1>
                     </li>
                 </ul>
             </div>
@@ -50,31 +50,54 @@
                     <div class='right'></div>
                 </div>
             </div>
-            <h1>my work</h1>
-            <div class= 'workSection'>
-                <div id="workTiles">
+            <div id= 'projectSection' class='tileSection dropSection'>
+                <div class='doubleCol'>
+                    <h1>My recent projects</h1>
+                    <p>Curabitur blandit tempus porttitor. Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis.</p>
+                </div>
+                <div id="projectTiles" class='tiles'>
                 </div>
             </div>
-            <div id='aboutMe'>
-                <h1>Who am i?</h1>
-               <img class='gravitar' url='http://www.gravatar.com/avatar/742c3308a036b36bd3b54ba3b2af2380.png'height='80px' width= '80px'></img>
-               
-
-                <div class='column'>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+            <div class='sectionHolder'>
+                <div id= 'skillSection' class='tileSection'>
+                    <div class='floatHolder'>
+                        <div class='singleCol'>
+                            <h1>What do I do?</h1>
+                            <p>Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper.</br></br>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+                        </div>
+                        <div id='skillTileHolder'>
+                            <div id="skillTiles" class='tiles'>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width='0px' height='0px'>
+            <div id='aboutMe' class='tileSection'>
+                <div class='floatHolder'>
+                    <div class='singleCol about'>
+                        <h1>who is this charming fellow?</h1>
+                        <p>Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper.</br></br>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis.</p>
+                    </div>
+                    <div class='singleCol'>
+                        <img src='../img/aboutImage.png'>
+                    </div>
+                    <div class='singleCol'>
+                        <h1>Where can i find him?</h1>
+                        <p>Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper.</p>
+                         <button class='btn'onclick=location.href='#hireMeModal'><h1>hire me</h1></button>
+                    </div>
+                </div>
+            </div>
+         <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width='0px' height='0px'>
             <defs>
                 <clipPath id="clipPath1">
                     <circle cx="40" cy="40" r="40" fill='blue'/>
                 </clipPath>
-            </defs>
+            </defs> -->
         </svg>
         <div id='footer'>
                 <!-- Copyrite info and  social links-->
-                <ul class='socialList'>
+               <!--  <ul class='socialList'>
                     <li class='tab_1' id='facebook' onclick=location.href='https://www.facebook.com/jessicamaryyork'>
                     </li>
                     <li class='tab_2' id='twitter' onclick=location.href='https://twitter.com/jessicamaryyork'>
@@ -83,7 +106,7 @@
                     </li>
                     <li class='tab_4' id='soundcloud' onclick=location.href='https://soundcloud.com/jessicamaryyork'>
                     </li>
-                </ul>
+                </ul> -->
             </div>
     </body>
 </html>

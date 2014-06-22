@@ -1,12 +1,17 @@
 /* Colours */
 @white: #FAFAFA;
 @black:#333;
+@pink:#f25b9b;
 
 @transparentWhite:rgba(255,255,255,0.85);
-@transparentBlack:rgba(44,63,82,0.4);
+@transparentPink:rgba(242,91,155,0.8);
+@backgroundColor:rgba(0,0,0,0.07);
 
-@btnColour: #148DF3;
+@btnColour: @pink;
 @green: #f4f4f4;
+
+@bodyFont:"adelle";
+@headerFont:"refrigerator-deluxe";
 
 // !! not yet used
 
@@ -30,4 +35,13 @@
 .dropShadow {
 	-webkit-box-shadow:  0px 0px 2px 0px rgba(0, 0, 0, 1);
     box-shadow:  0px 0px 2px 0px rgba(0, 0, 0, 1);
+}
+
+.clearfix {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
 }

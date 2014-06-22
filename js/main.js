@@ -10,8 +10,8 @@ var main = {
 	content:null,
 
 	init: function(data) {
-		animatedScroll();
-		main.loadWork(Object.keys(data));
+		// animatedScroll();
+		main.loadWork(data);
 	},
 
 	loadWork:function(data) {
@@ -21,26 +21,28 @@ var main = {
 		var projectToLoad;
 
 		main.content = data;
-		console.log("case studies are " + Object.keys(main.content));
 
 		totalProjects = main.content.length;
 		projectsRemaining = totalProjects - projectsLoaded;
-		trace(projectsRemaining + ' remaining');
 
 			for(var i in main.content) {
 				projectToLoad = main.content[i];
-				trace('loading ' + projectToLoad);
 				// if (i == projectToLoad) {
-				// if(main.content[i].tag) {
-					trace("found a match at " + projectToLoad);
+				if(main.content[i].tag == 'case') {
 					if(main.content[i].tile) {
-
-						trace("found i at " + i)
+						trace("case study found i at " + i)
 						projectsLoaded++;
 						projectsRemaining = totalProjects - projectsLoaded;
-						main.addTile(i,main.content[i].tile);
+						main.addTile(i,main.content[i].tile, 'project');
 					}
-				// }
+				} else if(main.content[i].tag == 'skill') {
+					if(main.content[i].tile) {
+						trace("skill found i at " + i)
+						projectsLoaded++;
+						projectsRemaining = totalProjects - projectsLoaded;
+						main.addTile(i,main.content[i].tile, 'skill');
+					}
+				}
 				// 	trace("error at project to load")
 				// }
 			}
@@ -66,9 +68,9 @@ var main = {
 			// trace('projects loaded ' + projectsLoaded);
 	},
 
-	addTile: function(name, tile) {
+	addTile: function(name, tile, addTo) {
 
-		$image = $('<img>').addClass('tile').attr('src', 'http://placekitten.com/g/400/400');
+		$image = $('<img>').addClass('img').attr('src', tile.image);
 		
 		$figCaption = $('<figcaption>').addClass('project'+ name);
 
@@ -79,59 +81,63 @@ var main = {
 		$figure = $('<figure>').append($image,$figCaption);;
 
 		$tile = $('<div>').addClass('tile').data('name',name).append($figure);
-		$('#workTiles').append($tile);
 		
-
+		if(addTo == 'project'){
+			trace('addTo is ' + addTo);
+			$('#projectTiles').append($tile);	
+		} else if(addTo == 'skill'){
+			$('#skillTiles').append($tile);
+		}
 	}
 
 }
 
-function animatedScroll() {
-	var docElem = document.documentElement,
-	header = document.querySelector('.header'),
-	socialList = document.querySelector('.socialList'),
-	logo = document.querySelector('.logo'),
-	workSection = document.querySelector('.workSection'),
-	didScroll = false,
-	showWorkTitle = 1;
-	changeHeaderOn = 80;
+// function animatedScroll() {
+// 	var docElem = document.documentElement,
+// 	header = document.querySelector('.header'),
+// 	socialList = document.querySelector('.socialList'),
+// 	logo = document.querySelector('.logo'),
+// 	workSection = document.querySelector('.workSection'),
+// 	didScroll = false,
+// 	showWorkTitle = 1;
+// 	changeHeaderOn = 80;
 
-	function headerInit() {
-		window.addEventListener( 'scroll', function( event ) {
-			if(!didScroll){
-				didScroll = true;
-				setTimeout(scrollPage,250);
-			}
-		}, false);
-	}
+// 	function headerInit() {
+// 		window.addEventListener( 'scroll', function( event ) {
+// 			if(!didScroll){
+// 				didScroll = true;
+// 				setTimeout(scrollPage,250);
+// 			}
+// 		}, false);
+// 	}
 
-	function scrollPage() {
-		trace('scroll page ran, didScroll = '+ didScroll);
-		var sy = scrollY();
-		if ( sy >= showWorkTitle ) {
-	        classie.add( workSection, 'workSectionDrop' );
-	    }
-	    else {
-	    	classie.remove( workSection, 'workSectionDrop' );  
-	    }
-	    if ( sy >= changeHeaderOn ) {
-	        classie.add( header, 'headerShrink' );
-	        classie.add( socialList, 'socialListShrink' );
-	        classie.add( logo, 'logoShrink' );
-	    }
-	    else {
-	        classie.remove( header, 'headerShrink' );
-	        classie.remove( socialList, 'socialListShrink' );
-	        classie.remove( logo, 'logoShrink' );
-	    }
-	    didScroll = false;
-	}
+// 	function scrollPage() {
+// 		trace('scroll page ran, didScroll = '+ didScroll);
+// 		var sy = scrollY();
+// 		if ( sy >= showWorkTitle ) {
+// 	        classie.add( projectSection, 'sectionDrop' );
+// 	    }
+// 	    else {
+// 	    	classie.remove( projectSection, 'workSectionDrop' );  
+// 	    }
+// 	    if ( sy >= changeHeaderOn ) {
+// 	        classie.add( header, 'headerShrink' );
+// 	        classie.add( socialList, 'socialListShrink' );
+// 	        classie.add( logo, 'logoShrink' );
+// 	    }
+// 	    else {
+// 	        classie.remove( header, 'headerShrink' );
+// 	        classie.remove( socialList, 'socialListShrink' );
+// 	        classie.remove( logo, 'logoShrink' );
+// 	    }
+// 	    didScroll = false;
+// 	}
 
-	function scrollY() {
-		return window.pageYOffset || docElem.scrollTop;
-	}
-	headerInit();
-};
+// 	function scrollY() {
+// 		return window.pageYOffset || docElem.scrollTop;
+// 	}
+// 	headerInit();
+// };
 
 
 function validateEmail(email) {

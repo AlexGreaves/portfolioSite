@@ -1,6 +1,15 @@
 {	
 	"Robots":{
-		
+		"tile":
+			{"head": "XXXX",
+			"subhead": "",
+			"image": ["/img/projectImages/robots/robots_tile.jpg"]},
+		"copy":
+			{"head":"Synergy Rail",
+			"subhead": "Branding",
+			"p":["some words here…"]},
+		"images":
+			["http://www.lorempixum.com/g/400/200/sports"],
 		"tag":
 			["case"]
 	},
@@ -10,105 +19,91 @@
 		"tile":
 			{"head": "XXXX",
 			"subhead": "",
-			"images": ["http://www.lorempixum.com/g/400/400/sports"]},
+			"image": ["/img/projectImages/londonUnderground/londonUnderground_tile.jpg"]},
 		"copy":
 			{"head":"London Underground",
 			"subhead": "3D Illustration",
 			"p":["some words here…"]},
 		"images":
-			["http://www.lorempixum.com/g/400/400/sports"]
+			["http://www.lorempixum.com/g/400/400/sports"],
+		"tag":
+			["case"]
 	},
 
 	"Shelter":{
 		"tile":
 			{"head": "XXXX",
 			"subhead": "",
-			"images": ["http://www.lorempixum.com/g/400/400/sports"]},
+			"image": ["/img/projectImages/shelter/shelter_tile.jpg"]},
 		"copy":
 			{"head":"Samsung SSD",
 			"subhead": "Art Direction, 3D Illustration",
 			"p":["some words here…"]},
 		"images":
-			["http://www.lorempixum.com/g/400/400/sports"]
+			["http://www.lorempixum.com/g/400/400/sports"],
+		"tag":
+			["case"]
 	},
 	
-	"Design":{
+	"Design and UI":{
 		"tile":
 			{"head": "XXXX",
 			"subhead": "",
-			"images": ["http://www.lorempixum.com/g/400/400/sports"]},
+			"image": ["/img/projectImages/design/design_tile.jpg"]},
 		"copy":
 			{"head":"Shelter Get Involved",
 			"subhead": "Web Design",
 			"p":["some words here…"]},
 		"images":
-			["http://www.lorempixum.com/g/400/400/sports"]
+			["http://www.lorempixum.com/g/400/400/sports"],
+		"tag":
+			["skill"]
 	},
 
 	"User Experience":{
 		"tile":
 			{"head": "XXXX",
 			"subhead": "",
-			"images": ["http://www.lorempixum.com/g/400/400/sports"]},
+			"image": ["/img/projectImages/ux/ux_tile.jpg"]},
 		"copy":
 			{"head":"Tempero",
 			"subhead": "Web Design",
 			"p":["some words here…"]},
 		"images":
-			["http://www.lorempixum.com/g/400/400/sports"]
+			["http://www.lorempixum.com/g/400/400/sports"],
+		"tag":
+			["skill"]
 	},
 
 	"Illustration":{
 		"tile":
 			{"head": "XXXX",
 			"subhead": "",
-			"images": ["http://www.lorempixum.com/g/400/400/sports"]},
+			"image": ["/img/projectImages/illustration/illustration_tile.jpg"]},
 		"copy":
 			{"head":"We Are Suburb",
 			"subhead": "Animation, Illustration",
 			"p":["some words here…"]},
-		"images":
-			["http://www.lorempixum.com/g/400/400/sports"]
+		"image":
+			["http://www.lorempixum.com/g/400/400/sports"],
+		"tag":
+			["skill"]
 	},
 
-	"Advertising":{
+	"Online Advertising":{
 		"tile":
 			{"head": "XXXX",
 			"subhead": "",
-			"images": ["http://www.lorempixum.com/g/400/400/sports"]},
+			"image": ["/img/projectImages/ola/ola_tile.jpg"]},
 		"copy":
 			{"head":"Sportlobster",
 			"subhead": "Design, Iconography",
 			"p":["some words here…"]},
 		"images":
-			["http://www.lorempixum.com/g/400/400/sports"]
-	},
-
-	"Iconography":{
-		"tile":
-			{"head": "XXXX",
-			"subhead": "",
-			"images": ["http://www.lorempixum.com/g/400/400/sports"]},
-		"copy":
-			{"head":"Cadbury's Joyville",
-			"subhead": "Flash Animation",
-			"p":["some words here…"]},
-		"images":
-			["http://www.lorempixum.com/g/400/400/sports"]
-	},
-
-	"Branding":{
-		"tile":
-			{"head": "XXXX",
-			"subhead": "",
-			"images": ["http://www.lorempixum.com/g/400/400/sports"]},
-		"copy":
-			{"head":"R&D Projects",
-			"subhead": "Design, Iconography",
-			"p":["some words here…"]},
-		"images":
-			["http://www.lorempixum.com/g/400/400/sports"]
-	}	
+			["http://www.lorempixum.com/g/400/400/sports"],
+		"tag":
+			["skill"]
+	}
 }
 
 
