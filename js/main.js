@@ -40,7 +40,7 @@ var main = {
 						trace("skill found i at " + i)
 						projectsLoaded++;
 						projectsRemaining = totalProjects - projectsLoaded;
-						main.addTile(i,main.content[i], 'skill', main);
+						main.addTile(i,main.content[i], 'skill');
 					}
 				}
 				// 	trace("error at project to load")
@@ -98,17 +98,27 @@ var main = {
 	projectModal: function(){
 		var p;
 		p = $(this).data('project');
-		// $( this ).click(function(){
-		switch (p){
-			case 'Shelter':
-				trace ('bingoooooOO!');
-				break;
-		}
-			// if($(this).data('project')){
-			// 	p = $(this).data('project');
-			// 	trace('word up ' + p.copy.head);
-			// }
-		// });
+		// $(this).click(function(){
+			switch (p.format){
+				case ("robots"):
+					trace(p.format);
+					break;
+				case ("london-underground"):
+					trace(p.format);
+					break;
+				case ("shelter"):
+					trace(p.format);
+					break;
+				case ("skills"):
+					trace(p.format);
+					break;
+				case ("ola"):
+					trace(p.format);
+					break;
+
+			}
+			$("body").css('overflow', 'hidden');
+			$("#modal").addClass("show");
 	}
 
 }
@@ -180,11 +190,11 @@ if ('console' in self && 'log' in console) console.log(s);
 $(document).ready(function () {
 
 		$.getJSON('content.json',main.init);
-		$('.tile').hide();
+		// $('.tile').hide();
 		
 
-			setTimeout(function(){
-				//show one at a time at random scale from 0 to
-				$('.tile').show();
-			},500);
+		// 	setTimeout(function(){
+		// 		//show one at a time at random scale from 0 to
+		// 		$('.tile').show();
+		// 	},500);
 });

@@ -3,10 +3,10 @@
 ------------------------------------------------------------ */
 * { margin: 0; padding: 0; }
 html {overflow-y: scroll; /*  Ensure that the modal is scroll-able */min-width:960px}
-body {background-color:@white; font-size: 20px; color: @black;font-weight: 300; font-family: 'adelle', Arial, helvetica, sans-serif; margin:0;overflow:hidden;}
+body {height:100%;background-color:@white; font-size: 20px; color: @black;font-weight: 300; font-family: 'adelle', Arial, helvetica, sans-serif; margin:0;overflow:auto;-webkit-text-size-adjust: none;-webkit-font-smoothing: antialiased;}
 h1 {text-transform:uppercase;font-size:1.5em;text-align:left;color:@pink;font-weight: 100;
 	;font-family: 'refrigerator-deluxe';margin:0 40px 0 40px;}
-p {margin:0 40px 0 40px;font-family: 'adelle';font-size:.9em;line-height:1.4em;text-align:left;padding:20px 0 30px 0;}
+p {margin:0 40px 0 40px;font-family: 'adelle';font-size:.9em;line-height:1.4em;text-align:left;padding:20px 0 0 0;}
 img { display: block;margin:0}
 
 article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section { 
@@ -22,6 +22,7 @@ button {
 	background: transparent;
 	padding: 0 20px;
 	margin-left:40px;
+	margin-top:60px;
 
 	h1 {
 		margin:0;
@@ -38,7 +39,9 @@ button {
 .doubleCol {
 	width:66.66%;
 
-
+	p {
+		margin-bottom:60px
+	}
 	.doubleCol_text {
 		// height:auto;
 	    -webkit-column-count: 2; /* Chrome, Safari, Opera */
@@ -207,7 +210,7 @@ button {
 	
 	.tileSection {
 		position:relative;
-		padding:30px 0;
+		padding:60px 0;
 		margin:0 auto;
 		max-width:1200px;
 		-webkit-transition: all 0.4s;
@@ -345,6 +348,27 @@ button {
     	background-color: darken(@btnColour,20%);
 
     }
+}
+
+#modal {
+	height:400px;
+	position:fixed;
+	background:rgba(0,0,0,0.9);
+	z-index:50;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+
+.hide{
+	display:none;
+}
+
+.show{
+	display:block;
 }
 #footer {
 		position:relative;

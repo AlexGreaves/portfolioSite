@@ -1,108 +1,142 @@
 {	
 	"Robots":{
 		"tile":
-			{"head": "XXXX",
-			"subhead": "",
-			"image": ["/img/projectImages/robots/robots_tile.jpg"]},
-		"copy":
-			{"head":"Robots",
-			"subhead": "Branding",
-			"p":["some words here…"]},
-		"images":
-			["http://www.lorempixum.com/g/400/200/sports"],
-		"tag":
-			["case"]
+		{"head": "XXXX",
+			"image": "/img/projectImages/robots/robots_tile.jpg"},
+		"modal":
+			{"section 1":
+				{"head":"Robots",
+				"copy": "Branding",
+				"images":["/img/projectImages/robots/robots_tile.jpg"],
+				"format":"XX"},
+			"section 2":
+				{"head":"Robots",
+				"copy": "Branding",
+				"images":["", ""],
+				"format":"XX"}
+		},
+		"format":"robots",
+		"tag":"case"
 	},
-
 
 	"London Underground":{
 		"tile":
-			{"head": "XXXX",
-			"subhead": "",
-			"image": ["/img/projectImages/londonUnderground/londonUnderground_tile.jpg"]},
-		"copy":
-			{"head":"London Underground",
-			"subhead": "3D Illustration",
-			"p":["some words here…"]},
-		"images":
-			["http://www.lorempixum.com/g/400/400/sports"],
-		"tag":
-			["case"]
+		{"head": "XXXX",
+			"image": "/img/projectImages/londonUnderground/londonUnderground_tile.jpg"},
+		"modal":
+			{"section 1":
+				{"head":"Robots",
+				"copy": "Branding",
+				"images":["/img/projectImages/robots/robots_tile.jpg"],
+				"format":"XX"},
+			"section 2":
+				{"head":"Robots",
+				"copy": "Branding",
+				"images":["", ""],
+				"format":"XX"}
+		},
+		"format":"london-underground",
+		"tag":"case"
 	},
 
-	"Shelter":{
+	"Shelter Get Involved":{
 		"tile":
-			{"head": "XXXX",
-			"subhead": "",
-			"image": ["/img/projectImages/shelter/shelter_tile.jpg"]},
-		"copy":
-			{"head":"Shelter",
-			"subhead": "Art Direction, 3D Illustration",
-			"p":["some words here…"]},
-		"images":
-			["http://www.lorempixum.com/g/400/400/sports"],
-		"tag":
-			["case"]
+		{"head": "XXXX",
+			"image": "/img/projectImages/shelter/shelter_tile.jpg"},
+		"modal":
+			{"section 1":
+				{"head":"Robots",
+				"copy": "Branding",
+				"images":["/img/projectImages/robots/robots_tile.jpg"],
+				"format":"XX"},
+			"section 2":
+				{"head":"Robots",
+				"copy": "Branding",
+				"images":["", ""],
+				"format":"XX"}
+		},
+		"format":"shelter",
+		"tag":"case"
 	},
-	
-	"Design and UI":{
+
+	"Design and Ui":{
 		"tile":
-			{"head": "XXXX",
-			"subhead": "",
-			"image": ["/img/projectImages/design/design_tile.jpg"]},
-		"copy":
-			{"head":"Shelter Get Involved",
-			"subhead": "Web Design",
-			"p":["some words here…"]},
-		"images":
-			["http://www.lorempixum.com/g/400/400/sports"],
-		"tag":
-			["skill"]
+		{"head": "XXXX",
+			"image": "/img/projectImages/design/design_tile.jpg"},
+		"modal":
+			{"section 1":
+				{"head":"Robots",
+				"copy": "Branding",
+				"images":["/img/projectImages/robots/robots_tile.jpg"],
+				"format":"XX"},
+			"section 2":
+				{"head":"Robots",
+				"copy": "Branding",
+				"images":["", ""],
+				"format":"XX"}
+		},
+		"format":"skills",
+		"tag":"skill"
 	},
 
 	"User Experience":{
 		"tile":
-			{"head": "XXXX",
-			"subhead": "",
-			"image": ["/img/projectImages/ux/ux_tile.jpg"]},
-		"copy":
-			{"head":"Tempero",
-			"subhead": "Web Design",
-			"p":["some words here…"]},
-		"images":
-			["http://www.lorempixum.com/g/400/400/sports"],
-		"tag":
-			["skill"]
+		{"head": "XXXX",
+			"image": "/img/projectImages/ux/ux_tile.jpg"},
+		"modal":
+			{"section 1":
+				{"head":"Robots",
+				"copy": "Branding",
+				"images":["/img/projectImages/robots/robots_tile.jpg"],
+				"format":"XX"},
+			"section 2":
+				{"head":"Robots",
+				"copy": "Branding",
+				"images":["", ""],
+				"format":"XX"}
+		},
+		"format":"skills",
+		"tag":"skill"
 	},
 
-	"Illustration":{
+	"illustration":{
 		"tile":
-			{"head": "XXXX",
-			"subhead": "",
-			"image": ["/img/projectImages/illustration/illustration_tile.jpg"]},
-		"copy":
-			{"head":"We Are Suburb",
-			"subhead": "Animation, Illustration",
-			"p":["some words here…"]},
-		"image":
-			["http://www.lorempixum.com/g/400/400/sports"],
-		"tag":
-			["skill"]
+		{"head": "XXXX",
+			"image": "/img/projectImages/illustration/illustration_tile.jpg"},
+		"modal":
+			{"section 1":
+				{"head":"Robots",
+				"copy": "Branding",
+				"images":["/img/projectImages/robots/robots_tile.jpg"],
+				"format":"XX"},
+			"section 2":
+				{"head":"Robots",
+				"copy": "Branding",
+				"images":["", ""],
+				"format":"XX"}
+		},
+		"format":"skills",
+		"tag":"skill"
 	},
 
 	"Online Advertising":{
 		"tile":
-			{"head": "XXXX",
-			"subhead": "",
-			"image": ["/img/projectImages/ola/ola_tile.jpg"]},
-		"copy":
-			{"head":"Sportlobster",
-			"subhead": "Design, Iconography",
-			"p":["some words here…"]},
-		"images":
-			["http://www.lorempixum.com/g/400/400/sports"],
-		"tag":
-			["skill"]
+		{"head": "XXXX",
+			"image": "/img/projectImages/ola/ola_tile.jpg"},
+		"modal":
+			{"section 1":
+				{"head":"Robots",
+				"copy": "Branding",
+				"images":["/img/projectImages/robots/robots_tile.jpg"],
+				"format":"XX"},
+			"section 2":
+				{"head":"Robots",
+				"copy": "Branding",
+				"images":["", ""],
+				"format":"XX"}
+		},
+		"format":"ola",
+		"tag":"skill"
 	}
 }
 
