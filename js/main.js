@@ -87,40 +87,86 @@ var main = {
 				
 		if(addTo == 'project'){
 			trace('addTo is ' + addTo);
+			$tile.addClass('three-col');
 			$('#projectTiles').append($tile);	
 		} else if(addTo == 'skill'){
+			$tile.addClass('two-col');
 			$('#skillTiles').append($tile);
 		}
 		$tile.click(main.projectModal);
 		// $tile.click('#workModal');
 	},
+// >>>>>>>>>>>>> formatting for projects <<<<<<<<<<<<<<<<
 
-	projectModal: function(){
-		var p;
-		p = $(this).data('project');
-		// $(this).click(function(){
-			switch (p.format){
+	projectModal: function() {
+		var item = $(this).data('project');;
+		var markup ='';
+
+			switch (item.format){
 				case ("robots"):
-					trace(p.format);
-					break;
+					$.each(item.modal, function (index, section){
+						trace(index);
+						switch (index){
+							case "hero":
+								$image = $('<div>').addClass('hero-image').css('background-image', 'url("' + section.image + '")').css('background-repeat', 'no-repeat');
+								markup += '<div class="tileSection"><div class="doubleCol"><h1>' + section.head + '</h1>' + '<p>' + section.copy + '</p></div></div>'
+								break;
+								
+							case "section 1":
+								// append copy to markup
+								markup += '<div class="sectionHolder"><div class="tileSection"><div class="singleCol"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div>';
+								// append images to markup
+								if (section.images != '') {
+									markup += '<div class="tile-holder"><div class="tiles">';
+									$.each (section.images, function(index, image){
+										markup += '<div class="tile two-col"><img class="img" src=' + image + '></img></div>';
+									})
+								}
+								markup += '</div></div>';
+								break;
+							// case "section 2":
+							// 	break;
+						}
+					});
 				case ("london-underground"):
-					trace(p.format);
+					trace(item.format);
 					break;
 				case ("shelter"):
-					trace(p.format);
+					trace(item.format);
 					break;
 				case ("skills"):
-					trace(p.format);
+					$.each(item.modal, function (index, section){
+						trace(index);
+						switch (index){
+							case "hero":
+								// $image = $('<div>').addClass('hero-image').css('background-image', 'url("' + section.image + '")').css('background-repeat', 'no-repeat');
+								markup += '<div class="tileSection skill-copy"><div class="doubleCol"><h1>' + section.head + '</h1>' + '<p>' + section.copy + '</p></div></div>'
+								break;
+								
+							case "masonry-images":
+								// markup += '<div class="sectionHolder"><div class="tileSection">';
+								// append images to markup
+								if (section.images != '') {
+									markup += '<div class="tileSection"><div class="tiles three-col">';
+									$.each (section.images, function(index, image){
+										markup += '<div class="tile three-col"><img class="img" src=' + image + '></img></div>';
+									})
+								}
+								markup += '</div></div>';
+								break;
+							// case "section 2":
+							// 	break;
+						}
+					});
 					break;
-				case ("ola"):
-					trace(p.format);
-					break;
-
 			}
+			
+			//append markup to modal 
+			$(".modal").append(markup);
 			$("body").css('overflow', 'hidden');
-			$("#modal").addClass("show");
+			$(".modal").addClass("show");
+		// })
 	}
-
 }
 
 // function animatedScroll() {
@@ -189,6 +235,7 @@ if ('console' in self && 'log' in console) console.log(s);
 //Ready function, load content
 $(document).ready(function () {
 
+		//needs a timer
 		$.getJSON('content.json',main.init);
 		// $('.tile').hide();
 		

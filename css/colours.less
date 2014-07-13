@@ -1,7 +1,7 @@
 /* Colours */
 @white: #FAFAFA;
 @black:#333;
-@pink:#f25b9b;
+@pink:#e55c95;
 
 @transparentWhite:rgba(255,255,255,0.85);
 @transparentPink:rgba(242,91,155,0.8);
@@ -37,11 +37,16 @@
     box-shadow:  0px 0px 2px 0px rgba(0, 0, 0, 1);
 }
 
-.clearfix {
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
 }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */

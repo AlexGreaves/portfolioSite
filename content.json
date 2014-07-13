@@ -2,15 +2,19 @@
 	"Robots":{
 		"tile":
 		{"head": "XXXX",
-			"image": "/img/projectImages/robots/robots_tile.jpg"},
-		"modal":
-			{"section 1":
-				{"head":"Robots",
-				"copy": "Branding",
-				"images":["/img/projectImages/robots/robots_tile.jpg"],
+			"image": "/img/project_images/robots/robots_tile.jpg"},
+		"modal":{
+			"hero":
+				{"image":"/img/heroImage.png",
+				"head":"Robot Orphan: We Are Suburb",
+				"copy":"Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit."},
+			"section 1":
+				{"head":"sect 1",
+				"copy": "Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+				"images":["/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg"],
 				"format":"XX"},
 			"section 2":
-				{"head":"Robots",
+				{"head":"sect 2",
 				"copy": "Branding",
 				"images":["", ""],
 				"format":"XX"}
@@ -22,12 +26,12 @@
 	"London Underground":{
 		"tile":
 		{"head": "XXXX",
-			"image": "/img/projectImages/londonUnderground/londonUnderground_tile.jpg"},
+			"image": "/img/project_images/londonUnderground/londonUnderground_tile.jpg"},
 		"modal":
 			{"section 1":
 				{"head":"Robots",
 				"copy": "Branding",
-				"images":["/img/projectImages/robots/robots_tile.jpg"],
+				"images":["/img/project_images/robots/robots_tile.jpg"],
 				"format":"XX"},
 			"section 2":
 				{"head":"Robots",
@@ -42,15 +46,19 @@
 	"Shelter Get Involved":{
 		"tile":
 		{"head": "XXXX",
-			"image": "/img/projectImages/shelter/shelter_tile.jpg"},
-		"modal":
-			{"section 1":
-				{"head":"Robots",
-				"copy": "Branding",
-				"images":["/img/projectImages/robots/robots_tile.jpg"],
+			"image": "/img/project_images/shelter/shelter_tile.jpg"},
+		"modal":{
+			"hero":
+				{"image":"/img/project_images/shelter/shelter_hero.png",
+				"head":"Shelter Get Involved: We Are Suburb",
+				"copy":"The website had started to feel a bit unloved and the team at Shelter decided it was time to add a new lick of paint. Collaborating alongside a user experience team I was responsible for spearheading the visual redesign in line with Shelter’s KPI’s.</br></br>Competition analysis helped reveal the look that Shelter was aiming to achieve and after an iterative design process the visual aesthetic was realised. Utilising a flat user interface helped to declutter the Get Involved section of the Shelter UK site and was complimented by the recommended CSS animations built by the development team.</br></br>This project was designed whilst at Suburb."},
+			"section 1":
+				{"head":"sect 1",
+				"copy": "Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+				"images":["/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg"],
 				"format":"XX"},
 			"section 2":
-				{"head":"Robots",
+				{"head":"sect 2",
 				"copy": "Branding",
 				"images":["", ""],
 				"format":"XX"}
@@ -59,60 +67,18 @@
 		"tag":"case"
 	},
 
-	"Design and Ui":{
+	"Design & Branding":{
 		"tile":
 		{"head": "XXXX",
-			"image": "/img/projectImages/design/design_tile.jpg"},
+			"image": "/img/project_images/design/design_tile.jpg"},
 		"modal":
-			{"section 1":
-				{"head":"Robots",
-				"copy": "Branding",
-				"images":["/img/projectImages/robots/robots_tile.jpg"],
-				"format":"XX"},
-			"section 2":
-				{"head":"Robots",
-				"copy": "Branding",
-				"images":["", ""],
-				"format":"XX"}
-		},
-		"format":"skills",
-		"tag":"skill"
-	},
-
-	"User Experience":{
-		"tile":
-		{"head": "XXXX",
-			"image": "/img/projectImages/ux/ux_tile.jpg"},
-		"modal":
-			{"section 1":
-				{"head":"Robots",
-				"copy": "Branding",
-				"images":["/img/projectImages/robots/robots_tile.jpg"],
-				"format":"XX"},
-			"section 2":
-				{"head":"Robots",
-				"copy": "Branding",
-				"images":["", ""],
-				"format":"XX"}
-		},
-		"format":"skills",
-		"tag":"skill"
-	},
-
-	"illustration":{
-		"tile":
-		{"head": "XXXX",
-			"image": "/img/projectImages/illustration/illustration_tile.jpg"},
-		"modal":
-			{"section 1":
-				{"head":"Robots",
-				"copy": "Branding",
-				"images":["/img/projectImages/robots/robots_tile.jpg"],
-				"format":"XX"},
-			"section 2":
-				{"head":"Robots",
-				"copy": "Branding",
-				"images":["", ""],
+			{"hero":
+				{"image":"/img/heroImage.png",
+				"head":"Design & Branding",
+				"copy":"Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit."},
+			"masonry-images":
+				{"head":"sect 1",
+				"images":["/img/project_images/design/robotOrphan.jpg","/img/project_images/design/tweetYourTeam.jpg","/img/project_images/design/synergyRail.jpg","/img/project_images/design/shelter.jpg","/img/project_images/design/sportLobster.jpg"],
 				"format":"XX"}
 		},
 		"format":"skills",
@@ -122,20 +88,90 @@
 	"Online Advertising":{
 		"tile":
 		{"head": "XXXX",
-			"image": "/img/projectImages/ola/ola_tile.jpg"},
+			"image": "/img/project_images/ola/ola_tile.jpg"},
 		"modal":
-			{"section 1":
-				{"head":"Robots",
-				"copy": "Branding",
-				"images":["/img/projectImages/robots/robots_tile.jpg"],
-				"format":"XX"},
-			"section 2":
-				{"head":"Robots",
-				"copy": "Branding",
-				"images":["", ""],
+			{"hero":
+				{"image":"/img/project_images/ola/ola_hero.jpg",
+				"head":"Online Advertising",
+				"copy":"I have extensive experience story boarding and developing banner projects for advertising platforms; Google double click, media mind and flash talking. My work takes a code heavy approach and I have developed a platform for rapid creation of standard banners in any number of sizes. I have worked for a number of national and International brands including; Cadbury, lloyds, Danone and Sony."},
+			"masonry-images":
+				{"head":"sect 1",
+				"images":["/img/project_images/ola/actimel_hero.jpg","/img/project_images/ola/danio_hero.jpg","/img/project_images/ola/cadbury_hero.jpg","/img/project_images/ola/sony_hero.jpg"],
 				"format":"XX"}
 		},
-		"format":"ola",
+		"format":"skills",
+		"tag":"skill"
+	},
+
+	"Iconography":{
+		"tile":
+		{"head": "XXXX",
+			"image": "/img/project_images/iconography/iconography_tile.jpg"},
+		"modal":
+			{"hero":
+				{"image":"/img/heroImage.png",
+				"head":"Iconography",
+				"copy":"Experience illustrating has helped me gain a reputation for developing pixel perfect Iconography for many clients. This has often been to compliment a specific design approach and has meant close collaboration as part of a design team. I have also directed the creation of iconography as lead designer."},
+			"masonry-images":
+				{"head":"sect 1",
+				"images":["/img/project_images/iconography/robot_1.jpg","/img/project_images/iconography/robot_2.jpg","/img/project_images/iconography/robot_3.jpg","/img/project_images/iconography/shelter_1.jpg","/img/project_images/iconography/shelter_2.jpg","/img/project_images/iconography/shelter_3.jpg","/img/project_images/iconography/tempero_1.jpg","/img/project_images/iconography/tempero_2.jpg","/img/project_images/iconography/tempero_3.jpg","/img/project_images/iconography/sport_1.jpg","/img/project_images/iconography/sport_2.jpg","/img/project_images/iconography/sport_3.jpg","/img/project_images/iconography/hash_1.jpg","/img/project_images/iconography/hash_2.jpg","/img/project_images/iconography/hash_3.jpg"],
+				"format":"XX"}
+		},
+		"format":"skills",
+		"tag":"skill"
+	},	
+
+"User Experience":{
+		"tile":
+		{"head": "XXXX",
+			"image": "/img/project_images/ux/ux_tile.jpg"},
+		"modal":
+			{"hero":
+				{"image":"/img/heroImage.png",
+				"head":"User Experience",
+				"copy":"As part of a small user experience team at a boutique agency I have had the chance to get my hands dirty on both client and internal user experience projects. This has enabled me to get involved in the preliminary planning and strategy stages of projects, lead projects and also work as part of a group. Typical tasks have included stakeholder interviews, task analysis, userbility testing, personas, scenario planning, user journeys, wire framing and prototyping."},
+			"masonry-images":
+				{"head":"sect 1",
+				"images":["/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg"],
+				"format":"XX"}
+		},
+		"format":"skills",
+		"tag":"skill"
+	},
+
+	"2d illustration":{
+		"tile":
+		{"head": "XXXX",
+			"image": "/img/project_images/2d_illustration/2d_tile.jpg"},
+		"modal":
+			{"hero":
+				{"image":"/img/heroImage.png",
+				"head":"2d illustration",
+				"copy":"Illustration has always been a passion. I am inspired by graphic novels and animation from my childhood.  I am looking to expand experience in this area over the coming months so expect this section to grow significantly."},
+			"masonry-images":
+				{"head":"sect 1",
+				"images":["/img/project_images/2d_illustration/colourWheel.jpg","/img/project_images/2d_illustration/suburb.jpg","/img/project_images/2d_illustration/robotOrphan.jpg","/img/project_images/2d_illustration/robot.jpg","/img/project_images/2d_illustration/iLoveNewYork.jpg","/img/project_images/2d_illustration/octopus.jpg","/img/project_images/2d_illustration/metTv.jpg"],
+				"format":"XX"}
+		},
+		"format":"skills",
+		"tag":"skill"
+	},
+
+	"3d illustration":{
+		"tile":
+		{"head": "XXXX",
+			"image": "/img/project_images/3d_illustration/3d_tile.jpg"},
+		"modal":
+			{"hero":
+				{"image":"/img/heroImage.png",
+				"head":"3d illustration",
+				"copy":"In my final year of university I made the bold move to change my specialism to 3D animation, fortunately that decision has been paying off recently. I have Art directed and created projects for international brands on a number of web based games and flat graphics."},
+			"masonry-images":
+				{"head":"sect 1",
+				"images":["/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg"],
+				"format":"XX"}
+		},
+		"format":"skills",
 		"tag":"skill"
 	}
 }
