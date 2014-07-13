@@ -1,5 +1,5 @@
 {	
-	"Robots":{
+	"Robot Orphan":{
 		"tile":
 		{"head": "XXXX",
 			"image": "/img/project_images/robots/robots_tile.jpg"},
@@ -19,8 +19,8 @@
 				"images":["", ""],
 				"format":"XX"}
 		},
-		"format":"robots",
-		"tag":"case"
+		"format":"caseStudy",
+		"href":"robot-orphan"
 	},
 
 	"London Underground":{
@@ -39,8 +39,8 @@
 				"images":["", ""],
 				"format":"XX"}
 		},
-		"format":"london-underground",
-		"tag":"case"
+		"format":"caseStudy",
+		"href":"london-underground"
 	},
 
 	"Shelter Get Involved":{
@@ -63,8 +63,8 @@
 				"images":["", ""],
 				"format":"XX"}
 		},
-		"format":"shelter",
-		"tag":"case"
+		"format":"caseStudy",
+		"href":"shelter"
 	},
 
 	"Design & Branding":{
@@ -81,8 +81,8 @@
 				"images":["/img/project_images/design/robotOrphan.jpg","/img/project_images/design/tweetYourTeam.jpg","/img/project_images/design/synergyRail.jpg","/img/project_images/design/shelter.jpg","/img/project_images/design/sportLobster.jpg"],
 				"format":"XX"}
 		},
-		"format":"skills",
-		"tag":"skill"
+		"format":"skill",
+		"href":"design-branding"
 	},
 
 	"Online Advertising":{
@@ -99,8 +99,8 @@
 				"images":["/img/project_images/ola/actimel_hero.jpg","/img/project_images/ola/danio_hero.jpg","/img/project_images/ola/cadbury_hero.jpg","/img/project_images/ola/sony_hero.jpg"],
 				"format":"XX"}
 		},
-		"format":"skills",
-		"tag":"skill"
+		"format":"skill",
+		"href":"online-advertising"
 	},
 
 	"Iconography":{
@@ -117,8 +117,8 @@
 				"images":["/img/project_images/iconography/robot_1.jpg","/img/project_images/iconography/robot_2.jpg","/img/project_images/iconography/robot_3.jpg","/img/project_images/iconography/shelter_1.jpg","/img/project_images/iconography/shelter_2.jpg","/img/project_images/iconography/shelter_3.jpg","/img/project_images/iconography/tempero_1.jpg","/img/project_images/iconography/tempero_2.jpg","/img/project_images/iconography/tempero_3.jpg","/img/project_images/iconography/sport_1.jpg","/img/project_images/iconography/sport_2.jpg","/img/project_images/iconography/sport_3.jpg","/img/project_images/iconography/hash_1.jpg","/img/project_images/iconography/hash_2.jpg","/img/project_images/iconography/hash_3.jpg"],
 				"format":"XX"}
 		},
-		"format":"skills",
-		"tag":"skill"
+		"format":"skill",
+		"href":"iconography"
 	},	
 
 "User Experience":{
@@ -135,8 +135,8 @@
 				"images":["/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg"],
 				"format":"XX"}
 		},
-		"format":"skills",
-		"tag":"skill"
+		"format":"skill",
+		"href":"user-experience"
 	},
 
 	"2d illustration":{
@@ -153,8 +153,8 @@
 				"images":["/img/project_images/2d_illustration/colourWheel.jpg","/img/project_images/2d_illustration/suburb.jpg","/img/project_images/2d_illustration/robotOrphan.jpg","/img/project_images/2d_illustration/robot.jpg","/img/project_images/2d_illustration/iLoveNewYork.jpg","/img/project_images/2d_illustration/octopus.jpg","/img/project_images/2d_illustration/metTv.jpg"],
 				"format":"XX"}
 		},
-		"format":"skills",
-		"tag":"skill"
+		"format":"skill",
+		"href":"2d-illustration"
 	},
 
 	"3d illustration":{
@@ -171,8 +171,8 @@
 				"images":["/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg"],
 				"format":"XX"}
 		},
-		"format":"skills",
-		"tag":"skill"
+		"format":"skill",
+		"href":"3d-illustration"
 	}
 }
 

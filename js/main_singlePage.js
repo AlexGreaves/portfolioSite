@@ -5,32 +5,13 @@ var noProjectsToLoad = 9;
 var projectToLoad;
 
 
-var fn = {
+var main = {
 
 	content:null,
 
 	init: function(data) {
-		fn.content = data;
-		fn.loadWork();
-		fn.linkSetup();
-	},
-
-	linkSetup:function(){
-	$(document).on("click", ".tile, .thumb", function() {
-			var $main = $("#main");
-			var $a = $(this).data('content');
-
-		  	history.pushState({}, '', $a.href);
-		  	trace(fn.myWork($a));
-
-		  	//neaten up some animation
-		  	$main.fadeOut(500, function(){
-				$main.empty().append(fn.myWork($a)).fadeIn(500);
-			});
-		  	
-
-		  	return false;
-		});
+		// animatedScroll();
+		main.loadWork(data);
 	},
 
 	loadWork:function(data) {
@@ -39,31 +20,59 @@ var fn = {
 		var projectsRemaining;
 		var projectToLoad;
 
-		totalProjects = fn.content.length;
+		main.content = data;
+
+		totalProjects = main.content.length;
 		projectsRemaining = totalProjects - projectsLoaded;
 
-			for(var i in fn.content) {
-				projectToLoad = fn.content[i];
+			for(var i in main.content) {
+				projectToLoad = main.content[i];
 				// if (i == projectToLoad) {
-				if(fn.content[i].format == 'caseStudy') {
-					if(fn.content[i].tile) {
+				if(main.content[i].tag == 'case') {
+					if(main.content[i].tile) {
 						trace("case study found i at " + i)
 						projectsLoaded++;
 						projectsRemaining = totalProjects - projectsLoaded;
-						fn.addTile(i,fn.content[i], 'project');
+						main.addTile(i,main.content[i], 'project');
 					}
-				} else if(fn.content[i].format == 'skill') {
-					if(fn.content[i].tile) {
+				} else if(main.content[i].tag == 'skill') {
+					if(main.content[i].tile) {
 						trace("skill found i at " + i)
 						projectsLoaded++;
 						projectsRemaining = totalProjects - projectsLoaded;
-						fn.addTile(i,fn.content[i], 'skill');
+						main.addTile(i,main.content[i], 'skill');
 					}
 				}
+				// 	trace("error at project to load")
+				// }
 			}
+			// if (projectsRemaining > 0) {
+			// 	//add loadMore Button
+			// 	$span = $('<span>').html('load more');
+			// 	$loadMore = $('<div>').addClass('btn').addClass('loadMore').append($span);
+
+			// 	$('.workSection').append($loadMore)
+			// 	$('.loadMore').click(function(){
+			// 		main.loadWork(data);
+			// 	});
+			// } else {
+			// 	//transition
+			// 	// $('.loadMore').
+			// 	setTimeout(function(){
+			// 		//show one at a time at random scale from 0 to
+			// 		$( ".loadMore" ).remove();
+			// 	},2000);
+				
+			// }
+			// trace('how many projects left ' + projectsRemaining);
+			// trace('projects loaded ' + projectsLoaded);
 	},
 
 	addTile: function(name, content, addTo) {
+
+		// $link = $('<a>').onClick
+
+
 		$image = $('<img>').addClass('img').attr('src', content.tile.image);
 		
 		$figCaption = $('<figcaption>').addClass(name);
@@ -74,27 +83,29 @@ var fn = {
 
 		$figure = $('<figure>').append($image,$figCaption);;
 
-		$tile = $('<div>').addClass('tile').data('content',content).append($figure);
+		$tile = $('<div>').addClass('tile').data('project',content).append($figure);
 				
 		if(addTo == 'project'){
+			trace('addTo is ' + addTo);
 			$tile.addClass('three-col');
 			$('#projectTiles').append($tile);	
 		} else if(addTo == 'skill'){
 			$tile.addClass('two-col');
 			$('#skillTiles').append($tile);
 		}
-
-		// $tile.click(fn.myWork);
+		$tile.click(main.projectModal);
+		// $tile.click('#workModal');
 	},
 // >>>>>>>>>>>>> formatting for projects <<<<<<<<<<<<<<<<
 
-	myWork: function(item) {
-		// var item = $(this).data('project');
+	projectModal: function() {
+		var item = $(this).data('project');;
 		var markup ='';
 
 			switch (item.format){
-				case ("caseStudy"):
+				case ("robots"):
 					$.each(item.modal, function (index, section){
+						trace(index);
 						switch (index){
 							case "hero":
 								$image = $('<div>').addClass('hero-image').css('background-image', 'url("' + section.image + '")').css('background-repeat', 'no-repeat');
@@ -117,8 +128,15 @@ var fn = {
 							// 	break;
 						}
 					});
-				case ("skill"):
+				case ("london-underground"):
+					trace(item.format);
+					break;
+				case ("shelter"):
+					trace(item.format);
+					break;
+				case ("skills"):
 					$.each(item.modal, function (index, section){
+						trace(index);
 						switch (index){
 							case "hero":
 								// $image = $('<div>').addClass('hero-image').css('background-image', 'url("' + section.image + '")').css('background-repeat', 'no-repeat');
@@ -144,13 +162,9 @@ var fn = {
 			}
 			
 			//append markup to modal 
-			//add to history state
-			
-			// history.pushState({}, '', item.href);
-			return markup;
-			// $("#main").append(markup);
-			// $("body").css('overflow', 'hidden');
-			// $(".modal").addClass("show");
+			$(".modal").append(markup);
+			$("body").css('overflow', 'hidden');
+			$(".modal").addClass("show");
 		// })
 	}
 }
@@ -222,7 +236,7 @@ if ('console' in self && 'log' in console) console.log(s);
 $(document).ready(function () {
 
 		//needs a timer
-		$.getJSON('content.json', fn.init);
+		$.getJSON('content.json',main.init);
 		// $('.tile').hide();
 		
 
