@@ -8,19 +8,28 @@ var projectToLoad;
 var fn = {
 
 	content:null,
-	url:"localhost",
-	homePage: $('#main'),
+	myUrl:"localhost",
+	main: $('#main'),
 	
 
 	init: function(data) {
 		fn.content = data;
-		trace (fn.homePage.html);
-
+		trace(fn.content.homePage);
+		testing = fn.content.homePage;
+		// displayPage(checkURL());
+		
+		$('#main').append(fn.checkURL);
 		fn.loadWork();
-		fn.linkSetup();
+		// fn.setup();
 	},
 
-	linkSetup:function(){
+	checkURL:function(){
+		var a = fn.displayPage(testing);
+
+		return a;
+	},
+	// <--history.js-->
+	setup:function(){
 		var $main = $('#main');
 
 		String.prototype.decodeHTML = function() {
@@ -44,12 +53,12 @@ var fn = {
 		//neaten up some animation
 		loadPage = function (content) {
 			$main.fadeOut(500, function(){
-				$main.empty().append(fn.myWork(content)).fadeIn(500);
+				$main.empty().append(fn.displayPage(content)).fadeIn(500);
 			});	
 		};
 	},
-
-	loadWork:function(data) {
+	// <--?end-->
+	loadWork:function() {
 		var totalProjects;
 		var projectsLoaded = 0;
 		var projectsRemaining;
@@ -99,25 +108,49 @@ var fn = {
 			$tile.addClass('two-col');
 			$('#skillTiles').append($tile);
 		}
-
-		// $tile.click(fn.myWork);
 	},
-// >>>>>>>>>>>>> formatting for projects <<<<<<<<<<<<<<<<
+// >>>>>>>>>>>>> formatting for pages <<<<<<<<<<<<<<<<
 
-	myWork: function(item) {
+	displayPage: function(item) {
 		// var item = $(this).data('project');
 		var markup ='';
-
 			switch (item.format){
-				case ("caseStudy"):
-					$.each(item.modal, function (index, section){
+				case ('homePage'):
+					$.each(item.main, function (index, section){
 						switch (index){
-							case "hero":
+							case 'hero':
+								trace('hero');
+								// $image = $('<div>').addClass('hero-image').css('background-image', 'url("' + section.image + '")');
+								//for now this will do need to add hero image in to markup
+								markup += '<div class="hero-image"></div>';
+								break;
+							case 'section 1':
+								trace('section 1');
+								markup += '<div id="projectSection" class="tileSection">'
+								markup += '<div class="case-studies"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div>';
+								markup += '<div id="projectTiles" class="tiles three-col"></div></div>';
+								break;
+							case 'section 2':
+								trace('section 2');
+								markup += '<div class="sectionHolder"><div id="skillSection" class="tileSection"><div class="singleCol"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div>'
+								markup += '<div id="skillTiles" class="tiles two-col"></div></div></div>'
+								break;
+							case 'section 3':
+								trace('section 3');
+								markup += '<div id="aboutMe" class="tileSection"><div class=floatHolder clearfix><div class="doubleCol doubleImage"><img src=' + section.images + '></img></div><div class="singleCol about-me"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div></div></div>'
+								break;
+						}
+					});
+					break;
+				case ('caseStudy'):
+					$.each(item.main, function (index, section){
+						switch (index){
+							case 'hero':
 								$image = $('<div>').addClass('hero-image').css('background-image', 'url("' + section.image + '")').css('background-repeat', 'no-repeat');
 								markup += '<div class="tileSection"><div class="doubleCol"><h1>' + section.head + '</h1>' + '<p>' + section.copy + '</p></div></div>'
 								break;
 								
-							case "section 1":
+							case 'section 1':
 								// append copy to markup
 								markup += '<div class="sectionHolder"><div class="tileSection"><div class="singleCol"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div>';
 								// append images to markup
@@ -133,15 +166,16 @@ var fn = {
 							// 	break;
 						}
 					});
-				case ("skill"):
-					$.each(item.modal, function (index, section){
+					break;
+				case ('skill'):
+					$.each(item.main, function (index, section){
 						switch (index){
-							case "hero":
+							case 'hero':
 								// $image = $('<div>').addClass('hero-image').css('background-image', 'url("' + section.image + '")').css('background-repeat', 'no-repeat');
 								markup += '<div class="tileSection skill-copy"><div class="doubleCol"><h1>' + section.head + '</h1>' + '<p>' + section.copy + '</p></div></div>'
 								break;
 								
-							case "masonry-images":
+							case 'masonry-images':
 								// markup += '<div class="sectionHolder"><div class="tileSection">';
 								// append images to markup
 								if (section.images != '') {
@@ -158,16 +192,7 @@ var fn = {
 					});
 					break;
 			}
-			
-			//append markup to modal 
-			//add to history state
-			
-			// history.pushState({}, '', item.href);
-			return markup;
-			// $("#main").append(markup);
-			// $("body").css('overflow', 'hidden');
-			// $(".modal").addClass("show");
-		// })
+		return markup;
 	}
 }
 

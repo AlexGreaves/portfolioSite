@@ -10,21 +10,27 @@
         <meta name='viewport' content='width=device-width, minimum-scale=1.0, maximum-scale=1.0'/>
         <!-- <link rel='stylesheet' href='css/reset.css'> -->
         <link rel='stylesheet' href='css/responsive.css'>
-
-
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-        <script src="js/vendor/jquery-1.9.1.min.js"></script>
-
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
         
         <script type="text/javascript" src="//use.typekit.net/bev2hzo.js">
         </script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
         <script src='js/classie.js'></script>
         <script type='text/javascript' src='js/main.js'></script>
 
-        <!-- // <script type='text/json' src='content.json'></script> -->
+<!-- this section is new -->
+        <!-- jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+        <!-- jQuery ScrollTo Plugin -->
+        <script src="//balupton.github.io/jquery-scrollto/lib/jquery-scrollto.js"></script>
+
+        <!-- History.js -->
+        <script src="//browserstate.github.io/history.js/scripts/bundled/html4+html5/jquery.history.js"></script>
+
+        <!-- Ajaxify -->
+        <script src="//rawgithub.com/browserstate/ajaxify/master/ajaxify-html5.js"></script>
+<!-- this section is new -->
 
     </head>
     <body>
@@ -42,40 +48,7 @@
             </div>
         </div>
         <div id='main'>
-            <div class='hero-image'>
-            </div>
-            <div id= 'projectSection' class='tileSection'>
-                    <div class='case-studies'>
-                        <h1>My recent projects</h1>
-                        <p>Curabitur blandit tempus porttitor. Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis.</p>
-                    </div>
-                <div id="projectTiles" class='tiles three-col'></div>
-            </div>
-            <div class='sectionHolder'>
-                <div id= 'skillSection' class='tileSection'>
-                        <div class='singleCol'>
-                            <h1>What do I do?</h1>
-                            <p>Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper.</br></br>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-                        </div>
-                    <div id="skillTiles" class='tiles two-col'>
-                    </div>
-                </div>
-            </div>
-            <!--  -->
-            <div id='aboutMe' class='tileSection'>
-                <div class='floatHolder clearfix'>
-                    <div class='doubleCol doubleImage'>
-                        <img src='../img/about-image.jpg'>
-                    </div>
-                    <div class='singleCol about-me'>
-                        <h1>who is this charming fellow?</h1>
-                        <p>I am a digital interactive designer with 3 years experience working on user experience, web design, online advertising and illustration projects. I have worked with a range of clients from global advertising agencies to small London based startups.</br></br>I currently live in East London and am able to work remotely or from anywhere in the city. If you would like to contact me regarding work or just to say hello send me an email directly or click the hire me button below.</p>
-                    </div>
-                    <button class='btn'onclick=location.href='#hireMeModal'><h1>hire me</h1></button>
-                </div>
-            </div>
         </div>
-        <div class="modal"></div>
         <div id='footer'>
                 <!-- Copyrite info and  social links-->
                <!--  <ul class='socialList'>

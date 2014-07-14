@@ -1,9 +1,29 @@
 {	
+	"homePage":{
+		"main":{
+			"hero":"url('../img/heroImage.png')",
+			"section 1":
+				{"head":"My recent projects",
+				"copy":"Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+				"images":[""]},
+			"section 2":
+				{"head":"What do I do?",
+				"copy": "Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper.</br></br>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo.",
+				"images":[""]},
+			"section 3":
+				{"images":["../img/about-image.jpg"],
+				"head":"who is this charming fellow?",
+				"copy": "I am a digital interactive designer with 3 years experience working on user experience, web design, online advertising and illustration projects. I have worked with a range of clients from global advertising agencies to small London based startups.</br></br>I currently live in East London and am able to work remotely or from anywhere in the city. If you would like to contact me regarding work or just to say hello send me an email directly or click the hire me button below."}
+		},
+		"format":"homePage",
+		"href":"home-page"
+	},
+
 	"Robot Orphan":{
 		"tile":
 		{"head": "XXXX",
 			"image": "/img/project_images/robots/robots_tile.jpg"},
-		"modal":{
+		"main":{
 			"hero":
 				{"image":"/img/heroImage.png",
 				"head":"Robot Orphan: We Are Suburb",
@@ -27,7 +47,7 @@
 		"tile":
 		{"head": "XXXX",
 			"image": "/img/project_images/londonUnderground/londonUnderground_tile.jpg"},
-		"modal":
+		"main":
 			{"section 1":
 				{"head":"Robots",
 				"copy": "Branding",
@@ -47,7 +67,7 @@
 		"tile":
 		{"head": "XXXX",
 			"image": "/img/project_images/shelter/shelter_tile.jpg"},
-		"modal":{
+		"main":{
 			"hero":
 				{"image":"/img/project_images/shelter/shelter_hero.png",
 				"head":"Shelter Get Involved: We Are Suburb",
@@ -71,7 +91,7 @@
 		"tile":
 		{"head": "XXXX",
 			"image": "/img/project_images/design/design_tile.jpg"},
-		"modal":
+		"main":
 			{"hero":
 				{"image":"/img/heroImage.png",
 				"head":"Design & Branding",
@@ -89,7 +109,7 @@
 		"tile":
 		{"head": "XXXX",
 			"image": "/img/project_images/ola/ola_tile.jpg"},
-		"modal":
+		"main":
 			{"hero":
 				{"image":"/img/project_images/ola/ola_hero.jpg",
 				"head":"Online Advertising",
@@ -107,7 +127,7 @@
 		"tile":
 		{"head": "XXXX",
 			"image": "/img/project_images/iconography/iconography_tile.jpg"},
-		"modal":
+		"main":
 			{"hero":
 				{"image":"/img/heroImage.png",
 				"head":"Iconography",
@@ -125,7 +145,7 @@
 		"tile":
 		{"head": "XXXX",
 			"image": "/img/project_images/ux/ux_tile.jpg"},
-		"modal":
+		"main":
 			{"hero":
 				{"image":"/img/heroImage.png",
 				"head":"User Experience",
@@ -143,7 +163,7 @@
 		"tile":
 		{"head": "XXXX",
 			"image": "/img/project_images/2d_illustration/2d_tile.jpg"},
-		"modal":
+		"main":
 			{"hero":
 				{"image":"/img/heroImage.png",
 				"head":"2d illustration",
@@ -161,7 +181,7 @@
 		"tile":
 		{"head": "XXXX",
 			"image": "/img/project_images/3d_illustration/3d_tile.jpg"},
-		"modal":
+		"main":
 			{"hero":
 				{"image":"/img/heroImage.png",
 				"head":"3d illustration",
