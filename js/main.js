@@ -8,29 +8,45 @@ var projectToLoad;
 var fn = {
 
 	content:null,
+	url:"localhost",
+	homePage: $('#main'),
+	
 
 	init: function(data) {
 		fn.content = data;
+		trace (fn.homePage.html);
+
 		fn.loadWork();
 		fn.linkSetup();
 	},
 
 	linkSetup:function(){
-	$(document).on("click", ".tile, .thumb", function() {
-			var $main = $("#main");
+		var $main = $('#main');
+
+		String.prototype.decodeHTML = function() {
+			return $("<div>", {html: "" + this}).html();
+		};
+
+		$(document).on("click", ".tile, .thumb", function() {
 			var $a = $(this).data('content');
-
 		  	history.pushState({}, '', $a.href);
-		  	trace(fn.myWork($a));
-
-		  	//neaten up some animation
-		  	$main.fadeOut(500, function(){
-				$main.empty().append(fn.myWork($a)).fadeIn(500);
-			});
-		  	
-
+		  	loadPage($a)
 		  	return false;
 		});
+		$(window).on("popstate", function(e) {
+			if (e.originalEvent.state !== null) {
+				trace(location.href)
+				loadPage(location.href);
+			} else {
+				trace(e.originalEvent.state);
+			}
+		});
+		//neaten up some animation
+		loadPage = function (content) {
+			$main.fadeOut(500, function(){
+				$main.empty().append(fn.myWork(content)).fadeIn(500);
+			});	
+		};
 	},
 
 	loadWork:function(data) {
