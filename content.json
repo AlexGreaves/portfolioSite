@@ -86,120 +86,294 @@
 		"format":"caseStudy",
 		"href":"shelter"
 	},
-
+		
 	"designBranding":{
-		"tile":
-		{"head": "design & branding",
-			"image": "/img/project_images/design/design_tile.jpg"},
-		"main":
-			{"hero":
-				{"image":"/img/heroImage.png",
+		"head": "design & branding",
+		"thumb": "/img/project_images/design/design_tile.jpg",
+		"main":{
+			"hero":{
 				"head":"Design & Branding",
-				"copy":"Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit."},
-			"masonry-images":
-				{"head":"sect 1",
-				"images":["/img/project_images/design/robotOrphan.jpg","/img/project_images/design/tweetYourTeam.jpg","/img/project_images/design/synergyRail.jpg","/img/project_images/design/shelter.jpg","/img/project_images/design/sportLobster.jpg"],
-				"format":"XX"}
+				"copy":"Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit."
+			},
+			"thumbnailImages":{
+				"robotOrphan":{
+					"head":"robot orphan",
+					"thumb":"/img/project_images/design/robotOrphan.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"tweetYourTeam":{
+					"head":"tweet your team",
+					"thumb":"/img/project_images/design/tweetYourTeam.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"synergyRail":{
+					"head":"synergy rail",
+					"thumb":"/img/project_images/design/synergyRail.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"shelterGetInvolved":{
+					"head":"shelter get involved",
+					"thumb":"/img/project_images/design/shelter.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"sportLobster":{
+					"head":"sport lobster",
+					"thumb":"/img/project_images/design/sportLobster.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"format":"thumbnail-images"
+			}
 		},
 		"format":"skill",
 		"href":"design-branding"
 	},
 
 	"onlineAdvertising":{
-		"tile":
-		{"head": "online advertising",
-			"image": "/img/project_images/ola/ola_tile.jpg"},
-		"main":
-			{"hero":
-				{"image":"/img/project_images/ola/ola_hero.jpg",
+		"head": "online advertising",
+		"thumb": "/img/project_images/ola/ola_tile.jpg",
+		"main":{
+			"hero":{
 				"head":"Online Advertising",
-				"copy":"I have extensive experience story boarding and developing banner projects for advertising platforms; Google double click, media mind and flash talking. My work takes a code heavy approach and I have developed a platform for rapid creation of standard banners in any number of sizes. I have worked for a number of national and International brands including; Cadbury, lloyds, Danone and Sony."},
-			"masonry-images":
-				{"head":"sect 1",
-				"work":{
-					"Actimel": {"/img/project_images/ola/actimel_hero.jpg":[] },
-					"Danio": {"/img/project_images/ola/danio_hero.jpg":[] },
-					"Cadbury": {"/img/project_images/ola/cadbury_hero.jpg":[] },
-					"Sony": {"/img/project_images/ola/sony_hero.jpg":[] }
+				"copy":"I have extensive experience story boarding and developing banner projects for advertising platforms; Google double click, media mind and flash talking. My work takes a code heavy approach and I have developed a platform for rapid creation of standard banners in any number of sizes. I have worked for a number of national and International brands including; Cadbury, lloyds, Danone and Sony."
+			},
+			"thumbnailImages":{
+				"actimel":{
+					"head":"actimel",
+					"thumb":"/img/project_images/ola/actimel_hero.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
 				},
-				"images":["/img/project_images/ola/actimel_hero.jpg","/img/project_images/ola/danio_hero.jpg","/img/project_images/ola/cadbury_hero.jpg","/img/project_images/ola/sony_hero.jpg"],
-				"format":"XX"}
+				"Danio":{
+					"head":"Danio",
+					"thumb":"/img/project_images/ola/danio_hero.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"Cadbury":{
+					"head":"Cadbury",
+					"thumb":"/img/project_images/ola/cadbury_hero.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"Sony":{
+					"head":"Sony",
+					"thumb":"/img/project_images/ola/sony_hero.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"format":"thumbnail-images"
+			}
 		},
 		"format":"skill",
 		"href":"online-advertising"
 	},
 
 	"iconography":{
-		"tile":
-		{"head": "XXXX",
-			"image": "/img/project_images/iconography/iconography_tile.jpg"},
-		"main":
-			{"hero":
-				{"image":"/img/heroImage.png",
+		"head": "iconography",
+		"thumb": "/img/project_images/iconography/iconography_tile.jpg",
+		"main":{
+			"hero":{
 				"head":"Iconography",
-				"copy":"Experience illustrating has helped me gain a reputation for developing pixel perfect Iconography for many clients. This has often been to compliment a specific design approach and has meant close collaboration as part of a design team. I have also directed the creation of iconography as lead designer."},
-			"masonry-images":
-				{"head":"sect 1",
-				"images":["/img/project_images/iconography/robot_1.jpg","/img/project_images/iconography/robot_2.jpg","/img/project_images/iconography/robot_3.jpg","/img/project_images/iconography/shelter_1.jpg","/img/project_images/iconography/shelter_2.jpg","/img/project_images/iconography/shelter_3.jpg","/img/project_images/iconography/tempero_1.jpg","/img/project_images/iconography/tempero_2.jpg","/img/project_images/iconography/tempero_3.jpg","/img/project_images/iconography/sport_1.jpg","/img/project_images/iconography/sport_2.jpg","/img/project_images/iconography/sport_3.jpg","/img/project_images/iconography/hash_1.jpg","/img/project_images/iconography/hash_2.jpg","/img/project_images/iconography/hash_3.jpg"],
-				"format":"XX"}
+				"copy":"Experience illustrating has helped me gain a reputation for developing pixel perfect Iconography for many clients. This has often been to compliment a specific design approach and has meant close collaboration as part of a design team. I have also directed the creation of iconography as lead designer."
+			},
+			"thumbnailImages":{
+				"robotOrphan":{
+					"head":"robot orphan",
+					"thumb":"/img/project_images/iconography/robot_1.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"shelterGetInvolved":{
+					"head":"shelterGetInvolved",
+					"thumb":"/img/project_images/iconography/shelter_1.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"tempero":{
+					"head":"tempero",
+					"thumb":"/img/project_images/iconography/tempero_1.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"sportLobster":{
+					"head":"sport lobster",
+					"thumb":"/img/project_images/iconography/sport_1.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"hashLondon":{
+					"head":"hash london",
+					"thumb":"/img/project_images/iconography/hash_3.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"format":"thumbnail-images"
+			}
 		},
 		"format":"skill",
 		"href":"iconography"
-	},	
+	},
 
-"userExperience":{
-		"tile":
-		{"head": "XXXX",
-			"image": "/img/project_images/ux/ux_tile.jpg"},
-		"main":
-			{"hero":
-				{"image":"/img/heroImage.png",
-				"head":"User Experience",
-				"copy":"As part of a small user experience team at a boutique agency I have had the chance to get my hands dirty on both client and internal user experience projects. This has enabled me to get involved in the preliminary planning and strategy stages of projects, lead projects and also work as part of a group. Typical tasks have included stakeholder interviews, task analysis, userbility testing, personas, scenario planning, user journeys, wire framing and prototyping."},
-			"masonry-images":
-				{"head":"sect 1",
-				"images":["/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg"],
-				"format":"XX"}
+	"userExperience":{
+		"head": "user experience",
+		"thumb": "/img/project_images/ux/ux_tile.jpg",
+		"main":{
+			"hero":{
+				"head":"user experience",
+				"copy":"As part of a small user experience team at a boutique agency I have had the chance to get my hands dirty on both client and internal user experience projects. This has enabled me to get involved in the preliminary planning and strategy stages of projects, lead projects and also work as part of a group. Typical tasks have included stakeholder interviews, task analysis, userbility testing, personas, scenario planning, user journeys, wire framing and prototyping."
+			},
+			"thumbnailImages":{
+				"robotOrphan":{
+					"head":"robot orphan",
+					"thumb":"/img/project_images/robots/robots_tile.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"shelterGetInvolved":{
+					"head":"shelterGetInvolved",
+					"thumb":"/img/project_images/iconography/shelter_1.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"tempero":{
+					"head":"tempero",
+					"thumb":"/img/project_images/iconography/tempero_1.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"sportLobster":{
+					"head":"sport lobster",
+					"thumb":"/img/project_images/iconography/sport_1.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"hashLondon":{
+					"head":"hash london",
+					"thumb":"/img/project_images/iconography/hash_3.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"format":"thumbnail-images"
+			}
 		},
 		"format":"skill",
 		"href":"user-experience"
 	},
 
 	"2dIllustration":{
-		"tile":
-		{"head": "XXXX",
-			"image": "/img/project_images/2d_illustration/2d_tile.jpg"},
-		"main":
-			{"hero":
-				{"image":"/img/heroImage.png",
+		"head": "2d illustration",
+		"thumb": "/img/project_images/2d_illustration/2d_tile.jpg",
+		"main":{
+			"hero":{
 				"head":"2d illustration",
-				"copy":"Illustration has always been a passion. I am inspired by graphic novels and animation from my childhood.  I am looking to expand experience in this area over the coming months so expect this section to grow significantly."},
-			"masonry-images":
-				{"head":"sect 1",
-				"images":["/img/project_images/2d_illustration/colourWheel.jpg","/img/project_images/2d_illustration/suburb.jpg","/img/project_images/2d_illustration/robotOrphan.jpg","/img/project_images/2d_illustration/robot.jpg","/img/project_images/2d_illustration/iLoveNewYork.jpg","/img/project_images/2d_illustration/octopus.jpg","/img/project_images/2d_illustration/metTv.jpg"],
-				"format":"XX"}
+				"copy":"Illustration has always been a passion. I am inspired by graphic novels and animation from my childhood.  I am looking to expand experience in this area over the coming months so expect this section to grow significantly."
+			},
+			"thumbnailImages":{
+				"colourWheel":{
+					"head":"Colour Wheels",
+					"thumb":"/img/project_images/2d_illustration/colourWheel.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"suburbTeam":{
+					"head":"Suburb team illustration",
+					"thumb":"/img/project_images/2d_illustration/suburb.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"robotOrphan":{
+					"head":"Robot Orphan",
+					"thumb":"/img/project_images/2d_illustration/robotOrphan.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"iLoveNewYork":{
+					"head":"I Love New York",
+					"thumb":"/img/project_images/2d_illustration/iLoveNewYork.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"partypus":{
+					"head":"partypus",
+					"thumb":"/img/project_images/2d_illustration/octopus.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"metTv":{
+					"head":"Catch the met tv",
+					"thumb":"/img/project_images/2d_illustration/metTv.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				
+				"format":"thumbnail-images"
+			}
 		},
 		"format":"skill",
 		"href":"2d-illustration"
 	},
 
 	"3dIllustration":{
-		"tile":
-		{"head": "XXXX",
-			"image": "/img/project_images/3d_illustration/3d_tile.jpg"},
-		"main":
-			{"hero":
-				{"image":"/img/heroImage.png",
+		"head": "3d illustration",
+		"thumb": "/img/project_images/3d_illustration/3d_tile.jpg",
+		"main":{
+			"hero":{
 				"head":"3d illustration",
-				"copy":"In my final year of university I made the bold move to change my specialism to 3D animation, fortunately that decision has been paying off recently. I have Art directed and created projects for international brands on a number of web based games and flat graphics."},
-			"masonry-images":
-				{"head":"sect 1",
-				"images":["/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg","/img/project_images/robots/robots_tile.jpg"],
-				"format":"XX"}
+				"copy":"In my final year of university I made the bold move to change my specialism to 3D animation, fortunately that decision has been paying off recently. I have Art directed and created projects for international brands on a number of web based games and flat graphics."
+			},
+			"thumbnailImages":{
+				"londonUnderground":{
+					"head":"london underground",
+					"thumb":"/img/project_images/2d_illustration/colourWheel.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				"availableOnRequest":{
+					"head":"available on request",
+					"thumb":"/img/project_images/2d_illustration/suburb.jpg",
+					"copy":"",
+					"images":[],
+					"links":[]
+				},
+				
+				"format":"thumbnail-images"
+			}
 		},
 		"format":"skill",
 		"href":"3d-illustration"
 	}
+	
 }
 
 

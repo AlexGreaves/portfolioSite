@@ -1,56 +1,65 @@
 var fn = {
 
 	content:null,
-	myUrl:"localhost/",
+	myUrl: window.location.host,
+	currentUrl:'',
 	main: $('#main'),
 	
 
 	init: function(data) {
 		fn.content = data;
 		fn.linking();
-		// fn.checkURL();
 	},
 
 	checkURL:function(){
-		var currentURL = window.location.href;
-		var avoid = ['http://', 'https://', 'www.', '.com'];
-		var regexp = new RegExp( avoid.join( '|' ), 'g' );
-		var miniURL = currentURL.toString().replace(regexp, '');
-
+		var currentUrl = cleanURL();
+		trace(currentUrl);
 		var pageToLoad;
-		if (miniURL == fn.myUrl){
-			trace(miniURL);
-			pageToLoad = fn.content.homePage;
-		} else {
 
-			$.each(fn.content, function (index, section){
-				var str = section.href.toString();
 
-				if (miniURL.search(str) != -1){
-					trace('yipee you found me!');
-					pageToLoad = section;
-					return false;
-				};
-			});
-		};
-		if (pageToLoad != null){
-			return pageToLoad;	
-		} else {
-			trace("404 page");
-			return fn.content.homePage;
-		}
+		// old code
+		// if (currentUrl == fn.myUrl){
+		// 	pageToLoad = fn.content.homePage;
+		// }
+
+		// else {
+		// 	$.each(fn.content, function (index, section){
+		// 		var str = section.href.toString();
+		// 		if (currentUrl.search(str) != -1){
+		// 			trace('yipee you found me!');
+		// 			pageToLoad = section;
+		// 			return false;
+		// 		};
+		// 	});
+		// };
+		// if (pageToLoad != null){
+		// 	return pageToLoad;	
+		// } else {
+		// 	trace("404 page");
+		// 	return fn.content.homePage;
+		// }
+
 	},
 
 	updateContent:function(a){
 		var $main = $("#main");
 		var $a = a;
+		fn.currentUrl = cleanURL();
+		trace('current url is ' + cleanURL());
+
 		if ($a.href){
 			$main.fadeOut(500, function(){
 				$('body').ScrollTo();
 				$main.empty().append(fn.displayPage($a)).fadeIn(500);
+				// old code
 				if ($a.href == "home-page"){
 					fn.loadWork(fn.content);
+				} else {
+					fn.loadWork($a.main.thumbnailImages);
 				}
+				// old code
+
+				//modal-images
 			});	
 
 
@@ -80,6 +89,7 @@ var fn = {
 	    $(document).on("click", ".tile", function(e) {
 	    	var State = History.getState();
 	    	var $a = $(this).data('content');
+	    	trace($a);
 
 	    	e.preventDefault();
 	    	History.pushState($a, '', $a.href);
@@ -89,29 +99,20 @@ var fn = {
 	// <--?end-->
 	loadWork:function(data) {
 		var toLoad;
+
 			for(var i in data) {
 				// trace(i);
 				toLoad = data[i];
-				// if (i == projectToLoad) {
-				switch (toLoad.format){
-					case 'caseStudy':
-						if(data[i].tile) {
-							addTile(i,data[i], 'project');
-						}
-						break;
-					case 'skill':
-						if(data[i].tile) {
-							addTile(i,data[i], 'skill');
-						}
-						break;
-					case 'thumb':
-						// trace('no script yet');
-						break;
+				
+				if (toLoad.thumb){
+					trace(toLoad);
+					addTile(toLoad.head, toLoad, toLoad.format);
 				}
 			}
 
+	//NEWNEWNEWNEWNEW
 		function addTile(name, content, addTo) {
-			$image = $('<img>').addClass('img').attr('src', content.tile.image);
+			$thumb = $('<img>').addClass('img').attr('src', content.thumb);
 			
 			$figCaption = $('<figcaption>').addClass(name);
 
@@ -119,19 +120,20 @@ var fn = {
 
 			$figCaption.append($span);
 
-			$figure = $('<figure>').append($image,$figCaption);;
+			$figure = $('<figure>').append($thumb,$figCaption);;
 
 			$tile = $('<div>').addClass('tile').data('content',content).append($figure);
 					
 			if(addTo == 'project'){
 				$tile.addClass('three-col');
-				// trace($('#projectTiles'));
 				$('#projectTiles').append($tile);	
 			} else if(addTo == 'skill'){
 				$tile.addClass('two-col');
 				$('#skillTiles').append($tile);
+			} else if(addTo = 'thumbnailImages'){
+				$tile.addClass('three-col');
+				$('#section-tiles').append($tile);
 			}
-			// trace($tile);
 		}
 	},
 
@@ -139,84 +141,68 @@ var fn = {
 // >>>>>>>>>>>>> formatting for pages <<<<<<<<<<<<<<<<
 
 	displayPage: function(item) {
-		// trace(item);
-		// var item = $(this).data('project');
-		// trace("attemping to load page");
 		var markup ='';
-			switch (item.format){
-				case ('homePage'):
-					$.each(item.main, function (index, section){
-						switch (index){
-							case 'hero':
-								// $image = $('<div>').addClass('hero-image').css('background-image', 'url("' + section.image + '")');
-								//for now this will do need to add hero image in to markup
-								markup += '<div class="hero-image"></div>';
-								break;
-							case 'section 1':
-								markup += '<div id="projectSection" class="tileSection">'
-								markup += '<div class="case-studies"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div>';
-								markup += '<div id="projectTiles" class="tiles three-col"></div></div>';
-								break;
-							case 'section 2':
-								markup += '<div class="sectionHolder"><div id="skillSection" class="tileSection"><div class="singleCol"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div>'
-								markup += '<div id="skillTiles" class="tiles two-col"></div></div></div>'
-								break;
-							case 'section 3':
-								markup += '<div id="aboutMe" class="tileSection"><div class=floatHolder clearfix><div class="doubleCol doubleImage"><img src=' + section.images + '></img></div><div class="singleCol about-me"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div></div></div>'
-								break;
-						}
-					});
-					break;
-				case ('caseStudy'):
-					$.each(item.main, function (index, section){
-						switch (index){
-							case 'hero':
-								$image = $('<div>').addClass('hero-image').css('background-image', 'url("' + section.image + '")').css('background-repeat', 'no-repeat');
-								markup += '<div class="tileSection"><div class="doubleCol"><h1>' + section.head + '</h1>' + '<p>' + section.copy + '</p></div></div>'
-								break;
-								
-							case 'section 1':
-								// append copy to markup
-								markup += '<div class="sectionHolder"><div class="tileSection"><div class="singleCol"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div>';
-								// append images to markup
-								if (section.images != '') {
-									markup += '<div class="tile-holder"><div class="tiles">';
-									$.each (section.images, function(index, image){
-										markup += '<div class="tile two-col"><img class="img" src=' + image + '></img></div>';
-									})
-								}
-								markup += '</div></div>';
-								break;
-							// case "section 2":
-							// 	break;
-						}
-					});
-					break;
-				case ('skill'):
-					$.each(item.main, function (index, section){
-						switch (index){
-							case 'hero':
-								// $image = $('<div>').addClass('hero-image').css('background-image', 'url("' + section.image + '")').css('background-repeat', 'no-repeat');
-								markup += '<div class="tileSection skill-copy"><div class="doubleCol"><h1>' + section.head + '</h1>' + '<p>' + section.copy + '</p></div></div>'
-								break;
-								
-							case 'masonry-images':
-								// markup += '<div class="sectionHolder"><div class="tileSection">';
-								// append images to markup
-								if (section.images != '') {
-									markup += '<div class="tileSection"><div class="tiles three-col">';
-									$.each (section.images, function(index, image){
-										markup += '<div class="tile three-col"><img class="img" src=' + image + '></img></div>';
-									})
-								}
-								markup += '</div></div>';
-								break;
-							// case "section 2":
-							// 	break;
-						}
-					});
-					break;
-			}
+		switch (item.format){
+			case ('homePage'):
+				$.each(item.main, function (index, section){
+					switch (index){
+						case 'hero':
+							// $image = $('<div>').addClass('hero-image').css('background-image', 'url("' + section.image + '")');
+							//for now this will do need to add hero image in to markup
+							markup += '<div class="hero-image"></div>';
+							break;
+						case 'section 1':
+							markup += '<div id="projectSection" class="tileSection clearfix">'
+							markup += '<div class="case-studies"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div>';
+							markup += '<div id="projectTiles" class="tiles three-col"></div></div>';
+							break;
+						case 'section 2':
+							markup += '<div class="sectionHolder"><div id="skillSection" class="tileSection clearfix"><div class="singleCol"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div>'
+							markup += '<div id="skillTiles" class="tiles two-col"></div></div></div>'
+							break;
+						case 'section 3':
+							markup += '<div id="aboutMe" class="tileSection clearfix"><div class=floatHolder><div class="doubleCol doubleImage"><img src=' + section.images + '></img></div><div class="singleCol about-me"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div></div></div>'
+							break;
+					}
+				});
+				break;
+			case ('caseStudy'):
+				$.each(item.main, function (index, section){
+					switch (index){
+						case 'hero':
+							markup += '<div class="tileSection"><div class="doubleCol"><h1>' + section.head + '</h1>' + '<p>' + section.copy + '</p></div></div>'
+							break;
+						case 'section 1':
+							// append copy to markup
+							markup += '<div class="sectionHolder"><div class="tileSection"><div class="singleCol"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div>';
+							// append images to markup
+							if (section.images != '') {
+								markup += '<div class="tile-holder"><div class="tiles">';
+								$.each (section.images, function(index, image){
+									markup += '<div class="tile two-col"><img class="img" src=' + image + '></img></div>';
+								})
+							}
+							markup += '</div></div>';
+							break;
+						// case "section 2":
+						// 	break;
+					}
+				});
+				break;
+			case ('skill'):
+				$.each(item.main, function (index, section){
+					switch (index){
+						case 'hero':
+							markup += '<div class="tileSection skill-copy clearfix"><div class="doubleCol"><h1>' + section.head + '</h1>' + '<p>' + section.copy + '</p></div></div>'
+							break;
+							
+						case 'thumbnailImages':
+							markup += '<div class="tileSection clearfix"><div id="section-tiles" class="tiles three-col"></div></div>';
+							break;
+					}
+				});
+				break;
+		}
 		return markup;
 	}
 }
@@ -230,6 +216,13 @@ function validateText(text) {
 	return re.test(text);
 }
 
+function cleanURL(url) {
+	var exp = window.location.href.split(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/);
+	var url = exp[4] + exp[5];
+	var splitUrl = url.split('/');
+	trace (splitUrl);
+	return splitUrl;
+}
 /* = = =  Prevent console.log in IE8  = = = */
 function trace(s) {
 if ('console' in self && 'log' in console) console.log(s); 
