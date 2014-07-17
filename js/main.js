@@ -1,142 +1,167 @@
-var totalProjects;
-var projectsLoaded = 0;
-var projectsRemaining;
-var noProjectsToLoad = 9;
-var projectToLoad;
-
-
 var fn = {
 
 	content:null,
-	myUrl:"localhost",
+	myUrl:"localhost/",
 	main: $('#main'),
 	
 
 	init: function(data) {
 		fn.content = data;
-		trace(fn.content.homePage);
-		testing = fn.content.homePage;
-		// displayPage(checkURL());
-		
-		$('#main').append(fn.checkURL);
-		fn.loadWork();
-		// fn.setup();
+		fn.linking();
+		// fn.checkURL();
 	},
 
 	checkURL:function(){
-		var a = fn.displayPage(testing);
+		var currentURL = window.location.href;
+		var avoid = ['http://', 'https://', 'www.', '.com'];
+		var regexp = new RegExp( avoid.join( '|' ), 'g' );
+		var miniURL = currentURL.toString().replace(regexp, '');
 
-		return a;
-	},
-	// <--history.js-->
-	setup:function(){
-		var $main = $('#main');
+		var pageToLoad;
+		if (miniURL == fn.myUrl){
+			trace(miniURL);
+			pageToLoad = fn.content.homePage;
+		} else {
 
-		String.prototype.decodeHTML = function() {
-			return $("<div>", {html: "" + this}).html();
+			$.each(fn.content, function (index, section){
+				var str = section.href.toString();
+
+				if (miniURL.search(str) != -1){
+					trace('yipee you found me!');
+					pageToLoad = section;
+					return false;
+				};
+			});
 		};
-
-		$(document).on("click", ".tile, .thumb", function() {
-			var $a = $(this).data('content');
-		  	history.pushState({}, '', $a.href);
-		  	loadPage($a)
-		  	return false;
-		});
-		$(window).on("popstate", function(e) {
-			if (e.originalEvent.state !== null) {
-				trace(location.href)
-				loadPage(location.href);
-			} else {
-				trace(e.originalEvent.state);
-			}
-		});
-		//neaten up some animation
-		loadPage = function (content) {
-			$main.fadeOut(500, function(){
-				$main.empty().append(fn.displayPage(content)).fadeIn(500);
-			});	
-		};
-	},
-	// <--?end-->
-	loadWork:function() {
-		var totalProjects;
-		var projectsLoaded = 0;
-		var projectsRemaining;
-		var projectToLoad;
-
-		totalProjects = fn.content.length;
-		projectsRemaining = totalProjects - projectsLoaded;
-
-			for(var i in fn.content) {
-				projectToLoad = fn.content[i];
-				// if (i == projectToLoad) {
-				if(fn.content[i].format == 'caseStudy') {
-					if(fn.content[i].tile) {
-						trace("case study found i at " + i)
-						projectsLoaded++;
-						projectsRemaining = totalProjects - projectsLoaded;
-						fn.addTile(i,fn.content[i], 'project');
-					}
-				} else if(fn.content[i].format == 'skill') {
-					if(fn.content[i].tile) {
-						trace("skill found i at " + i)
-						projectsLoaded++;
-						projectsRemaining = totalProjects - projectsLoaded;
-						fn.addTile(i,fn.content[i], 'skill');
-					}
-				}
-			}
-	},
-
-	addTile: function(name, content, addTo) {
-		$image = $('<img>').addClass('img').attr('src', content.tile.image);
-		
-		$figCaption = $('<figcaption>').addClass(name);
-
-		$span = $('<span>').html(name);
-
-		$figCaption.append($span);
-
-		$figure = $('<figure>').append($image,$figCaption);;
-
-		$tile = $('<div>').addClass('tile').data('content',content).append($figure);
-				
-		if(addTo == 'project'){
-			$tile.addClass('three-col');
-			$('#projectTiles').append($tile);	
-		} else if(addTo == 'skill'){
-			$tile.addClass('two-col');
-			$('#skillTiles').append($tile);
+		if (pageToLoad != null){
+			return pageToLoad;	
+		} else {
+			trace("404 page");
+			return fn.content.homePage;
 		}
 	},
+
+	updateContent:function(a){
+		var $main = $("#main");
+		var $a = a;
+		if ($a.href){
+			$main.fadeOut(500, function(){
+				$('body').ScrollTo();
+				$main.empty().append(fn.displayPage($a)).fadeIn(500);
+				if ($a.href == "home-page"){
+					fn.loadWork(fn.content);
+				}
+			});	
+
+
+		} else {
+			trace("no href data! Now Rerouting");
+			fn.updateContent(fn.checkURL());
+		}
+	},
+
+	// <--history.js-->
+	linking:function(){
+		var History = window.History;
+
+		if (History.enabled){
+			var State = History.getState(); // Note: We are using History.getState() instead of event.state 
+			History.pushState(State, '', State.urlPath);
+
+			fn.updateContent(fn.checkURL());
+		} else {
+			return false;
+		}
+
+		History.Adapter.bind(window, 'statechange', function(){
+			fn.updateContent(History.getState().data);
+		});
+
+	    $(document).on("click", ".tile", function(e) {
+	    	var State = History.getState();
+	    	var $a = $(this).data('content');
+
+	    	e.preventDefault();
+	    	History.pushState($a, '', $a.href);
+	    });
+	},
+
+	// <--?end-->
+	loadWork:function(data) {
+		var toLoad;
+			for(var i in data) {
+				// trace(i);
+				toLoad = data[i];
+				// if (i == projectToLoad) {
+				switch (toLoad.format){
+					case 'caseStudy':
+						if(data[i].tile) {
+							addTile(i,data[i], 'project');
+						}
+						break;
+					case 'skill':
+						if(data[i].tile) {
+							addTile(i,data[i], 'skill');
+						}
+						break;
+					case 'thumb':
+						// trace('no script yet');
+						break;
+				}
+			}
+
+		function addTile(name, content, addTo) {
+			$image = $('<img>').addClass('img').attr('src', content.tile.image);
+			
+			$figCaption = $('<figcaption>').addClass(name);
+
+			$span = $('<span>').html(name);
+
+			$figCaption.append($span);
+
+			$figure = $('<figure>').append($image,$figCaption);;
+
+			$tile = $('<div>').addClass('tile').data('content',content).append($figure);
+					
+			if(addTo == 'project'){
+				$tile.addClass('three-col');
+				// trace($('#projectTiles'));
+				$('#projectTiles').append($tile);	
+			} else if(addTo == 'skill'){
+				$tile.addClass('two-col');
+				$('#skillTiles').append($tile);
+			}
+			// trace($tile);
+		}
+	},
+
+	
 // >>>>>>>>>>>>> formatting for pages <<<<<<<<<<<<<<<<
 
 	displayPage: function(item) {
+		// trace(item);
 		// var item = $(this).data('project');
+		// trace("attemping to load page");
 		var markup ='';
 			switch (item.format){
 				case ('homePage'):
 					$.each(item.main, function (index, section){
 						switch (index){
 							case 'hero':
-								trace('hero');
 								// $image = $('<div>').addClass('hero-image').css('background-image', 'url("' + section.image + '")');
 								//for now this will do need to add hero image in to markup
 								markup += '<div class="hero-image"></div>';
 								break;
 							case 'section 1':
-								trace('section 1');
 								markup += '<div id="projectSection" class="tileSection">'
 								markup += '<div class="case-studies"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div>';
 								markup += '<div id="projectTiles" class="tiles three-col"></div></div>';
 								break;
 							case 'section 2':
-								trace('section 2');
 								markup += '<div class="sectionHolder"><div id="skillSection" class="tileSection"><div class="singleCol"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div>'
 								markup += '<div id="skillTiles" class="tiles two-col"></div></div></div>'
 								break;
 							case 'section 3':
-								trace('section 3');
 								markup += '<div id="aboutMe" class="tileSection"><div class=floatHolder clearfix><div class="doubleCol doubleImage"><img src=' + section.images + '></img></div><div class="singleCol about-me"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div></div></div>'
 								break;
 						}
@@ -196,54 +221,6 @@ var fn = {
 	}
 }
 
-// function animatedScroll() {
-// 	var docElem = document.documentElement,
-// 	header = document.querySelector('.header'),
-// 	socialList = document.querySelector('.socialList'),
-// 	logo = document.querySelector('.logo'),
-// 	workSection = document.querySelector('.workSection'),
-// 	didScroll = false,
-// 	showWorkTitle = 1;
-// 	changeHeaderOn = 80;
-
-// 	function headerInit() {
-// 		window.addEventListener( 'scroll', function( event ) {
-// 			if(!didScroll){
-// 				didScroll = true;
-// 				setTimeout(scrollPage,250);
-// 			}
-// 		}, false);
-// 	}
-
-// 	function scrollPage() {
-// 		trace('scroll page ran, didScroll = '+ didScroll);
-// 		var sy = scrollY();
-// 		if ( sy >= showWorkTitle ) {
-// 	        classie.add( projectSection, 'sectionDrop' );
-// 	    }
-// 	    else {
-// 	    	classie.remove( projectSection, 'workSectionDrop' );  
-// 	    }
-// 	    if ( sy >= changeHeaderOn ) {
-// 	        classie.add( header, 'headerShrink' );
-// 	        classie.add( socialList, 'socialListShrink' );
-// 	        classie.add( logo, 'logoShrink' );
-// 	    }
-// 	    else {
-// 	        classie.remove( header, 'headerShrink' );
-// 	        classie.remove( socialList, 'socialListShrink' );
-// 	        classie.remove( logo, 'logoShrink' );
-// 	    }
-// 	    didScroll = false;
-// 	}
-
-// 	function scrollY() {
-// 		return window.pageYOffset || docElem.scrollTop;
-// 	}
-// 	headerInit();
-// };
-
-
 function validateEmail(email) {
 	var re = /^(([^<>()[\]\\.,;:\s@\']+(\.[^<>()[\]\\.,;:\s@\']+)*)|(\'.+\'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	return re.test(email);
@@ -264,6 +241,8 @@ $(document).ready(function () {
 
 		//needs a timer
 		$.getJSON('content.json', fn.init);
+
+
 		// $('.tile').hide();
 		
 

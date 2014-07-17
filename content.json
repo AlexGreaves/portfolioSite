@@ -1,7 +1,7 @@
 {	
 	"homePage":{
 		"main":{
-			"hero":"url('../img/heroImage.png')",
+			"hero":"../img/heroImage.png",
 			"section 1":
 				{"head":"My recent projects",
 				"copy":"Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit.",
@@ -19,7 +19,7 @@
 		"href":"home-page"
 	},
 
-	"Robot Orphan":{
+	"robotOrphan":{
 		"tile":
 		{"head": "XXXX",
 			"image": "/img/project_images/robots/robots_tile.jpg"},
@@ -43,7 +43,7 @@
 		"href":"robot-orphan"
 	},
 
-	"London Underground":{
+	"londonUnderground":{
 		"tile":
 		{"head": "XXXX",
 			"image": "/img/project_images/londonUnderground/londonUnderground_tile.jpg"},
@@ -63,7 +63,7 @@
 		"href":"london-underground"
 	},
 
-	"Shelter Get Involved":{
+	"shelterGetInvolved":{
 		"tile":
 		{"head": "XXXX",
 			"image": "/img/project_images/shelter/shelter_tile.jpg"},
@@ -87,9 +87,9 @@
 		"href":"shelter"
 	},
 
-	"Design & Branding":{
+	"designBranding":{
 		"tile":
-		{"head": "XXXX",
+		{"head": "design & branding",
 			"image": "/img/project_images/design/design_tile.jpg"},
 		"main":
 			{"hero":
@@ -105,9 +105,9 @@
 		"href":"design-branding"
 	},
 
-	"Online Advertising":{
+	"onlineAdvertising":{
 		"tile":
-		{"head": "XXXX",
+		{"head": "online advertising",
 			"image": "/img/project_images/ola/ola_tile.jpg"},
 		"main":
 			{"hero":
@@ -116,6 +116,12 @@
 				"copy":"I have extensive experience story boarding and developing banner projects for advertising platforms; Google double click, media mind and flash talking. My work takes a code heavy approach and I have developed a platform for rapid creation of standard banners in any number of sizes. I have worked for a number of national and International brands including; Cadbury, lloyds, Danone and Sony."},
 			"masonry-images":
 				{"head":"sect 1",
+				"work":{
+					"Actimel": {"/img/project_images/ola/actimel_hero.jpg":[] },
+					"Danio": {"/img/project_images/ola/danio_hero.jpg":[] },
+					"Cadbury": {"/img/project_images/ola/cadbury_hero.jpg":[] },
+					"Sony": {"/img/project_images/ola/sony_hero.jpg":[] }
+				},
 				"images":["/img/project_images/ola/actimel_hero.jpg","/img/project_images/ola/danio_hero.jpg","/img/project_images/ola/cadbury_hero.jpg","/img/project_images/ola/sony_hero.jpg"],
 				"format":"XX"}
 		},
@@ -123,7 +129,7 @@
 		"href":"online-advertising"
 	},
 
-	"Iconography":{
+	"iconography":{
 		"tile":
 		{"head": "XXXX",
 			"image": "/img/project_images/iconography/iconography_tile.jpg"},
@@ -141,7 +147,7 @@
 		"href":"iconography"
 	},	
 
-"User Experience":{
+"userExperience":{
 		"tile":
 		{"head": "XXXX",
 			"image": "/img/project_images/ux/ux_tile.jpg"},
@@ -159,7 +165,7 @@
 		"href":"user-experience"
 	},
 
-	"2d illustration":{
+	"2dIllustration":{
 		"tile":
 		{"head": "XXXX",
 			"image": "/img/project_images/2d_illustration/2d_tile.jpg"},
@@ -177,7 +183,7 @@
 		"href":"2d-illustration"
 	},
 
-	"3d illustration":{
+	"3dIllustration":{
 		"tile":
 		{"head": "XXXX",
 			"image": "/img/project_images/3d_illustration/3d_tile.jpg"},
