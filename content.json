@@ -97,41 +97,60 @@
 			},
 			"thumbnailImages":{
 				"robotOrphan":{
-					"head":"robot orphan",
+					"head":"Robot Orphan",
+					"subHead":"suburb",
+					"subHeadLink":"http://www.wearesuburb.com",
 					"thumb":"/img/project_images/design/robotOrphan.jpg",
-					"copy":"",
-					"images":[],
-					"links":[]
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["/img/project_images/design/robotOrphan/5.jpg","/img/project_images/design/robotOrphan/3.jpg","/img/project_images/design/robotOrphan/7.jpg","/img/project_images/design/robotOrphan/1.jpg","/img/project_images/design/robotOrphan/8.jpg","/img/project_images/design/robotOrphan/10.png","/img/project_images/design/robotOrphan/4.jpg"],
+					"links":[],
+					"href":"design-branding/robot-orphan",
+					"format":"modal"
 				},
 				"tweetYourTeam":{
-					"head":"tweet your team",
+					"head":"Tweet Your Team",
+					"subHead":"Suburb",
+					"subHeadLink":"http://www.tweetyourteam2014.com",
 					"thumb":"/img/project_images/design/tweetYourTeam.jpg",
 					"copy":"",
 					"images":[],
-					"links":[]
+					"links":[],
+					"href":"design-branding/tweet-your-team",
+					"format":"modal"
 				},
 				"synergyRail":{
-					"head":"synergy rail",
+					"head":"Synergy Rail Branding",
+					"subHead":"Synergy Rail",
+					"subHeadLink":"http://www.synergyrail.co.uk",
 					"thumb":"/img/project_images/design/synergyRail.jpg",
 					"copy":"",
 					"images":[],
-					"links":[]
+					"links":[],
+					"href":"design-branding/synergy-rail",
+					"format":"modal"
 				},
 				"shelterGetInvolved":{
-					"head":"shelter get involved",
+					"head":"Shelter Get Involved",
+					"subHead":"Shelter",
+					"subHeadLink":"http://england.shelter.org.uk/get_involved",
 					"thumb":"/img/project_images/design/shelter.jpg",
 					"copy":"",
 					"images":[],
-					"links":[]
+					"links":[],
+					"href":"design-branding/shelter-get-involved",
+					"format":"modal"
 				},
 				"sportLobster":{
-					"head":"sport lobster",
+					"head":"Sport Lobster",
+					"subHead":"Sport Lobster",
+					"subHeadLink":"http://www.sportlobster.com",
 					"thumb":"/img/project_images/design/sportLobster.jpg",
 					"copy":"",
 					"images":[],
-					"links":[]
-				},
-				"format":"thumbnail-images"
+					"links":[],
+					"href":"design-branding/sport-lobster",
+					"format":"modal"
+				}
 			}
 		},
 		"format":"skill",

@@ -1,10 +1,14 @@
 /* Colours */
 @white: #FAFAFA;
 @black:#333;
+@grey: lighten(@black, 45%);
 @pink:#e55c95;
+@blue:#58c8f3;
 
-@transparentWhite:rgba(255,255,255,0.85);
-@transparentPink:rgba(229,92,149,0.8);
+@transparentWhite:rgba(255,255,255,0.9);
+@transparentPink:fade(@pink, 85%);
+
+@transparentBlack:fade(@black, 95%);
 @backgroundColor:rgba(0,0,0,0.07);
 
 @btnColour: @pink;

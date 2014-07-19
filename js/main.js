@@ -3,7 +3,9 @@ var fn = {
 	content:null,
 	myUrl: window.location.host,
 	currentUrl:'',
+	previousUrl:'',
 	main: $('#main'),
+
 	
 
 	init: function(data) {
@@ -12,61 +14,104 @@ var fn = {
 	},
 
 	checkURL:function(){
-		var currentUrl = cleanURL();
-		trace(currentUrl);
+		fn.currentUrl = cleanURL();
 		var pageToLoad;
-
-
-		// old code
-		// if (currentUrl == fn.myUrl){
-		// 	pageToLoad = fn.content.homePage;
-		// }
-
-		// else {
-		// 	$.each(fn.content, function (index, section){
-		// 		var str = section.href.toString();
-		// 		if (currentUrl.search(str) != -1){
-		// 			trace('yipee you found me!');
-		// 			pageToLoad = section;
-		// 			return false;
-		// 		};
-		// 	});
-		// };
-		// if (pageToLoad != null){
-		// 	return pageToLoad;	
-		// } else {
-		// 	trace("404 page");
-		// 	return fn.content.homePage;
-		// }
-
+		var modal = '';
+		// trace('current url length is '+currentUrl.length);
+		// trace(currentUrl);
+		
+		if (fn.currentUrl[1]){
+			$.each(fn.content, function (index, section){
+				var str = section.href.toString();
+				if (fn.currentUrl[1] == (str) && str != 'home-page'){
+					// trace(pageToLoad);
+					if (fn.currentUrl[2]){
+						// trace(fn.currentUrl[2]);
+						$.each(section.main.thumbnailImages, function (index, section){
+							str = section.href.toString().split('/');
+							var subStr = str[1];
+							if (fn.currentUrl[2] == subStr){
+								modal = section;
+								trace ('theres a winning modal, display it');
+								// pageToLoad = [section, section, section.format];
+								// $('.modal').removeClass('hide');
+								return false;
+							}
+						});
+						// check through section thumbnails and return modal yes
+					}
+					pageToLoad = [section, section.main.thumbnailImages,modal];
+					return false;
+				} else {
+					pageToLoad = [fn.content.homePage, fn.content,''];		
+				}
+			});
+		} else {
+			pageToLoad = [fn.content.homePage, fn.content,''];
+		}
+		return pageToLoad;
 	},
 
-	updateContent:function(a){
+	updateContent:function(a,initialState){
 		var $main = $("#main");
-		var $a = a;
-		fn.currentUrl = cleanURL();
-		trace('current url is ' + cleanURL());
+		var $a = a[0];
+		var $b = a[1];
+		var $modal = a[2];
 
-		if ($a.href){
-			$main.fadeOut(500, function(){
+		if(fn.currentUrl.length < 3 && initialState == 'initial'){
+			$('body').fadeOut(0, function(){
+				$main.empty().append(fn.loadMarkup($a));
+				// $('body').removeClass('hide');
+				$('body').fadeIn(250)
 				$('body').ScrollTo();
-				$main.empty().append(fn.displayPage($a)).fadeIn(500);
-				// old code
-				if ($a.href == "home-page"){
-					fn.loadWork(fn.content);
-				} else {
-					fn.loadWork($a.main.thumbnailImages);
-				}
-				// old code
+				fn.loadWork($b);
+			});
+		} else if (fn.currentUrl.length == 3 && initialState == 'initial'){
+			$('body').fadeOut(0, function(){
+				$main.empty().append(fn.loadMarkup($a));
+				// $('body').removeClass('hide');
+				$('body').fadeIn(250);
+				$('body').ScrollTo();
+				fn.loadWork($b);
+				trace($modal);
+				//load the required modal
+				showModal($modal);
+				// $('.modal').removeClass('hide');
+			});
+		};
 
-				//modal-images
-			});	
-
-
-		} else {
-			trace("no href data! Now Rerouting");
-			fn.updateContent(fn.checkURL());
+		if (initialState != 'initial' && fn.previousUrl.length < 3 && fn.currentUrl.length < 3){
+			$main.fadeOut(250, function(){
+				$main.empty().append(fn.loadMarkup($a)).fadeIn(250);
+				$('body').ScrollTo();
+				fn.loadWork($b);
+			});
+		} else if (initialState != 'initial' && fn.currentUrl.length == 3){
+			trace('modal to fade in');
+			showModal();
 		}
+
+		if (fn.previousUrl.length == 3) {
+			$('.modal').removeClass('show');
+			$('.modal').empty()
+		}
+
+		function showModal(){
+			
+			$('.modal').append(fn.loadMarkup($modal));
+			
+			$('.modal').addClass('show');
+			fn.addThis($modal);
+			
+			// $('body').addClass('open-modal');
+			
+		}
+		fn.previousUrl = cleanURL(window.location.href);
+	},
+
+	addThis:function(modal){
+		var addthis_share =	{'url':window.location.href,'title':modal.head + ' by Frankly Nonsense','description':modal.copy};
+		addthis.toolbox('.addthis_toolbox','',addthis_share);
 	},
 
 	// <--history.js-->
@@ -75,42 +120,50 @@ var fn = {
 
 		if (History.enabled){
 			var State = History.getState(); // Note: We are using History.getState() instead of event.state 
-			History.pushState(State, '', State.urlPath);
+			History.replaceState('', '', State.urlPath);
 
-			fn.updateContent(fn.checkURL());
+			fn.updateContent(fn.checkURL(),'initial');
 		} else {
 			return false;
 		}
 
 		History.Adapter.bind(window, 'statechange', function(){
-			fn.updateContent(History.getState().data);
+			fn.updateContent(fn.checkURL(),'');
 		});
 
 	    $(document).on("click", ".tile", function(e) {
-	    	var State = History.getState();
+	    	// this will have to be different for the type of tile
 	    	var $a = $(this).data('content');
-	    	trace($a);
-
 	    	e.preventDefault();
-	    	History.pushState($a, '', $a.href);
+	    	History.pushState('', '', $a.href);
+	    });
+	    $(document).on("click", ".modal", function(e){
+	    	trace('click');
+	    	e.preventDefault();
+	    	var closeLocation = (cleanURL(window.location.href));
+	    	var newUrl ='/'+closeLocation[1];
+	    	History.pushState('', '', newUrl);
+	    	// History.back();
+	    });
+	    $(document).on("click", ".modal-content", function(e){
+	    	e.stopPropagation();
 	    });
 	},
 
 	// <--?end-->
 	loadWork:function(data) {
 		var toLoad;
-
-			for(var i in data) {
-				// trace(i);
-				toLoad = data[i];
-				
-				if (toLoad.thumb){
-					trace(toLoad);
-					addTile(toLoad.head, toLoad, toLoad.format);
-				}
+		trace(data);
+		for(var i in data) {
+			// trace(i);
+			toLoad = data[i];
+			// trace(toLoad);
+			
+			if (toLoad.thumb){
+				addTile(toLoad.head, toLoad, toLoad.format);
 			}
+		}
 
-	//NEWNEWNEWNEWNEW
 		function addTile(name, content, addTo) {
 			$thumb = $('<img>').addClass('img').attr('src', content.thumb);
 			
@@ -123,16 +176,20 @@ var fn = {
 			$figure = $('<figure>').append($thumb,$figCaption);;
 
 			$tile = $('<div>').addClass('tile').data('content',content).append($figure);
-					
-			if(addTo == 'project'){
-				$tile.addClass('three-col');
-				$('#projectTiles').append($tile);	
-			} else if(addTo == 'skill'){
-				$tile.addClass('two-col');
-				$('#skillTiles').append($tile);
-			} else if(addTo = 'thumbnailImages'){
-				$tile.addClass('three-col');
-				$('#section-tiles').append($tile);
+			// trace(addTo);	
+			switch (addTo) {
+				case 'project':
+					$tile.addClass('three-col');
+					$('#projectTiles').append($tile);
+					break;
+				case 'skill':
+					$tile.addClass('two-col');
+					$('#skillTiles').append($tile);
+					break;
+				case 'modal':
+					$tile.addClass('three-col');
+					$('#section-tiles').append($tile);
+					break;
 			}
 		}
 	},
@@ -140,10 +197,10 @@ var fn = {
 	
 // >>>>>>>>>>>>> formatting for pages <<<<<<<<<<<<<<<<
 
-	displayPage: function(item) {
+	loadMarkup: function(item) {
 		var markup ='';
 		switch (item.format){
-			case ('homePage'):
+			case 'homePage':
 				$.each(item.main, function (index, section){
 					switch (index){
 						case 'hero':
@@ -166,7 +223,7 @@ var fn = {
 					}
 				});
 				break;
-			case ('caseStudy'):
+			case 'caseStudy':
 				$.each(item.main, function (index, section){
 					switch (index){
 						case 'hero':
@@ -174,22 +231,14 @@ var fn = {
 							break;
 						case 'section 1':
 							// append copy to markup
-							markup += '<div class="sectionHolder"><div class="tileSection"><div class="singleCol"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div>';
-							// append images to markup
-							if (section.images != '') {
-								markup += '<div class="tile-holder"><div class="tiles">';
-								$.each (section.images, function(index, image){
-									markup += '<div class="tile two-col"><img class="img" src=' + image + '></img></div>';
-								})
-							}
-							markup += '</div></div>';
+							markup += '<div class="sectionHolder"><div class="tileSection"><div class="singleCol"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div></div></div>';
 							break;
 						// case "section 2":
 						// 	break;
 					}
 				});
 				break;
-			case ('skill'):
+			case 'skill':
 				$.each(item.main, function (index, section){
 					switch (index){
 						case 'hero':
@@ -198,12 +247,33 @@ var fn = {
 							
 						case 'thumbnailImages':
 							markup += '<div class="tileSection clearfix"><div id="section-tiles" class="tiles three-col"></div></div>';
+							// markup += '<div class="modal hide"></div>';
 							break;
 					}
 				});
 				break;
+			case 'modal':
+				markup += '<div class="modal-content"><div class="tileSection clearfix"><div class="doubleCol"><h1>' + item.head + '</h1><h2>created for <a target="_blank" href='+item.subHeadLink+'>' + item.subHead + '</a></h2><p>' + item.copy + '</p></div>'
+				markup += '<div class="addthis_toolbox addthis_32x32_style"><a class="addthis_button_facebook social-btn" style="cursor:pointer"></a><a class="addthis_button_twitter social-btn" style="cursor:pointer"></a><a class="addthis_button_linkedin social-btn" style="cursor:pointer"></a><a class="addthis_button_pinterest_share social-btn" style="cursor:pointer"></a><a class="addthis_button_email social-btn" style="cursor:pointer"></a></div></div>';
+				// trace(item.images);
+				if (item.images.length > 0){
+					trace(item.images);
+					markup += '<div class="modal-images">'
+					$.each(item.images, function(index,image){
+						trace(image);
+						markup += '<img src=' + image + '></img>'
+					})
+					markup += '</div>'
+				}
+
+				markup += '</div>';
+				break;
 		}
 		return markup;
+	},
+
+	loadModalContent: function(item) {
+
 	}
 }
 
@@ -220,9 +290,11 @@ function cleanURL(url) {
 	var exp = window.location.href.split(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/);
 	var url = exp[4] + exp[5];
 	var splitUrl = url.split('/');
-	trace (splitUrl);
+	// trace (splitUrl);
 	return splitUrl;
 }
+
+
 /* = = =  Prevent console.log in IE8  = = = */
 function trace(s) {
 if ('console' in self && 'log' in console) console.log(s); 
@@ -233,6 +305,9 @@ if ('console' in self && 'log' in console) console.log(s);
 $(document).ready(function () {
 
 		//needs a timer
+
+
+	    addthis.init(); //callback function for script loading
 		$.getJSON('content.json', fn.init);
 
 
