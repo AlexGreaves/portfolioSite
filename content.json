@@ -4,11 +4,11 @@
 			"hero":"../img/heroImage.png",
 			"section 1":
 				{"head":"My recent projects",
-				"copy":"Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+				"copy":"Recently my work has involved; user experience, web design, app design and  illustration. My projects have spanned across small and large clients and budgets and have required diverse knowledge and skills to complete. You can view projects as a whole by clicking a tile below or alternatively you can view individual skills in the next section.",
 				"images":[""]},
 			"section 2":
 				{"head":"What do I do?",
-				"copy": "Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper.</br></br>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo.",
+				"copy": "I prefer to take a top down view when working on projects so I see nurturing a diverse skillset as paramount to my craft. Doing so enables me to work with a multitude of professionals, take multiple perspectives, form a more rounded understanding of problems and help to identify possible solutions.</br></br>One skill that I don't address in this section is my ability to write front end code. The reason for excluding this is because at present I use this to form better working relationships with developers when designing. A developers workload can be drastically reduced by tackling problems in design and by providing them with concrete files.</br></br>This site is designed and coded by myself.",
 				"images":[""]},
 			"section 3":
 				{"images":["../img/about-image.jpg"],
@@ -93,16 +93,16 @@
 		"main":{
 			"hero":{
 				"head":"Design & Branding",
-				"copy":"Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit."
+				"copy":"Digital Design and branding projects undertaken for a variety of brands, often in close collaboration with development teams. Knowledge of front end languages; HTML, CSS, LESS, JAVASCRIPT AND JQUERY has been the key to delivering high quality designs, files and finished products."
 			},
 			"thumbnailImages":{
 				"robotOrphan":{
 					"head":"Robot Orphan",
 					"subHead":"suburb",
 					"subHeadLink":"http://www.wearesuburb.com",
-					"thumb":"/img/project_images/design/robotOrphan.jpg",
+					"thumb":"/img/project_images/design/robot_orphan.jpg",
 					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-					"images":["/img/project_images/design/robotOrphan/5.jpg","/img/project_images/design/robotOrphan/3.jpg","/img/project_images/design/robotOrphan/7.jpg","/img/project_images/design/robotOrphan/1.jpg","/img/project_images/design/robotOrphan/8.jpg","/img/project_images/design/robotOrphan/10.png","/img/project_images/design/robotOrphan/4.jpg"],
+					"images":["/img/project_images/design/robot_orphan/robot_orphan_5.jpg","/img/project_images/design/robot_orphan/robot_orphan_3.jpg","/img/project_images/design/robot_orphan/robot_orphan_7.jpg","/img/project_images/design/robot_orphan/robot_orphan_1.jpg","/img/project_images/design/robot_orphan/robot_orphan_8.jpg","/img/project_images/design/robot_orphan/robot_orphan_10.png","/img/project_images/design/robot_orphan/robot_orphan_4.jpg"],
 					"links":[],
 					"href":"design-branding/robot-orphan",
 					"format":"modal"
@@ -111,9 +111,9 @@
 					"head":"Tweet Your Team",
 					"subHead":"Suburb",
 					"subHeadLink":"http://www.tweetyourteam2014.com",
-					"thumb":"/img/project_images/design/tweetYourTeam.jpg",
-					"copy":"",
-					"images":[],
+					"thumb":"/img/project_images/design/tweet_your_team.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["/img/project_images/design/tweet_your_team/tweet_your_team_5.jpg","/img/project_images/design/tweet_your_team/tweet_your_team_4.jpg","/img/project_images/design/tweet_your_team/tweet_your_team_1.jpg","/img/project_images/design/tweet_your_team/tweet_your_team_3.jpg","/img/project_images/design/tweet_your_team/tweet_your_team_2.jpg"],
 					"links":[],
 					"href":"design-branding/tweet-your-team",
 					"format":"modal"
@@ -122,9 +122,9 @@
 					"head":"Synergy Rail Branding",
 					"subHead":"Synergy Rail",
 					"subHeadLink":"http://www.synergyrail.co.uk",
-					"thumb":"/img/project_images/design/synergyRail.jpg",
-					"copy":"",
-					"images":[],
+					"thumb":"/img/project_images/design/synergy_rail.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["/img/project_images/design/synergy_rail/synergy_rail_6.png","/img/project_images/design/synergy_rail/synergy_rail_5.png","/img/project_images/design/synergy_rail/synergy_rail_9.jpg","/img/project_images/design/synergy_rail/synergy_rail_7.jpg","/img/project_images/design/synergy_rail/synergy_rail_1.jpg","/img/project_images/design/synergy_rail/synergy_rail_2.png","/img/project_images/design/synergy_rail/synergy_rail_3.jpg"],
 					"links":[],
 					"href":"design-branding/synergy-rail",
 					"format":"modal"
@@ -134,8 +134,8 @@
 					"subHead":"Shelter",
 					"subHeadLink":"http://england.shelter.org.uk/get_involved",
 					"thumb":"/img/project_images/design/shelter.jpg",
-					"copy":"",
-					"images":[],
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["/img/project_images/design/shelter/shelter_1.jpg","/img/project_images/design/shelter/shelter_4.jpg","/img/project_images/design/shelter/shelter_5.jpg","/img/project_images/design/shelter/shelter_6.jpg","/img/project_images/design/shelter/shelter_3.jpg","/img/project_images/design/shelter/shelter_2.png","/img/project_images/design/shelter/shelter_7.jpg"],
 					"links":[],
 					"href":"design-branding/shelter-get-involved",
 					"format":"modal"
@@ -145,8 +145,8 @@
 					"subHead":"Sport Lobster",
 					"subHeadLink":"http://www.sportlobster.com",
 					"thumb":"/img/project_images/design/sportLobster.jpg",
-					"copy":"",
-					"images":[],
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["/img/project_images/design/sport_lobster/sport_lobster_3.jpg","/img/project_images/design/sport_lobster/sport_lobster_2.jpg","/img/project_images/design/sport_lobster/sport_lobster_1.jpg","/img/project_images/design/sport_lobster/sport_lobster_4.jpg","/img/project_images/design/sport_lobster/sport_lobster_5.png"],
 					"links":[],
 					"href":"design-branding/sport-lobster",
 					"format":"modal"
@@ -167,32 +167,48 @@
 			},
 			"thumbnailImages":{
 				"actimel":{
-					"head":"actimel",
+					"head":"Actimel Family Well Being Index",
+					"subHead":"Actimel",
+					"subHeadLink":"http://www.familywellbeingindex.co.uk",
 					"thumb":"/img/project_images/ola/actimel_hero.jpg",
 					"copy":"",
 					"images":[],
-					"links":[]
+					"links":[],
+					"href":"online-advertising/actimel",
+					"format":"modal"
 				},
 				"Danio":{
-					"head":"Danio",
+					"head":"Danio Break Maker",
+					"subHead":"Danone",
+					"subHeadLink":"http://www.danio.co.uk",
 					"thumb":"/img/project_images/ola/danio_hero.jpg",
 					"copy":"",
 					"images":[],
-					"links":[]
+					"links":[],
+					"href":"online-advertising/danio-break-maker",
+					"format":"modal"
 				},
 				"Cadbury":{
-					"head":"Cadbury",
+					"head":"Cadbury Joyville",
+					"subHead":"Cadbury",
+					"subHeadLink":"https://www.cadbury.co.uk",
 					"thumb":"/img/project_images/ola/cadbury_hero.jpg",
 					"copy":"",
 					"images":[],
-					"links":[]
+					"links":[],
+					"href":"online-advertising/cadbury-joyville",
+					"format":"modal"
 				},
 				"Sony":{
-					"head":"Sony",
+					"head":"Sony Xperia T Bond",
+					"subHead":"Sony",
+					"subHeadLink":"http://www.sonymobile.com/gb/xperia/",
 					"thumb":"/img/project_images/ola/sony_hero.jpg",
 					"copy":"",
 					"images":[],
-					"links":[]
+					"links":[],
+					"href":"online-advertising/sony-xperia-t-bond",
+					"format":"modal"
 				},
 				"format":"thumbnail-images"
 			}
@@ -211,39 +227,59 @@
 			},
 			"thumbnailImages":{
 				"robotOrphan":{
-					"head":"robot orphan",
-					"thumb":"/img/project_images/iconography/robot_1.jpg",
-					"copy":"",
-					"images":[],
-					"links":[]
+					"head":"Robot Orphan",
+					"subHead":"Suburb",
+					"subHeadLink":"http://www.wearesuburb.com",
+					"thumb":"/img/project_images/iconography/robot_orphan.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["/img/project_images/iconography/robot_orphan/robot_orphan_1.png","/img/project_images/iconography/robot_orphan/robot_orphan_2.png"],
+					"links":[],
+					"href":"iconography/robot-orphan",
+					"format":"modal"
 				},
 				"shelterGetInvolved":{
-					"head":"shelterGetInvolved",
-					"thumb":"/img/project_images/iconography/shelter_1.jpg",
-					"copy":"",
-					"images":[],
-					"links":[]
+					"head":"Shelter Get Involved",
+					"subHead":"Shelter",
+					"subHeadLink":"http://england.shelter.org.uk/get_involved",
+					"thumb":"/img/project_images/iconography/shelter.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["/img/project_images/iconography/shelter/shelter_1.png","/img/project_images/iconography/shelter/shelter_2.jpg"],
+					"links":[],
+					"href":"iconography/shelter-get-involved",
+					"format":"modal"
 				},
 				"tempero":{
-					"head":"tempero",
-					"thumb":"/img/project_images/iconography/tempero_1.jpg",
-					"copy":"",
-					"images":[],
-					"links":[]
+					"head":"Tempero",
+					"subHead":"Tempero Social Media Management",
+					"subHeadLink":"http://socialroi.tempero.co.uk",
+					"thumb":"/img/project_images/iconography/tempero.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["/img/project_images/iconography/tempero/tempero_1.jpg"],
+					"links":[],
+					"href":"iconography/tempero",
+					"format":"modal"
 				},
 				"sportLobster":{
-					"head":"sport lobster",
-					"thumb":"/img/project_images/iconography/sport_1.jpg",
-					"copy":"",
-					"images":[],
-					"links":[]
+					"head":"Sport Lobster",
+					"subHead":"Sport Lobster",
+					"subHeadLink":"http://www.sportlobster.com",
+					"thumb":"/img/project_images/iconography/sport_lobster.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["/img/project_images/iconography/sport_lobster/sport_lobster_1.jpg","/img/project_images/iconography/sport_lobster/sport_lobster_3.png","/img/project_images/iconography/sport_lobster/sport_lobster_2.jpg"],
+					"links":[],
+					"href":"iconography/sport-lobster",
+					"format":"modal"
 				},
 				"hashLondon":{
-					"head":"hash london",
-					"thumb":"/img/project_images/iconography/hash_3.jpg",
-					"copy":"",
-					"images":[],
-					"links":[]
+					"head":"Hash London",
+					"subHead":"Suburb R&D",
+					"subHeadLink":"http://hashlondon.com",
+					"thumb":"/img/project_images/iconography/hash_london.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["/img/project_images/iconography/hash_london/hash_london_1.jpg"],
+					"links":[],
+					"href":"iconography/hash-london",
+					"format":"modal"
 				},
 				"format":"thumbnail-images"
 			}
@@ -263,38 +299,25 @@
 			"thumbnailImages":{
 				"robotOrphan":{
 					"head":"robot orphan",
+					"subHead":"suburb",
+					"subHeadLink":"http://www.wearesuburb.com",
 					"thumb":"/img/project_images/robots/robots_tile.jpg",
 					"copy":"",
 					"images":[],
-					"links":[]
+					"links":[],
+					"href":"design-branding/robot-orphan",
+					"format":"modal"
 				},
 				"shelterGetInvolved":{
 					"head":"shelterGetInvolved",
+					"subHead":"suburb",
+					"subHeadLink":"http://www.wearesuburb.com",
 					"thumb":"/img/project_images/iconography/shelter_1.jpg",
 					"copy":"",
 					"images":[],
-					"links":[]
-				},
-				"tempero":{
-					"head":"tempero",
-					"thumb":"/img/project_images/iconography/tempero_1.jpg",
-					"copy":"",
-					"images":[],
-					"links":[]
-				},
-				"sportLobster":{
-					"head":"sport lobster",
-					"thumb":"/img/project_images/iconography/sport_1.jpg",
-					"copy":"",
-					"images":[],
-					"links":[]
-				},
-				"hashLondon":{
-					"head":"hash london",
-					"thumb":"/img/project_images/iconography/hash_3.jpg",
-					"copy":"",
-					"images":[],
-					"links":[]
+					"links":[],
+					"href":"design-branding/robot-orphan",
+					"format":"modal"
 				},
 				"format":"thumbnail-images"
 			}
@@ -312,47 +335,61 @@
 				"copy":"Illustration has always been a passion. I am inspired by graphic novels and animation from my childhood.  I am looking to expand experience in this area over the coming months so expect this section to grow significantly."
 			},
 			"thumbnailImages":{
-				"colourWheel":{
+				"colourWheels":{
 					"head":"Colour Wheels",
-					"thumb":"/img/project_images/2d_illustration/colourWheel.jpg",
-					"copy":"",
-					"images":[],
-					"links":[]
+					"subHead":"Threadless Competition",
+					"subHeadLink":"https://www.threadless.com",
+					"thumb":"/img/project_images/2d_illustration/colour_wheels.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["/img/project_images/2d_illustration/colour_wheels/colour_wheels_2.png","/img/project_images/2d_illustration/colour_wheels/colour_wheels_1.jpg"],
+					"links":[],
+					"href":"2d-illustration/colour-wheels",
+					"format":"modal"
 				},
 				"suburbTeam":{
-					"head":"Suburb team illustration",
-					"thumb":"/img/project_images/2d_illustration/suburb.jpg",
-					"copy":"",
-					"images":[],
-					"links":[]
+					"head":"The Suburb Team",
+					"subHead":"Suburb",
+					"subHeadLink":"http://www.wearesuburb.com",
+					"thumb":"/img/project_images/2d_illustration/suburb_team.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["/img/project_images/2d_illustration/suburb_team/suburb_team_1.jpg","/img/project_images/2d_illustration/suburb_team/suburb_team_2.png","/img/project_images/2d_illustration/suburb_team/suburb_team_3.jpg","/img/project_images/2d_illustration/suburb_team/suburb_team_4.jpg","/img/project_images/2d_illustration/suburb_team/suburb_team_5.jpg","/img/project_images/2d_illustration/suburb_team/suburb_team_6.png","/img/project_images/2d_illustration/suburb_team/suburb_team_7.jpg"],
+					"links":[],
+					"href":"2d-illustration/the-suburb-team",
+					"format":"modal"
 				},
 				"robotOrphan":{
 					"head":"Robot Orphan",
-					"thumb":"/img/project_images/2d_illustration/robotOrphan.jpg",
-					"copy":"",
-					"images":[],
-					"links":[]
+					"subHead":"Suburb",
+					"subHeadLink":"http://www.wearesuburb.com",
+					"thumb":"/img/project_images/2d_illustration/robot_orphan.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["/img/project_images/2d_illustration/robot_orphan/robot_orphan_1.jpg","/img/project_images/2d_illustration/robot_orphan/robot_orphan_2.png","/img/project_images/2d_illustration/robot_orphan/robot_orphan_3.png","/img/project_images/2d_illustration/robot_orphan/robot_orphan_4.png","/img/project_images/2d_illustration/robot_orphan/robot_orphan_5.jpg","/img/project_images/2d_illustration/robot_orphan/robot_orphan_6.png"],
+					"links":[],
+					"href":"2d-illustration/robot-orphan",
+					"format":"modal"
 				},
 				"iLoveNewYork":{
 					"head":"I Love New York",
-					"thumb":"/img/project_images/2d_illustration/iLoveNewYork.jpg",
-					"copy":"",
-					"images":[],
-					"links":[]
+					"subHead":"myself",
+					"subHeadLink":"http://www.franklynonsense.com",
+					"thumb":"/img/project_images/2d_illustration/i_love_new_york.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["/img/project_images/2d_illustration/i_love_new_york/i_love_new_york_1.jpg","/img/project_images/2d_illustration/i_love_new_york/i_love_new_york_2.jpg","/img/project_images/2d_illustration/i_love_new_york/i_love_new_york_3.jpg","/img/project_images/2d_illustration/i_love_new_york/i_love_new_york_4.jpg","/img/project_images/2d_illustration/i_love_new_york/i_love_new_york_5.png","/img/project_images/2d_illustration/i_love_new_york/i_love_new_york_6.jpg"],
+					"links":[],
+					"href":"2d-illustration/i-love-new-york",
+					"format":"modal"
 				},
-				"partypus":{
-					"head":"partypus",
-					"thumb":"/img/project_images/2d_illustration/octopus.jpg",
-					"copy":"",
-					"images":[],
-					"links":[]
-				},
-				"metTv":{
-					"head":"Catch the met tv",
-					"thumb":"/img/project_images/2d_illustration/metTv.jpg",
-					"copy":"",
-					"images":[],
-					"links":[]
+				
+				"random":{
+					"head":"Bits & Pieces",
+					"subHead":"myself",
+					"subHeadLink":"http://www.franklynonsense.com",
+					"thumb":"/img/project_images/2d_illustration/random.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["/img/project_images/2d_illustration/random/catch_the_met_tv_1.jpg","/img/project_images/2d_illustration/random/suburb_capabilities_1.gif","/img/project_images/2d_illustration/random/partypus_1.png"],
+					"links":[],
+					"href":"2d-illustration/random",
+					"format":"modal"
 				},
 				
 				"format":"thumbnail-images"
@@ -372,18 +409,26 @@
 			},
 			"thumbnailImages":{
 				"londonUnderground":{
-					"head":"london underground",
+					"head":"London Underground",
+					"subHead":"Transport For London",
+					"subHeadLink":"http://www.wearesuburb.com",
 					"thumb":"/img/project_images/2d_illustration/colourWheel.jpg",
 					"copy":"",
 					"images":[],
-					"links":[]
+					"links":[],
+					"href":"design-branding/robot-orphan",
+					"format":"modal"
 				},
 				"availableOnRequest":{
 					"head":"available on request",
+					"subHead":"suburb",
+					"subHeadLink":"http://www.wearesuburb.com",
 					"thumb":"/img/project_images/2d_illustration/suburb.jpg",
 					"copy":"",
 					"images":[],
-					"links":[]
+					"links":[],
+					"href":"design-branding/robot-orphan",
+					"format":"modal"
 				},
 				
 				"format":"thumbnail-images"

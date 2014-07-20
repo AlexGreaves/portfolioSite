@@ -99,8 +99,9 @@ var fn = {
 		function showModal(){
 			
 			$('.modal').append(fn.loadMarkup($modal));
-			
+
 			$('.modal').addClass('show');
+			$('.modal-content').ScrollTo();
 			fn.addThis($modal);
 			
 			// $('body').addClass('open-modal');
