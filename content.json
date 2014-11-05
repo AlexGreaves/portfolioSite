@@ -1,47 +1,92 @@
 {	
 	"homePage":{
 		"main":{
-			"hero":"../img/heroImage.png",
+			"hero":"./img/hero-image.jpg",
+			"heroLogo":"./img/hero-logo.png",
 			"section 1":
 				{"head":"My recent projects",
-				"copy":"Recently my work has involved; user experience, web design, app design and  illustration. My projects have spanned across small and large clients and budgets and have required diverse knowledge and skills to complete. You can view projects as a whole by clicking a tile below or alternatively you can view individual skills in the next section.",
+				"copy":"I am a freelance digital creative designer living and working in the heart of London. Recently projects have involved user experience, app design and illustration and online advertising. These have been for an array of small and large clients with both large and limited budgets, requiring skill diversity and a solid base of knowledge. Here you can find a snippet of my recent work, or to have a deeper look at a particular specialty please scroll to the next section.",
 				"images":[""]},
 			"section 2":
 				{"head":"What do I do?",
-				"copy": "I prefer to take a top down view when working on projects so I see nurturing a diverse skillset as paramount to my craft. Doing so enables me to work with a multitude of professionals, take multiple perspectives, form a more rounded understanding of problems and help to identify possible solutions.</br></br>One skill that I don't address in this section is my ability to write front end code. The reason for excluding this is because at present I use this to form better working relationships with developers when designing. A developers workload can be drastically reduced by tackling problems in design and by providing them with concrete files.</br></br>This site is designed and coded by myself.",
+				"copy": "I prefer to take a top down view when working on projects so I see nurturing a diverse skillset as the key to my craft. This way of thinking enables me to work with a multitude of disciplines, take multiple perspectives, form a more rounded understanding of problems and help to identify possible solutions.</br></br>One skill not featured in this section is front end development. The reason for excluding this is because my purpose for this skill is to form stronger collaboration with developers when designing. A developers workload can be drastically reduced by tackling problems in design and by providing solid files that can be produced both in design and development.</br></br>This site is designed and coded by myself.",
 				"images":[""]},
 			"section 3":
-				{"images":["../img/about-image.jpg"],
+				{"images":["./img/about-image.jpg"],
 				"head":"who is frankly nonsense?",
-				"copy": "I am a digital interactive designer with 3 years experience working on user experience, web design, online advertising and illustration projects. I have worked with a range of clients from global advertising agencies to small London based startups.</br></br>I currently live in East London and am able to work remotely or from anywhere in the city. If you would like to contact me regarding work or just to say hello send me an email directly or click the hire me button below."}
+				"copy": "I am a digital interactive designer working in the heart of London specialising in user experience, web design, online advertising and illustration. I have worked with a range of clients from global advertising agencies to small London based startups.</br></br> I currently live in East London and am able to work remotely or from anywhere in the city. If you would like to contact me regarding work or just to say hello please send me an email directly with the button below."}
 		},
 		"format":"homePage",
 		"href":"home-page",
 		"addTo":"project"
 	},
-	"missingPage":{
-		"main":{
-			"hero":"",
-			"head":"This link is a dead",
-			"copy":"Please click the button below or the logo in the header to be redirected to the frankly nonsense home page"
-
-		},
-		"format":"404",
-		"href":"404"
-	},
-	"robotOrphan":{
-		"head":"Robot Orphan",
-		"subHead":"suburb",
+	
+	"londonUnderground":{
+		"head":"London Underground",
+		"subHead":"Transport For London",
 		"subHeadLink":"http://www.wearesuburb.com",
-		"relatedProjects":{
-			"character illustration":"2d-illustration/robot-orphan",
-			"iconography":"iconography/robot-orphan"
-		},
-		"thumb":"/img/project_images/design/robot_orphan.jpg",
-		"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-		"images":["/img/project_images/design/robot_orphan/robot_orphan_5.jpg","/img/project_images/design/robot_orphan/robot_orphan_3.jpg","/img/project_images/design/robot_orphan/robot_orphan_7.jpg","/img/project_images/design/robot_orphan/robot_orphan_1.jpg","/img/project_images/design/robot_orphan/robot_orphan_8.jpg","/img/project_images/design/robot_orphan/robot_orphan_10.png","/img/project_images/design/robot_orphan/robot_orphan_4.jpg"],
+		"thumb":"../img/project_images/3d_illustration/london_underground.jpg",
+		"copy":"London Underground needed a way to present it's complex distribution model to internal stakeholders. I was brought on board to develop a visual style and produce a graphic to aid human communication, intended for presentation to non-technical, high-level decision makers to communicate the purpose of the architecture developed using TRAK (London Underground’s general enterprise architecture framework based on British Ministry of Defence Architecture Framework (MODAF) 1.2.).</br></br>Created using Cinema 4D and making use of a low poly style this project was highly successful, answered all KPI’s set by the client, was used for presentation purposes to multiple worldwide organisations and also went on to be published in Rail Infrastructure magazine.",
+		"images":["../img/project_images/3d_illustration/london_underground/london_underground_2.jpg","../img/project_images/3d_illustration/london_underground/london_underground_3.jpg","../img/project_images/3d_illustration/london_underground/london_underground_4.png","../img/project_images/3d_illustration/london_underground/london_underground_5.jpg","../img/project_images/3d_illustration/london_underground/london_underground_6.jpg","../img/project_images/3d_illustration/london_underground/london_underground_7.png","../img/project_images/3d_illustration/london_underground/london_underground_1.jpg"],
 		"links":[],
-		"href":"robot-orphan",
+		"href":"london-underground-infographic",
+		"format":"modal",
+		"addTo":"project"
+	},
+
+	"actimel":{
+		"head":"Actimel Family Well Being Index",
+		"subHead":"Actimel",
+		"subHeadLink":"http://www.familywellbeingindex.co.uk",
+		"thumb":"../img/project_images/ola/actimel_hero.jpg",
+		"copy":"This project required storyboarding and banner development for nine different creatives. Each creative needed to be available in a minimum of three formats and a couple were required to be served during different weather conditions. For this project I created a flexible AS3 framework capable of delivering multiple creatives at various sizes in as short an amount of time as possible. This was important to ensure an iterative development process and meet the tight delivery deadlines in place. My Framework has since been tested on a number of projects and has received nothing but high appraisal.",
+		"flash":{
+			"weekends":{
+				"mpu":{
+					"swf":"../img/project_images/ola/actimel/weekends_std.swf",
+					"backup":"../img/project_images/ola/actimel/weekends_std.jpg"
+				},
+				"super-sky":{
+					"swf":"../img/project_images/ola/actimel/weekends_tall.swf",
+					"backup":"../img/project_images/ola/actimel/weekends_tall.jpg"
+				},
+				"leaderboard":{
+					"swf":"../img/project_images/ola/actimel/weekends_wide.swf",
+					"backup":"../img/project_images/ola/actimel/weekends_wide.jpg"
+				}
+			},
+			"rainydays":{
+				"mpu":{
+					"swf":"../img/project_images/ola/actimel/rainydays_std.swf",
+					"backup":"../img/project_images/ola/actimel/rainydays_std.jpg"
+				},
+				"super-sky":{
+					"swf":"../img/project_images/ola/actimel/rainydays_tall.swf",
+					"backup":"../img/project_images/ola/actimel/rainydays_tall.jpg"
+				},
+				"leaderboard":{
+					"swf":"../img/project_images/ola/actimel/rainydays_wide.swf",
+					"backup":"../img/project_images/ola/actimel/rainydays_wide.jpg"
+				}
+			},
+			"generic":{
+				"mpu":{
+					"swf":"../img/project_images/ola/actimel/generic_std.swf",
+					"backup":"../img/project_images/ola/actimel/generic_std.jpg"
+				},
+				"super-sky":{
+					"swf":"../img/project_images/ola/actimel/weekends_tall.swf",
+					"backup":"../img/project_images/ola/actimel/generic_tall.jpg"
+				},
+				"leaderboard":{
+					"swf":"../img/project_images/ola/actimel/generic_wide.swf",
+					"backup":"../img/project_images/ola/actimel/generic_wide.jpg"
+				}
+			}
+		},
+		"images":[],
+		"links":[],
+		"href":"actimel",
 		"format":"modal",
 		"addTo":"project"
 	},
@@ -50,60 +95,32 @@
 		"head":"Shelter Get Involved",
 		"subHead":"Shelter",
 		"subHeadLink":"http://england.shelter.org.uk/get_involved",
-		"thumb":"/img/project_images/design/shelter.jpg",
-		"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-		"images":["/img/project_images/design/shelter/shelter_1.jpg","/img/project_images/design/shelter/shelter_4.jpg","/img/project_images/design/shelter/shelter_5.jpg","/img/project_images/design/shelter/shelter_6.jpg","/img/project_images/design/shelter/shelter_3.jpg","/img/project_images/design/shelter/shelter_2.png","/img/project_images/design/shelter/shelter_7.jpg"],
+		"thumb":"../img/project_images/design/shelter.jpg",
+		"copy":"Shelter England approached Suburb with a need to replenish and update their charities online presence starting with a usability audit to help distinguish what were the key areas for improvement and to define the project’s KPIs. As lead designer I was tasked with revitalising Shelter’s established brand whilst also positioning them amongst their younger peers. The chosen aesthetic made use of strong shapes and bold colours, whilst also restructuring the way the brand red is used on digital platforms. A range of iconography was also developed to signpost each section of the new site.",
+		"images":["../img/project_images/design/shelter/shelter_1.jpg","../img/project_images/design/shelter/shelter_4.jpg","../img/project_images/design/shelter/shelter_5.jpg","../img/project_images/design/shelter/shelter_6.jpg","../img/project_images/design/shelter/shelter_3.jpg","../img/project_images/design/shelter/shelter_2.png","../img/project_images/design/shelter/shelter_7.jpg"],
 		"links":[],
 		"href":"shelter-get-involved",
-		"format":"modal",
-		"addTo":"project"
-	},
-
-	"londonUnderground":{
-		"head":"London Underground",
-		"subHead":"Transport For London",
-		"subHeadLink":"http://www.wearesuburb.com",
-		"thumb":"/img/project_images/3d_illustration/london_underground.jpg",
-		"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-		"images":["/img/project_images/3d_illustration/london_underground/london_underground_2.jpg","/img/project_images/3d_illustration/london_underground/london_underground_3.jpg","/img/project_images/3d_illustration/london_underground/london_underground_4.png","/img/project_images/3d_illustration/london_underground/london_underground_5.jpg","/img/project_images/3d_illustration/london_underground/london_underground_6.jpg","/img/project_images/3d_illustration/london_underground/london_underground_7.png","/img/project_images/3d_illustration/london_underground/london_underground_1.jpg"],
-		"links":[],
-		"href":"london-underground-infographic",
 		"format":"modal",
 		"addTo":"project"
 	},
 		
 	"designBranding":{
 		"head": "design & branding",
-		"thumb": "/img/project_images/design/design_tile.jpg",
+		"thumb": "../img/project_images/design/design_tile.jpg",
 		"main":{
 			"hero":{
 				"head":"Design & Branding",
 				"copy":"Digital Design and branding projects undertaken for a variety of brands, often in close collaboration with development teams. Knowledge of front end languages; HTML, CSS, LESS, JAVASCRIPT AND JQUERY has been the key to delivering high quality designs, files and finished products."
 			},
 			"thumbnailImages":{
-				"robotOrphan":{
-					"head":"Robot Orphan",
-					"subHead":"suburb",
-					"subHeadLink":"http://www.wearesuburb.com",
-					"relatedProjects":{
-						"character illustration":"2d-illustration/robot-orphan",
-						"iconography":"iconography/robot-orphan"
-					},
-					"thumb":"/img/project_images/design/robot_orphan.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-					"images":["/img/project_images/design/robot_orphan/robot_orphan_5.jpg","/img/project_images/design/robot_orphan/robot_orphan_3.jpg","/img/project_images/design/robot_orphan/robot_orphan_7.jpg","/img/project_images/design/robot_orphan/robot_orphan_1.jpg","/img/project_images/design/robot_orphan/robot_orphan_8.jpg","/img/project_images/design/robot_orphan/robot_orphan_10.png","/img/project_images/design/robot_orphan/robot_orphan_4.jpg"],
-					"links":[],
-					"href":"design-branding/robot-orphan",
-					"format":"modal",
-					"addTo":"section"
-				},
+				
 				"tweetYourTeam":{
 					"head":"Tweet Your Team",
 					"subHead":"Suburb",
 					"subHeadLink":"http://www.tweetyourteam2014.com",
-					"thumb":"/img/project_images/design/tweet_your_team.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-					"images":["/img/project_images/design/tweet_your_team/tweet_your_team_5.jpg","/img/project_images/design/tweet_your_team/tweet_your_team_4.jpg","/img/project_images/design/tweet_your_team/tweet_your_team_1.jpg","/img/project_images/design/tweet_your_team/tweet_your_team_3.jpg","/img/project_images/design/tweet_your_team/tweet_your_team_2.jpg"],
+					"thumb":"../img/project_images/design/tweet_your_team.jpg",
+					"copy":"To celebrate the start of World Cup 2014 a small team at Suburb was tasked with designing and developing something useful for use during the games. Tweet Your Team aimed to exist as a second screen for during each match. The web app displayed the games of the day and recorded live tweets for playing teams, pitting their social fans against each other to discover correlations between a countries team and it’s fans. The data was displayed on a constantly updating bar chart, mapping the highs and lows of the team’s, and it’s fans, action at Brazil 2014.",
+					"images":["../img/project_images/design/tweet_your_team/tweet_your_team_5.jpg","../img/project_images/design/tweet_your_team/tweet_your_team_4.jpg","../img/project_images/design/tweet_your_team/tweet_your_team_1.jpg","../img/project_images/design/tweet_your_team/tweet_your_team_3.jpg","../img/project_images/design/tweet_your_team/tweet_your_team_2.jpg"],
 					"links":[],
 					"href":"design-branding/tweet-your-team",
 					"format":"modal",
@@ -113,9 +130,9 @@
 					"head":"Synergy Rail Branding",
 					"subHead":"Synergy Rail",
 					"subHeadLink":"http://www.synergyrail.co.uk",
-					"thumb":"/img/project_images/design/synergy_rail.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-					"images":["/img/project_images/design/synergy_rail/synergy_rail_6.png","/img/project_images/design/synergy_rail/synergy_rail_5.png","/img/project_images/design/synergy_rail/synergy_rail_9.jpg","/img/project_images/design/synergy_rail/synergy_rail_7.jpg","/img/project_images/design/synergy_rail/synergy_rail_1.jpg","/img/project_images/design/synergy_rail/synergy_rail_2.png","/img/project_images/design/synergy_rail/synergy_rail_3.jpg"],
+					"thumb":"../img/project_images/design/synergy_rail.jpg",
+					"copy":"Synergy Rail is an organisation of practicing engineers specialising in the Project Management, Project Engineering, System Safety Engineering and Acceptance of ‘cutting edge’ technology within the transportation sector. I was approached to rebrand the company in line with it’s larger competitors, helping cut a place in the market for the ambitious managing director. I worked very closely with the client in order to embody his vision in the final brand mark. The final mark represents, their sector, breadth of knowledge, and the smooth journey working with them represents.",
+					"images":["../img/project_images/design/synergy_rail/synergy_rail_6.png","../img/project_images/design/synergy_rail/synergy_rail_5.png","../img/project_images/design/synergy_rail/synergy_rail_9.jpg","../img/project_images/design/synergy_rail/synergy_rail_7.jpg","../img/project_images/design/synergy_rail/synergy_rail_1.jpg","../img/project_images/design/synergy_rail/synergy_rail_2.png","../img/project_images/design/synergy_rail/synergy_rail_3.jpg"],
 					"links":[],
 					"href":"design-branding/synergy-rail",
 					"format":"modal",
@@ -125,9 +142,9 @@
 					"head":"Shelter Get Involved",
 					"subHead":"Shelter",
 					"subHeadLink":"http://england.shelter.org.uk/get_involved",
-					"thumb":"/img/project_images/design/shelter.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-					"images":["/img/project_images/design/shelter/shelter_1.jpg","/img/project_images/design/shelter/shelter_4.jpg","/img/project_images/design/shelter/shelter_5.jpg","/img/project_images/design/shelter/shelter_6.jpg","/img/project_images/design/shelter/shelter_3.jpg","/img/project_images/design/shelter/shelter_2.png","/img/project_images/design/shelter/shelter_7.jpg"],
+					"thumb":"../img/project_images/design/shelter.jpg",
+					"copy":"Shelter England approached Suburb with a need to replenish and update their charities online presence starting with a usability audit to help distinguish what were the key areas for improvement and to define the project’s KPIs. As lead designer I was tasked with revitalising Shelter’s established brand whilst also positioning them amongst their younger peers. The chosen aesthetic made use of strong shapes and bold colours, whilst also restructuring the way the brand red is used on digital platforms. A range of iconography was also developed to signpost each section of the new site.",
+					"images":["../img/project_images/design/shelter/shelter_1.jpg","../img/project_images/design/shelter/shelter_4.jpg","../img/project_images/design/shelter/shelter_5.jpg","../img/project_images/design/shelter/shelter_6.jpg","../img/project_images/design/shelter/shelter_3.jpg","../img/project_images/design/shelter/shelter_2.png","../img/project_images/design/shelter/shelter_7.jpg"],
 					"links":[],
 					"href":"design-branding/shelter-get-involved",
 					"format":"modal",
@@ -137,9 +154,9 @@
 					"head":"Sport Lobster",
 					"subHead":"Sport Lobster",
 					"subHeadLink":"http://www.sportlobster.com",
-					"thumb":"/img/project_images/design/sportLobster.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-					"images":["/img/project_images/design/sport_lobster/sport_lobster_3.jpg","/img/project_images/design/sport_lobster/sport_lobster_2.jpg","/img/project_images/design/sport_lobster/sport_lobster_1.jpg","/img/project_images/design/sport_lobster/sport_lobster_4.jpg","/img/project_images/design/sport_lobster/sport_lobster_5.png"],
+					"thumb":"../img/project_images/design/sportLobster.jpg",
+					"copy":"This sports social environment was conceived to offer sports fans a no nonsense hub for all of their tailored sporting needs. When we first came across Sport Lobster they were the sparkle in two entrepreneurs eyes. Suburb were approached to lead user experience, design and branding with a focus on simplicity through a mobile-first design approach. As a young whipper snapper in the agency I worked on the branding and bank of bespoke iconography as part of the design team. The following images went unused by the Sport Lobster team, however as I have a certain fondness for them, here they are.",
+					"images":["../img/project_images/design/sport_lobster/sport_lobster_3.jpg","../img/project_images/design/sport_lobster/sport_lobster_2.jpg","../img/project_images/design/sport_lobster/sport_lobster_1.jpg","../img/project_images/design/sport_lobster/sport_lobster_4.jpg","../img/project_images/design/sport_lobster/sport_lobster_5.png"],
 					"links":[],
 					"href":"design-branding/sport-lobster",
 					"format":"modal",
@@ -154,60 +171,60 @@
 
 	"onlineAdvertising":{
 		"head": "online advertising",
-		"thumb": "/img/project_images/ola/ola_tile.jpg",
+		"thumb": "../img/project_images/ola/ola_tile.jpg",
 		"main":{
 			"hero":{
 				"head":"Online Advertising",
-				"copy":"I have extensive experience story boarding and developing banner projects for advertising platforms; Google double click, media mind and flash talking. My work takes a code heavy approach and I have developed a platform for rapid creation of standard banners in any number of sizes. I have worked for a number of national and International brands including; Cadbury, lloyds, Danone and Sony."
+				"copy":"I have extensive experience story boarding and developing standard and rich banner projects for advertising platforms; Google Double Click, Media Mind and Flash Talking. Clients have been national and international brands including; Cadbury, TSB, Danone, Sony and Adidas. I develop banners mainly using Actionscript (2 or 3) which results in an iterative process with a solid base for amendments, changes and resizes and clean files."
 			},
 			"thumbnailImages":{
 				"actimel":{
 					"head":"Actimel Family Well Being Index",
 					"subHead":"Actimel",
 					"subHeadLink":"http://www.familywellbeingindex.co.uk",
-					"thumb":"/img/project_images/ola/actimel_hero.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"thumb":"../img/project_images/ola/actimel_hero.jpg",
+					"copy":"This project required storyboarding and banner development for nine different creatives. Each creative needed to be available in a minimum of three formats and a couple were required to be served during different weather conditions. For this project I created a flexible AS3 framework capable of delivering multiple creatives at various sizes in as short an amount of time as possible. This was important to ensure an iterative development process and meet the tight delivery deadlines in place. My Framework has since been tested on a number of projects and has received nothing but high appraisal.",
 					"flash":{
 						"weekends":{
 							"mpu":{
-								"swf":"/img/project_images/ola/actimel/weekends_std.swf",
-								"backup":"/img/project_images/ola/actimel/weekends_std.jpg"
+								"swf":"../img/project_images/ola/actimel/weekends_std.swf",
+								"backup":"../img/project_images/ola/actimel/weekends_std.jpg"
 							},
 							"super-sky":{
-								"swf":"/img/project_images/ola/actimel/weekends_tall.swf",
-								"backup":"/img/project_images/ola/actimel/weekends_tall.jpg"
+								"swf":"../img/project_images/ola/actimel/weekends_tall.swf",
+								"backup":"../img/project_images/ola/actimel/weekends_tall.jpg"
 							},
 							"leaderboard":{
-								"swf":"/img/project_images/ola/actimel/weekends_wide.swf",
-								"backup":"/img/project_images/ola/actimel/weekends_wide.jpg"
+								"swf":"../img/project_images/ola/actimel/weekends_wide.swf",
+								"backup":"../img/project_images/ola/actimel/weekends_wide.jpg"
 							}
 						},
 						"rainydays":{
 							"mpu":{
-								"swf":"/img/project_images/ola/actimel/rainydays_std.swf",
-								"backup":"/img/project_images/ola/actimel/rainydays_std.jpg"
+								"swf":"../img/project_images/ola/actimel/rainydays_std.swf",
+								"backup":"../img/project_images/ola/actimel/rainydays_std.jpg"
 							},
 							"super-sky":{
-								"swf":"/img/project_images/ola/actimel/rainydays_tall.swf",
-								"backup":"/img/project_images/ola/actimel/rainydays_tall.jpg"
+								"swf":"../img/project_images/ola/actimel/rainydays_tall.swf",
+								"backup":"../img/project_images/ola/actimel/rainydays_tall.jpg"
 							},
 							"leaderboard":{
-								"swf":"/img/project_images/ola/actimel/rainydays_wide.swf",
-								"backup":"/img/project_images/ola/actimel/rainydays_wide.jpg"
+								"swf":"../img/project_images/ola/actimel/rainydays_wide.swf",
+								"backup":"../img/project_images/ola/actimel/rainydays_wide.jpg"
 							}
 						},
 						"generic":{
 							"mpu":{
-								"swf":"/img/project_images/ola/actimel/generic_std.swf",
-								"backup":"/img/project_images/ola/actimel/generic_std.jpg"
+								"swf":"../img/project_images/ola/actimel/generic_std.swf",
+								"backup":"../img/project_images/ola/actimel/generic_std.jpg"
 							},
 							"super-sky":{
-								"swf":"/img/project_images/ola/actimel/weekends_tall.swf",
-								"backup":"/img/project_images/ola/actimel/generic_tall.jpg"
+								"swf":"../img/project_images/ola/actimel/weekends_tall.swf",
+								"backup":"../img/project_images/ola/actimel/generic_tall.jpg"
 							},
 							"leaderboard":{
-								"swf":"/img/project_images/ola/actimel/generic_wide.swf",
-								"backup":"/img/project_images/ola/actimel/generic_wide.jpg"
+								"swf":"../img/project_images/ola/actimel/generic_wide.swf",
+								"backup":"../img/project_images/ola/actimel/generic_wide.jpg"
 							}
 						}
 					},
@@ -221,21 +238,21 @@
 					"head":"Danio Break Maker",
 					"subHead":"Danone",
 					"subHeadLink":"http://www.danio.co.uk",
-					"thumb":"/img/project_images/ola/danio_hero.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"thumb":"../img/project_images/ola/danio_hero.jpg",
+					"copy":"The Danio Make My Break campaign presented cooped up office workers with ideas for filling their wasted lunch breaks, the banner campaign advertised a side running competition to win the ultimate 20 minute break. These banners were created using a flexible banner framework developed by myself in AS3 and were hosted using Google Double Click. The biggest challenge of the project was fitting so much in to limited file restrictions, this was overcome by using Actionscript for animation and replacing images with vector illustrations.",
 					"flash":{
 						"breakmaker":{
 							"mpu":{
-								"swf":"/img/project_images/ola/danio_breakmaker/danio_std.swf",
-								"backup":"/img/project_images/ola/danio_breakmaker/danio_std.jpg"
+								"swf":"../img/project_images/ola/danio_breakmaker/danio_std.swf",
+								"backup":"../img/project_images/ola/danio_breakmaker/danio_std.jpg"
 							},
 							"super-sky":{
-								"swf":"/img/project_images/ola/danio_breakmaker/danio_tall.swf",
-								"backup":"/img/project_images/ola/danio_breakmaker/danio_tall.jpg"
+								"swf":"../img/project_images/ola/danio_breakmaker/danio_tall.swf",
+								"backup":"../img/project_images/ola/danio_breakmaker/danio_tall.jpg"
 							},
 							"leaderboard":{
-								"swf":"/img/project_images/ola/danio_breakmaker/danio_wide.swf",
-								"backup":"/img/project_images/ola/danio_breakmaker/danio_wide.jpg"
+								"swf":"../img/project_images/ola/danio_breakmaker/danio_wide.swf",
+								"backup":"../img/project_images/ola/danio_breakmaker/danio_wide.jpg"
 							}
 						}
 					},
@@ -249,10 +266,10 @@
 					"head":"Cadbury Joyville",
 					"subHead":"Cadbury",
 					"subHeadLink":"https://www.cadbury.co.uk",
-					"thumb":"/img/project_images/ola/cadbury_hero.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"thumb":"../img/project_images/ola/cadbury_hero.jpg",
+					"copy":"Various Flash animated sections were built as part of Cadbury's recently ended Joyville campaign in the UK and Australia. Spinning, Eggfarm and Timeline. These were all animated by myself and another flash developer for various Cadbury sub-campaigns released over the last 2 years. Previews of these sections can be viewed in the below case study video (also created by myself for Suburb) at 0:20s and 1:05s. As the swf files are inexplicably large I have chosen not to display them on this site.",
 					"video":{
-						"reel-wearesuburb":{
+						"joyville wearesuburb":{
 							"src":"//player.vimeo.com/video/65237196?byline=0&amp;portrait=0"
 						}
 					},
@@ -271,32 +288,21 @@
 
 	"iconography":{
 		"head": "iconography",
-		"thumb": "/img/project_images/iconography/iconography_tile.jpg",
+		"thumb": "../img/project_images/iconography/iconography_tile.jpg",
 		"main":{
 			"hero":{
 				"head":"Iconography",
 				"copy":"Experience illustrating has helped me gain a reputation for developing pixel perfect Iconography for many clients. This has often been to compliment a specific design approach and has meant close collaboration as part of a design team. I have also directed the creation of iconography as lead designer."
 			},
 			"thumbnailImages":{
-				"robotOrphan":{
-					"head":"Robot Orphan",
-					"subHead":"Suburb",
-					"subHeadLink":"http://www.wearesuburb.com",
-					"thumb":"/img/project_images/iconography/robot_orphan.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-					"images":["/img/project_images/iconography/robot_orphan/robot_orphan_1.png","/img/project_images/iconography/robot_orphan/robot_orphan_2.png"],
-					"links":[],
-					"href":"iconography/robot-orphan",
-					"format":"modal",
-					"addTo":"section"
-				},
+
 				"shelterGetInvolved":{
 					"head":"Shelter Get Involved",
 					"subHead":"Shelter",
 					"subHeadLink":"http://england.shelter.org.uk/get_involved",
-					"thumb":"/img/project_images/iconography/shelter.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-					"images":["/img/project_images/iconography/shelter/shelter_1.png","/img/project_images/iconography/shelter/shelter_2.jpg"],
+					"thumb":"../img/project_images/iconography/shelter.jpg",
+					"copy":"Shelter England approached Suburb with a need to replenish and update their charities online presence starting with a usability audit to help distinguish what were the key areas for improvement and to define the project’s KPIs.Part of my task as lead designer was to direct and develop a range of iconography to signpost the new site. I designed the initial iconography in tandem with redesigning the Get Involved section of the site before tasking the completion of the icons to another designer. I then oversaw the creation of the rest of the iconography pack before finalising the iconography for the live site. Icons were clean and concise in order to complement the redesign and featured a limited colour palest that referenced the Shelter brand.",
+					"images":["../img/project_images/iconography/shelter/shelter_1.png","../img/project_images/iconography/shelter/shelter_2.jpg"],
 					"links":[],
 					"href":"iconography/shelter-get-involved",
 					"format":"modal",
@@ -306,9 +312,9 @@
 					"head":"Tempero",
 					"subHead":"Tempero Social Media Management",
 					"subHeadLink":"http://socialroi.tempero.co.uk",
-					"thumb":"/img/project_images/iconography/tempero.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-					"images":["/img/project_images/iconography/tempero/tempero_1.jpg"],
+					"thumb":"../img/project_images/iconography/tempero.jpg",
+					"copy":"These icons were created for the Social ROI Calculator developed by Suburb and Tempero. The ROI calculator is a beta tool developed to automatically calculate the Return on Investment (ROI) of a Facebook page, and compare it against competitors. Icons were designed super flat for clarity and to fit on trend with the rise of social buttons and icons available all over the web at the time of design.",
+					"images":["../img/project_images/iconography/tempero/tempero_1.jpg"],
 					"links":[],
 					"href":"iconography/tempero",
 					"format":"modal",
@@ -318,9 +324,9 @@
 					"head":"Sport Lobster",
 					"subHead":"Sport Lobster",
 					"subHeadLink":"http://www.sportlobster.com",
-					"thumb":"/img/project_images/iconography/sport_lobster.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-					"images":["/img/project_images/iconography/sport_lobster/sport_lobster_1.jpg","/img/project_images/iconography/sport_lobster/sport_lobster_3.png","/img/project_images/iconography/sport_lobster/sport_lobster_2.jpg"],
+					"thumb":"../img/project_images/iconography/sport_lobster.jpg",
+					"copy":"As part of the Sport Lobster design there were a huge number of bespoke sports icons to create. These needed to be energetic, creative, clear and descriptive as they would be used all over the social platform. This is a snippet of the icon bank created for Sport Lobster and displays a range of the Sports icons and some menu icons. All icons were designed in 16px, 34px and 60px versions for clarity and readability when used in their various locations. Personal favourites are American Football and AFL (Australian Football League).",
+					"images":["../img/project_images/iconography/sport_lobster/sport_lobster_1.jpg","../img/project_images/iconography/sport_lobster/sport_lobster_3.png","../img/project_images/iconography/sport_lobster/sport_lobster_2.jpg"],
 					"links":[],
 					"href":"iconography/sport-lobster",
 					"format":"modal",
@@ -330,15 +336,14 @@
 					"head":"Hash London",
 					"subHead":"Suburb R&D",
 					"subHeadLink":"http://hashlondon.com",
-					"thumb":"/img/project_images/iconography/hash_london.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-					"images":["/img/project_images/iconography/hash_london/hash_london_1.jpg"],
+					"thumb":"../img/project_images/iconography/hash_london.jpg",
+					"copy":"This was an internal project designed and developed whilst at Suburb. Hash London is a social aggregator providing a digital snapshot of London at any given time. Iconography was developed for displaying the weather using the Yahoo! weather Api. Just under 50 icons were created to display everything from clear skies to Tornado’s. Although I am not too sure when the last time London saw a Tornado.",
+					"images":["../img/project_images/iconography/hash_london/hash_london_1.jpg"],
 					"links":[],
 					"href":"iconography/hash-london",
 					"format":"modal",
 					"addTo":"section"
-				},
-				"format":"thumbnail-images"
+				}
 			}
 		},
 		"format":"skill",
@@ -347,37 +352,103 @@
 	},
 
 	"userExperience":{
-		"head": "user experience : available on request",
-		"thumb": "/img/project_images/ux/ux_tile.jpg",
+		"head": "user experience",
+		"thumb": "../img/project_images/ux/ux_tile.jpg",
 		"main":{
 			"hero":{
 				"head":"user experience",
-				"copy":"As part of a small user experience team at a boutique agency I have had the chance to get my hands dirty on both client and internal user experience projects. This has enabled me to get involved in the preliminary planning and strategy stages of projects, lead projects and also work as part of a group. Typical tasks have included stakeholder interviews, task analysis, userbility testing, personas, scenario planning, user journeys, wire framing and prototyping."
+				"copy":"Forming part of a user experience team at a boutique agency I have had the chance to get my hands dirty on both client and internal research and development user experience projects. This has enabled me to get involved in the preliminary planning and strategy stages of projects, lead projects and also work as part of a group. My user experience knowledge has empowered me to take a more holistic view of the design and experience process, opening up an arsenal of skills that would go on to position me as a digital experience and design hybrid.",
+				"skills":["stakeholder interviews","task analysis","usability testing","personas","scenario planning","prototyping","wireframing"]
 			},
 			"thumbnailImages":{
-				"robotOrphan":{
-					"head":"robot orphan",
-					"subHead":"suburb",
+				"SuburbResearchAndDev":{
+					"head":"Suburb R & D",
+					"subHead":"Suburb",
 					"subHeadLink":"http://www.wearesuburb.com",
-					"thumb":"/img/project_images/robots/robots_tile.jpg",
-					"copy":"",
-					"images":[],
+					"thumb":"../img/project_images/ux/suburb_rd_tile.jpg",
+					"copy":"Key member of a UX team focussing on research and development, and pitching. Involvement working on rapidly evolving projects in a pitch environment meant agile and responsive working was key, whilst research and development work helped me to take a much more research orientated approach. This culmination of methodologies acts as the building blocks to my adaptive design practice.",
+					"skills":["site mapping","Paper Prototyping","Interactive Prototyping","User Research & Strategy", "User Journeys", "scenario planning"],
+					"video":{
+						"Tapestry proto":{
+							"src":"//player.vimeo.com/video/110155277"
+						}
+					},
+					"images":["../img/project_images/ux/suburb_rd/free_siteMap_001.jpg","../img/project_images/ux/suburb_rd/free_taskModels_001.jpg","../img/project_images/ux/suburb_rd/robots_journey_001.jpg"],
 					"links":[],
-					"href":"design-branding/robot-orphan",
+					"href":"user-experience/suburb",
 					"format":"modal",
 					"addTo":"section"
+				},
+				"Tapestry":{
+					"head":"Tapestry",
+					"subHead":"Tapestry",
+					"subHeadLink":"http://www.tapestry.mobi",
+					"thumb":"../img/project_images/ux/tapestry_tile.jpg",
+					"copy":"The Tapestry app utilizes apple’s ibeacon technology to deliver a more user centered and responsive shopping experience to Liberty London’s loyalty customers. They approached us at the early stages of their development and as part of the UX team I was responsible for delivering the information architecture, navigation planning and high fidelity interactive prototypes for proof of concept and user testing. Because of the nature of the application and the multiple possibilities for user onboarding scenarios: instore, out of store, with or without loyalty card, this became a highly iterative process.",
+					"skills":["interactive prototyping", "user journeys", "scenario planning", "card sorting"],
+					"video":{
+						"Tapestry proto":{
+							"src":"//player.vimeo.com/video/109839447"
+						}
+					},
+					"images":["../img/project_images/ux/tapestry/tapestry_001.jpg"],
+					"links":[],
+					"href":"user-experience/tapestry",
+					"format":"modal",
+					"addTo":"section"
+				},
+				"crosswayFoundation":{
+					"head":"Crossway Foundation",
+					"subHead":"Crossway Foundation",
+					"subHeadLink":"http://crossway-foundation.org",
+					"thumb":"../img/project_images/ux/crosswayFoundation_tile.jpg",
+					"copy":"The Crossway Foundation is a London-based charity delivering arts and education initiative for young people between the UK and the Middle East. They approached us with a consistency problem, their various channels all had different identities and they had a need to unify. Involved initially in the project I lead the user testing for all channels to help identify any shortcomings or pain points in their three main online platforms. The results were assessed and compiled before being presented to all key stakeholders, forming the basis of their online revitalisation.",
+					"skills":["userbility testing", "workshop assistance"],
+					"images":["../img/project_images/ux/crosswayFoundation/crosswayFoundation_001.jpg"],
+					"links":[],
+					"href":"user-experience/crossway-foundation",
+					"format":"modal",
+					"addTo":"section"
+				},
+				"Forevermark":{
+					"head":"Forevermark",
+					"subHead":"Tapestry",
+					"subHeadLink":"http://www.forevermark.com/en-GB",
+					"thumb":"../img/project_images/ux/forevermark_tile.jpg",
+					"copy":"Forevermark sell responsibly sourced high quality diamonds and as such required a website that matched their offline service. Part of this service is keeping up to date records of a user and their diamond collection through a user account. We were responsible for planning the registration process and scenarios for a user and their related diamonds. The work consisted of a number of scenario planning exercises and a full package of wireframes reflecting the associated scenarios.",
+					"skills":["wireframing", "scenario planning"],
+					"images":["../img/project_images/ux/forevermark/forevermark_wires_001.jpg","../img/project_images/ux/forevermark/forevermark_wires_002.jpg"],
+					"links":[],
+					"href":"user-experience/forevermark",
+					"format":"modal",
+					"addTo":"section"
+				},
+				
+				"MaltesersBakeYourselfSilly":{
+					"head":"Maltesers Bake Yourself Silly",
+					"subHead":"heyHuman!",
+					"subHeadLink":"http://www.heyhuman.com",
+					"thumb":"../img/project_images/3d_illustration/london_underground.jpg",
+					"skills":["wireframing","responsive"],
+					"copy":"Using Malteser’s products for baking delicious treats is seen as common place on a number of social channels and recipe sites. As part of their partnership with Comic Relief 2014 the brand wanted to channel this passion for their product by providing their consumers with a hub to discover, share and most importantly raise money for charity. I provided responsive wireframes and technical recommendations for utilising social platforms to strengthen their core campaign, making it as easy as possible for their user’s to get involved and get baking.",
+					"images":[""],
+					"links":[],
+					"href":"user-experience/maltesers",
+					"format":"modal",
+					"addTo":"section",
+					"special":"hidden"
 				}
 			}
 		},
 		"format":"skill",
 		"addTo":"skill",
-		"href":"",
-		"special":"locked"
+		"href":"user-experience",
+		"special":""
 	},
 
 	"2dIllustration":{
 		"head": "2d illustration",
-		"thumb": "/img/project_images/2d_illustration/2d_tile.jpg",
+		"thumb": "../img/project_images/2d_illustration/2d_tile.jpg",
 		"main":{
 			"hero":{
 				"head":"2d illustration",
@@ -388,9 +459,9 @@
 					"head":"Colour Wheels",
 					"subHead":"Threadless Competition",
 					"subHeadLink":"https://www.threadless.com",
-					"thumb":"/img/project_images/2d_illustration/colour_wheels.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-					"images":["/img/project_images/2d_illustration/colour_wheels/colour_wheels_2.png","/img/project_images/2d_illustration/colour_wheels/colour_wheels_1.jpg"],
+					"thumb":"../img/project_images/2d_illustration/colour_wheels.jpg",
+					"copy":"Everyone has a love. Something that inspires them. No matter how big or small this thing adds colour to what can become a very grey existence. This piece was created as a competition entry for the Threadless site, although this was not printed Colour Wheels became a promise to myself to continue developing my illustrative style despite my move into more digital mediums.",
+					"images":["../img/project_images/2d_illustration/colour_wheels/colour_wheels_2.png","../img/project_images/2d_illustration/colour_wheels/colour_wheels_1.jpg"],
 					"links":[],
 					"href":"2d-illustration/colour-wheels",
 					"format":"modal",
@@ -400,53 +471,39 @@
 					"head":"The Suburb Team",
 					"subHead":"Suburb",
 					"subHeadLink":"http://www.wearesuburb.com",
-					"thumb":"/img/project_images/2d_illustration/suburb_team.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-					"images":["/img/project_images/2d_illustration/suburb_team/suburb_team_1.jpg","/img/project_images/2d_illustration/suburb_team/suburb_team_2.png","/img/project_images/2d_illustration/suburb_team/suburb_team_3.jpg","/img/project_images/2d_illustration/suburb_team/suburb_team_4.jpg","/img/project_images/2d_illustration/suburb_team/suburb_team_5.jpg","/img/project_images/2d_illustration/suburb_team/suburb_team_6.png","/img/project_images/2d_illustration/suburb_team/suburb_team_7.jpg"],
+					"thumb":"../img/project_images/2d_illustration/suburb_team.jpg",
+					"copy":"Illustrated a range of characters to represent the members of the Suburb team. These were all drawn by hand before being created as vector illustrations for the final pieces. These now represent  Suburb members on various social channels and throughout the Suburb studio.",
+					"images":["../img/project_images/2d_illustration/suburb_team/suburb_team_1.jpg","../img/project_images/2d_illustration/suburb_team/suburb_team_2.png","../img/project_images/2d_illustration/suburb_team/suburb_team_3.jpg","../img/project_images/2d_illustration/suburb_team/suburb_team_4.jpg","../img/project_images/2d_illustration/suburb_team/suburb_team_5.jpg","../img/project_images/2d_illustration/suburb_team/suburb_team_6.png","../img/project_images/2d_illustration/suburb_team/suburb_team_7.jpg"],
 					"links":[],
 					"href":"2d-illustration/the-suburb-team",
 					"format":"modal",
 					"addTo":"section"
 				},
-				"robotOrphan":{
-					"head":"Robot Orphan",
-					"subHead":"Suburb",
-					"subHeadLink":"http://www.wearesuburb.com",
-					"thumb":"/img/project_images/2d_illustration/robot_orphan.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-					"images":["/img/project_images/2d_illustration/robot_orphan/robot_orphan_1.jpg","/img/project_images/2d_illustration/robot_orphan/robot_orphan_2.png","/img/project_images/2d_illustration/robot_orphan/robot_orphan_3.png","/img/project_images/2d_illustration/robot_orphan/robot_orphan_4.png","/img/project_images/2d_illustration/robot_orphan/robot_orphan_5.jpg","/img/project_images/2d_illustration/robot_orphan/robot_orphan_6.png"],
-					"links":[],
-					"href":"2d-illustration/robot-orphan",
-					"format":"modal",
-					"addTo":"section"
-				},
+
 				"iLoveNewYork":{
 					"head":"I Love New York",
 					"subHead":"myself",
 					"subHeadLink":"http://www.franklynonsense.com",
-					"thumb":"/img/project_images/2d_illustration/i_love_new_york.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-					"images":["/img/project_images/2d_illustration/i_love_new_york/i_love_new_york_1.jpg","/img/project_images/2d_illustration/i_love_new_york/i_love_new_york_2.jpg","/img/project_images/2d_illustration/i_love_new_york/i_love_new_york_3.jpg","/img/project_images/2d_illustration/i_love_new_york/i_love_new_york_4.jpg","/img/project_images/2d_illustration/i_love_new_york/i_love_new_york_5.png","/img/project_images/2d_illustration/i_love_new_york/i_love_new_york_6.jpg"],
+					"thumb":"../img/project_images/2d_illustration/i_love_new_york.jpg",
+					"copy":"In 2013 I spent 5 days in New York city, on my return I spent 5 days locked away illustrating my time there. I Love New York was the product of those 5 days. The illustration was created using a combination of pencil, Staedtler pens, tracing paper, A4 paper and a lot of cello tape. The final piece was 5 sheets wide and 2 sheets tall. This was then scanned and digitally coloured before being displayed at a show in Leeds.",
+					"images":["../img/project_images/2d_illustration/i_love_new_york/i_love_new_york_1.jpg","../img/project_images/2d_illustration/i_love_new_york/i_love_new_york_2.jpg","../img/project_images/2d_illustration/i_love_new_york/i_love_new_york_3.jpg","../img/project_images/2d_illustration/i_love_new_york/i_love_new_york_4.jpg","../img/project_images/2d_illustration/i_love_new_york/i_love_new_york_5.png","../img/project_images/2d_illustration/i_love_new_york/i_love_new_york_6.jpg"],
 					"links":[],
 					"href":"2d-illustration/i-love-new-york",
 					"format":"modal",
 					"addTo":"section"
 				},
-				
 				"random":{
 					"head":"Bits & Pieces",
 					"subHead":"myself",
 					"subHeadLink":"http://www.franklynonsense.com",
-					"thumb":"/img/project_images/2d_illustration/random.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-					"images":["/img/project_images/2d_illustration/random/catch_the_met_tv_1.jpg","/img/project_images/2d_illustration/random/suburb_capabilities_1.gif","/img/project_images/2d_illustration/random/partypus_1.png"],
+					"thumb":"../img/project_images/2d_illustration/random.jpg",
+					"copy":"The dumping ground of my past and present, this section is for all the work that didn’t quite warrant it’s own page but still deserved a place in my portfolio.",
+					"images":["../img/project_images/2d_illustration/random/catch_the_met_tv_1.jpg","../img/project_images/2d_illustration/random/suburb_capabilities_1.gif","../img/project_images/2d_illustration/random/partypus_1.png"],
 					"links":[],
 					"href":"2d-illustration/random",
 					"format":"modal",
 					"addTo":"section"
-				},
-				
-				"format":"thumbnail-images"
+				}
 			}
 		},
 		"format":"skill",
@@ -456,40 +513,37 @@
 
 	"3dIllustration":{
 		"head": "3d illustration",
-		"thumb": "/img/project_images/3d_illustration/3d_tile.jpg",
+		"thumb": "../img/project_images/3d_illustration/3d_tile.jpg",
 		"main":{
 			"hero":{
 				"head":"3d illustration",
-				"copy":"In my final year of university I made the bold move to change my specialism to 3D animation, fortunately that decision has been paying off recently. I have Art directed and created projects for international brands on a number of web based games and flat graphics."
+				"copy":"In my final year of university I made the bold move to change my specialism to 3D animation, fortunately that decision has been paying off. I have Art directed and created projects for international brands on a number of web based games and for flat graphics."
 			},
 			"thumbnailImages":{
 				"londonUnderground":{
 					"head":"London Underground",
 					"subHead":"Transport For London",
 					"subHeadLink":"http://www.wearesuburb.com",
-					"thumb":"/img/project_images/3d_illustration/london_underground.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-					"images":["/img/project_images/3d_illustration/london_underground/london_underground_2.jpg","/img/project_images/3d_illustration/london_underground/london_underground_3.jpg","/img/project_images/3d_illustration/london_underground/london_underground_4.png","/img/project_images/3d_illustration/london_underground/london_underground_5.jpg","/img/project_images/3d_illustration/london_underground/london_underground_6.jpg","/img/project_images/3d_illustration/london_underground/london_underground_7.png","/img/project_images/3d_illustration/london_underground/london_underground_1.jpg"],
+					"thumb":"../img/project_images/3d_illustration/london_underground.jpg",
+					"copy":"London Underground needed a way to present it's complex distribution model to internal stakeholders. I was brought on board to develop a visual style and produce a graphic to aid human communication, intended for presentation to non-technical, high-level decision makers to communicate the purpose of the architecture developed using TRAK (London Underground’s general enterprise architecture framework based on British Ministry of Defence Architecture Framework (MODAF) 1.2.).</br></br>Created using Cinema 4D and making use of a low poly style this project was highly successful, answered all KPI’s set by the client, was used for presentation purposes to multiple worldwide organisations and also went on to be published in Rail Infrastructure magazine.",
+					"images":["../img/project_images/3d_illustration/london_underground/london_underground_2.jpg","../img/project_images/3d_illustration/london_underground/london_underground_3.jpg","../img/project_images/3d_illustration/london_underground/london_underground_4.png","../img/project_images/3d_illustration/london_underground/london_underground_5.jpg","../img/project_images/3d_illustration/london_underground/london_underground_6.jpg","../img/project_images/3d_illustration/london_underground/london_underground_7.png","../img/project_images/3d_illustration/london_underground/london_underground_1.jpg"],
 					"links":[],
 					"href":"3d-illustration/london-underground-infographic",
 					"format":"modal",
 					"addTo":"section"
 				},
-				"availableOnRequest":{
-					"head":"available on request",
-					"subHead":"suburb",
-					"subHeadLink":"http://www.wearesuburb.com",
-					"thumb":"/img/project_images/3d_illustration/available_on_request.jpg",
-					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-					"images":[],
+				"samsungSSD":{
+					"head":"Samsung SSD Facebook Game",
+					"subHead":"Samsung",
+					"subHeadLink":"https://www.facebook.com/SamsungSSD",
+					"thumb":"../img/project_images/3d_illustration/samsung_ssd.jpg",
+					"copy":"Art direction and lead 3D design/illustration for a social media competition promoting a new Samsung product. Personally oversaw conception, aesthetic and development of all game assets and animations whilst working closely with development and design teams to ensure final product was produced to a high standard and met with client expectations. Over the course of the 21 day competition the game received 30,0000 plays by 20,000 unique users resulting in a 28% increase in total Facebook fan growth or 64,294 new Facebook fans.",
+					"images":["../img/project_images/3d_illustration/samsung_ssd/samsung_ssd_1.jpg","../img/project_images/3d_illustration/samsung_ssd/samsung_ssd_2.png","../img/project_images/3d_illustration/samsung_ssd/samsung_ssd_3.jpg","../img/project_images/3d_illustration/samsung_ssd/samsung_ssd_4.jpg","../img/project_images/3d_illustration/samsung_ssd/samsung_ssd_5.jpg","../img/project_images/3d_illustration/samsung_ssd/samsung_ssd_6.jpg","../img/project_images/3d_illustration/samsung_ssd/samsung_ssd_7.jpg","../img/project_images/3d_illustration/samsung_ssd/samsung_ssd_8.jpg"],
 					"links":[],
-					"href":"",
+					"href":"3d-illustration/samsung-ssd",
 					"format":"modal",
-					"addTo":"section",
-					"special":"locked"
-				},
-				
-				"format":"thumbnail-images"
+					"addTo":"section"
+				}
 			}
 		},
 		"format":"skill",

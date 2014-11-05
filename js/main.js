@@ -1,7 +1,7 @@
 var fn = {
 
 	content:null,
-	hostUrl: 'localhost',
+	hostUrl: window.location.hostname,
 	currentUrl:'',
 	previousUrl:'',
 	main: $('#main'),
@@ -30,6 +30,9 @@ var fn = {
 		}
 
 		History.Adapter.bind(window, 'statechange', function(){
+			var loc = window.location,
+		    page = loc.hash ? loc.hash.substring(1) : loc.pathname + loc.search;
+		    ga('send', 'pageview', page);
 			fn.updateContent(fn.checkUrl(),'');
 		});
 
@@ -37,11 +40,9 @@ var fn = {
 	    	// this will have to be different for the type of tile
 	    	if(!$(this).hasClass('locked')){
 	    		var $a = $(this).data('content');
-		    	// trace($a);
 		    	e.preventDefault();
 		    	History.pushState('', '', $a.href);	
 	    	} else {
-	    		trace('this content is locked');
 	    	}
 	    	
 	    });
@@ -84,11 +85,9 @@ var fn = {
 		var modal = '';
 
 		var pageToLoad; // this is an object containing the information for update content
-		trace(fn.currentUrl);
-		if (fn.currentUrl[1] && fn.currentUrl[1] != 'home-page' && fn.currentUrl[1] != 'index'){
+		if (fn.currentUrl[1] && fn.currentUrl[1] != 'home-page' && fn.currentUrl[1] != 'index.html'){
 			$.each(fn.content, function (index, section){
 				if (section.href == fn.currentUrl[1]){
-					trace(section.href);
 					if(section.format == 'modal'){
 						modal = section;
 						markup = fn.content.homePage;
@@ -96,11 +95,12 @@ var fn = {
 					} else if(section.format == 'skill'){
 						markup = section;
 						tiles = section.main.thumbnailImages;
-
-							if (fn.currentUrl.length > 2){
+							if (fn.currentUrl.length >= 2){
+								
 								$.each(section.main.thumbnailImages, function (index, section){
 									str = section.href.toString().split('/');
 									subStr = str[str.length-1];
+
 									if (fn.currentUrl[2] == subStr){
 										modal = section;
 										return false;
@@ -111,24 +111,20 @@ var fn = {
 					}
 					return false;
 				}
-				// else {
-				// 	trace('404 page');
-				// 	markup = section;
-				// 	// tiles = '';	
-				// 	return false;
-				// }
+
 			});
 		} else {
 			markup = fn.content.homePage;
 			tiles = fn.content;
 		}
-
+		trace(fn.currentUrl);
 		pageToLoad = [markup,tiles,modal];
 		return pageToLoad; // always return object	
 	},
 
 	updateContent:function(toLoad,initialState){
-		var $main = $('#main')
+		var $main = $('#main');
+		var $modal = $('.modal');
 		var markup = toLoad[0];
 		var tiles = toLoad[1];
 		var modal = toLoad[2];
@@ -143,7 +139,6 @@ var fn = {
 				
 				if(tiles != ''){
 					fn.loadWork(tiles);
-					trace(tiles);	
 				}
 
 				$('body').removeClass('hide');
@@ -165,19 +160,20 @@ var fn = {
 
 		}
 
-		// load the modal if there is one
-
 		if (modal != ''){
 
-			$('.modal').empty().append(fn.loadMarkup(modal)).fadeIn(250);
-			fn.loadRichContent(modal);	
+			$('.modal').empty().append(fn.loadMarkup(modal)).fadeIn();
+			fn.loadRichContent(modal);	// video needs to be loaded first
 			fn.addThis(modal);
 			$('.modal').addClass('show');
 			$('.modal-content').ScrollTo();
 
 		} else {
+			$modal.removeClass('show');
 
-			$('.modal').removeClass('show');
+			setTimeout(function() {
+			  $('.modal-content').empty();
+			}, 250);
 
 			// show or hide back button
 			if(fn.currentUrl[1] != '' && fn.currentUrl[1] != 'home-page'){
@@ -198,7 +194,6 @@ var fn = {
 			
 			if (toLoad.thumb){
 				addTile(toLoad.head, toLoad, toLoad.addTo);
-				// trace(toLoad);
 			}
 		}
 
@@ -218,16 +213,19 @@ var fn = {
 			$tile = $('<div>').addClass('tile').data('content',content).append($figure);
 
 			if (content.special){
-				trace(name);
 				
-				// this needs a way to update the dom
+				// this needs a way to update the dom to add svg icon
 				// .attr('xlink:href', '/svg/svg-defs.svg#lock-icon')
 				// $lockedIcon = $('<use>').addClass('lock-icon');
 				// $locked = $('<svg>').addClass('icon').append($lockedIcon);
 
 				// $('.socialLinks').append($locked);
-				$tile.addClass('locked');
-
+				trace("we have special content " + content.special);
+				$tile.addClass(content.special);
+				
+				if (content.special == "hidden"){
+					return false;	
+				}
 			}
 
 			switch (addTo) {
@@ -287,14 +285,13 @@ var fn = {
 
 	loadMarkup: function(item) {
 		var markup ='';
+
 		switch (item.format){
 			case 'homePage':
 				$.each(item.main, function (index, section){
 					switch (index){
 						case 'hero':
-							// $image = $('<div>').addClass('hero-image').css('background-image', 'url("' + section.image + '")');
-							//for now this will do need to add hero image in to markup
-							markup += '<div class="hero-image"></div>';
+							markup += '<div class="hero-holder"><div class="hero-image"></div></div>';
 							break;
 						case 'section 1':
 							markup += '<div id="projectSection" class="tileSection clearfix"><div class="doubleCol"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div>'
@@ -321,7 +318,6 @@ var fn = {
 							
 						case 'thumbnailImages':
 							markup += '<div class="tileSection clearfix"><div id="section-tiles" class="tiles three-col"></div></div>';
-							// markup += '<div class="modal hide"></div>';
 							break;
 					}
 				});
@@ -342,7 +338,21 @@ var fn = {
 				break;
 			case 'modal':
 				markup += '<div class="modal-content"><h1 class="close">&times</h1><div class="tileSection clearfix"><div class="doubleCol"><h1>' + item.head + '</h1><h2>created for <a target="_blank" href='+item.subHeadLink+'>' + item.subHead + '</a></h2><p>' + item.copy + '</p></div>'
-				markup += '<div class="addthis_toolbox addthis_32x32_style"><a class="addthis_button_facebook social-btn" style="cursor:pointer"></a><a class="addthis_button_twitter social-btn" style="cursor:pointer"></a><a class="addthis_button_linkedin social-btn" style="cursor:pointer"></a><a class="addthis_button_tumblr social-btn" style="cursor:pointer"></a><a class="addthis_button_pinterest_share social-btn" style="cursor:pointer"></a></div></div>';
+				markup += '<div class="addthis_toolbox addthis_32x32_style"><a class="addthis_button_facebook social-btn" style="cursor:pointer"></a><a class="addthis_button_twitter social-btn" style="cursor:pointer"></a><a class="addthis_button_linkedin social-btn" style="cursor:pointer"></a><a class="addthis_button_tumblr social-btn" style="cursor:pointer"></a><a class="addthis_button_pinterest_share social-btn" style="cursor:pointer"></a></div>';
+				if (item.skills){
+					markup += '<div class="skillCol"><div class="skillCloud clearfix"><h2>what skills did i use?</h2>';
+					$.each(item.skills, function(index,text){
+						markup += '<h2 class="skills">'+ text + '</h2>';
+					})
+					markup += '</div></div>';
+				}
+				markup += '</div>';
+				if (item.flash){
+					markup += '<div id="flash-work"></div>';
+				}
+				if (item.video){
+					markup += '<div id="video-work"></div>';
+				}
 				if (item.images.length > 0){
 					markup += '<div class="modal-images">'
 					$.each(item.images, function(index,image){
@@ -350,17 +360,10 @@ var fn = {
 					})
 					markup += '</div>'
 				}
-
-				if (item.flash){
-					markup += '<div id="flash-work"></div>';
-				}
-				if (item.video){
-					markup += '<div id="video-work"></div>';
-				}
+				
 				markup += '</div>';
 				break;
 			case '404':
-			trace('loading 404');
 				markup += '<div class="tileSection skill-copy clearfix"><div class="doubleCol"><h1>' + section.head + '</h1>' + '<p>' + section.copy + '</p></div></div>'
 		}
 		return markup;

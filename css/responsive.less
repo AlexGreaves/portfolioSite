@@ -2,17 +2,15 @@
 /* Reset
 ------------------------------------------------------------ */
 * { margin: 0; padding: 0; }
-html {overflow-y: scroll; /*  Ensure that the modal is scroll-able */min-width:960px;}
+html {overflow-y: scroll; /*  Ensure that the modal is scroll-able */min-width:800px;}
 body {display:block;height:100%;background-color:@white; font-size: 20px; color: @black;font-weight: 300; font-family: 'adelle', Arial, helvetica, sans-serif; margin:0;overflow:auto;-webkit-text-size-adjust: none;-webkit-font-smoothing: antialiased;}
 h1 {text-transform:uppercase;font-size:1.5em;text-align:left;color:@pink;font-weight: 100;font-family: 'refrigerator-deluxe', sans-serif;margin:0 40px 0 40px;}
-h2 {text-transform:uppercase;font-size:1.1em;text-align:left;color:@grey;font-weight: 100;font-family: 'refrigerator-deluxe', sans-serif;margin:0 40px 0 40px;}
+h2 {text-transform:uppercase;font-size:1em;text-align:left;color:@grey;font-weight: 100;font-family: 'refrigerator-deluxe', sans-serif;margin:0 40px 0 40px;}
 
 p {letter-spacing:0.5px; margin:0 40px 0 40px;font-family: 'adelle';font-size:.9em;line-height:1.4em;text-align:left;padding:20px 0 0 0;}
 img { display: block;margin:0; width:100%}
 
-article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section { 
-    display: block;
-	}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
 
 a {
 	color:@blue;
@@ -23,9 +21,7 @@ a {
 		text-decoration:underline;
 	}
 }
-
-
-.back-holder{
+.back-holder {
 	position: absolute;
 	height: 100%;
 	left: 40px;
@@ -60,7 +56,7 @@ a {
 		}
 	}
 }
-.logoHolder{
+.logoHolder {
 	position: absolute;
 	height: 100%;
 	right: 0;
@@ -81,7 +77,6 @@ a {
 		}
 	}
 }
- 
 .icon {
 	height:34px;
 	width:34px;
@@ -116,7 +111,7 @@ button {
 		background: darken(@blue,20%);
 	}
 }
-.addthis_toolbox{
+.addthis_toolbox {
     		float:right;
     		margin:12px 40px 0 0;
 
@@ -124,19 +119,17 @@ button {
 				float:left;
 				padding:1px;
 			}
-    	}
+}
 
-#main{
+#main {
 	margin-top:50px;
 	position:relative;
 }
-
 .case-studies {
 	width:66.66%;
 	margin-bottom:40px
 }
-
-.floatHolder{
+.floatHolder {
 	overflow:auto;
 
 
@@ -145,23 +138,20 @@ button {
 		overflow:hidden;
 	}
 }
-
 .singleCol {
 	width:33.33%;
 	margin-bottom:30px;
 	float:left;
 	overflow:hidden;
 }
-
-.about-me{
+.about-me {
 	height:405px;
 	overflow:auto;
 	float:none;
 	overflow-y:auto;
 	overflow-x:hidden;
 }
-
-.sectionHolder{
+.sectionHolder {
 	background:@backgroundColor;
 	z-index:-1;
 }
@@ -173,7 +163,7 @@ button {
 	overflow:hidden;
 	height:50px;
 	width:100%;
-	min-width:960px;
+	min-width:800px;
 	background:@pink;
 
     .headerInner{
@@ -191,9 +181,7 @@ button {
 			top:24px;
 		}
 	}
-
 }
-
 .socialLinks {
 	position:absolute;
 	height:100%;
@@ -219,20 +207,30 @@ button {
 	    }
 	}  
 }  
-
 .headerShrink {
 	height:50px;
 	background:@transparentWhite;
 }
+.hero-holder {
+	.hero-logo{
+		background-image: url("../img/hero-logo.png");
+		background-position: center;
+		height: 250px;
+		margin: auto;
+		background-repeat: no-repeat;
+		background-color: transparent;
+		position: absolute;
+		width:100%;
+	}
 
-.hero-image {
-		height:550px;
+	.hero-image {
+		height:250px;
 		background:@white;
-		background-image: url("../img/heroImage.png");
+		background-image: url("../img/hero-image.jpg");
 		background-position:center;
 		margin:auto;
+	}	
 }
-
 .tileSection {
 		position:relative;
 		padding:40px 0;
@@ -246,6 +244,38 @@ button {
     		float:left;
     		width:66.666%
 	    }
+	    .skillCol{
+	    	margin-top: 22px;
+	    	margin-bottom: 0;
+	    	width:28.66%;
+	    	float:right;
+	    	// padding: 10px;
+	    	padding-right:40px;
+			// background: @yellow;
+			// border-radius: 4px;
+	    	h2{
+	    		margin:0;
+	    		color:white;
+	    		margin-bottom:10px;
+	    	}
+	    	.skillCloud { 
+	    		padding:10px;
+	    		background: @transparentPink;
+				border-radius: 4px;
+	    	}
+	    	.skills{
+				text-align: center;
+				width: auto;
+				float: left;
+				position: relative;
+				padding: 4px 10px;
+				background: white;
+				color: @pink;
+				border-radius: 4px;
+				margin: 0 5px 5px 0;
+		    }
+	    }
+	    
 
 		.tiles{
 			width:auto;
@@ -339,7 +369,9 @@ button {
 					}
 				}
 			}
-
+			.hidden{
+				display:none;
+			}
 			.one-col{
 				width:100%;
 			}
@@ -360,11 +392,9 @@ button {
 			width:100%;
 		}
 }
-
-.skill-copy{
+.skill-copy {
 	padding:40px 0 0 0;
 }
-
 .tile-holder{
 	width:66.66%;
 	display:inline-block;
@@ -396,50 +426,13 @@ button {
 		overflow-x: hidden;
 	}
 }
-	
-	
-	// .dropSection{
-	// 	margin-top:-250px;
-	// }
-	// #aboutMe{
-	// 	position:relative;
-	// 	height:auto;
-	// 	padding:30px 0;
-	// 	margin:0 auto;
-	// 	max-width:1200px;
-	// 	-webkit-transition: all 0.4s;
-	//     -moz-transition: all 0.4s;
-	//     transition: all 0.4s;
-	    
-	// 	.gravitar {
-			
-	// 		// height:80px;
-	// 		// width:80px;
-	// 		margin:auto;
-	// 		clip-path: url(#clipPath1);
-	// 		// clip-path: circle(40px,40px,40px, 40px);
-	// 	}
-	// }
-	//animation classes
-// 	.sectionDrop {
-// 		margin-top: 0;
-// 	}
-
-//     //Hover Effects
-//     .btn:hover {
-//     	background-color: darken(@btnColour,20%);
-
-//     }
-// }
-
 .vimeoVid {
 	width:100%;
 	// height:550px;
 	border:0;
 	padding:0 0 40px 0;
 }
-
-.open-modal{
+.open-modal {
 	overflow:hidden;
 }
 .modal {
@@ -549,18 +542,14 @@ button {
 	   	}
     }
 }
-
-.hide{
+.hide {
 	opacity:0;
 	visibility:hidden;
 }
-
-.show{
-	
+.show {
 	opacity:1;
 	visibility:visible;
 }
-
 #footer {
 	position:relative;
 	overflow:hidden;
@@ -593,10 +582,8 @@ button {
 			margin-top:20px;
 		}
 
-	}
-		
+	}		
 }
-
 // >>>>>>>>>>>>>>>> MEDIA QUERIES <<<<<<<<<<<<<<<<<<<
 
 // @media screen and (min-width: 821px) and (max-width: 1280px) {
