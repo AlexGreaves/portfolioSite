@@ -4,17 +4,17 @@
 			"hero":"./img/hero-image.jpg",
 			"heroLogo":"./img/hero-logo.png",
 			"section 1":
-				{"head":"My recent projects",
-				"copy":"I am a freelance digital creative designer living and working in the heart of London. Recently projects have involved user experience, app design and illustration and online advertising. These have been for an array of small and large clients with both large and limited budgets, requiring skill diversity and a solid base of knowledge. Here you can find a snippet of my recent work, or to have a deeper look at a particular specialty please scroll to the next section.",
+				{"head":"WHAT AM I UP TO?",
+				"copy":"I am a freelance digital creative designer living and working in the heart of London. Recently projects have involved user experience, app design, illustration and online advertising. These have been for small and large clients with both large and limited budgets, requiring skill diversity and a solid base of knowledge. Here you can find a snapshot of my recent work, or if you would like to see more of a particular specialty please scroll to the next section.",
 				"images":[""]},
 			"section 2":
-				{"head":"What do I do?",
-				"copy": "I prefer to take a top down view when working on projects so I see nurturing a diverse skillset as the key to my craft. This way of thinking enables me to work with a multitude of disciplines, take multiple perspectives, form a more rounded understanding of problems and help to identify possible solutions.</br></br>One skill not featured in this section is front end development. The reason for excluding this is because my purpose for this skill is to form stronger collaboration with developers when designing. A developers workload can be drastically reduced by tackling problems in design and by providing solid files that can be produced both in design and development.</br></br>This site is designed and coded by myself.",
+				{"head":"WANT TO KNOW MORE?",
+				"copy": "I take a top down view when working on projects so I see nurturing a diverse skillset as the key to my craft. This way of thinking enables me to work with a multitude of disciplines, take multiple perspectives, form a more rounded understanding of problems and help to identify possible solutions.</br></br>I would pretty much describe myself as digitally focussed. One skill not featured in this section is front end development. The reason for excluding this is because my purpose for this skill is to form stronger collaboration with developers when designing. A developers workload can be drastically reduced by tackling development problems from a design perspective.",
 				"images":[""]},
 			"section 3":
 				{"images":["./img/about-image.jpg"],
-				"head":"who is frankly nonsense?",
-				"copy": "I am a digital interactive designer working in the heart of London specialising in user experience, web design, online advertising and illustration. I have worked with a range of clients from global advertising agencies to small London based startups.</br></br> I currently live in East London and am able to work remotely or from anywhere in the city. If you would like to contact me regarding work or just to say hello please send me an email directly with the button below."}
+				"head":"HOW DO YOU GET IN TOUCH?",
+				"copy": "I currently live in East London and am able to work remotely or from anywhere in the city. If you would like to contact me regarding work or just to say a big hello please send me an email directly with the button below or feel free to find me on any of the linked social channels."}
 		},
 		"format":"homePage",
 		"href":"home-page",
@@ -24,7 +24,7 @@
 	"londonUnderground":{
 		"head":"London Underground",
 		"subHead":"Transport For London",
-		"subHeadLink":"http://www.wearesuburb.com",
+		"subHeadLink":"http://www.tfl.gov.uk",
 		"thumb":"../img/project_images/3d_illustration/london_underground.jpg",
 		"copy":"London Underground needed a way to present it's complex distribution model to internal stakeholders. I was brought on board to develop a visual style and produce a graphic to aid human communication, intended for presentation to non-technical, high-level decision makers to communicate the purpose of the architecture developed using TRAK (London Underground’s general enterprise architecture framework based on British Ministry of Defence Architecture Framework (MODAF) 1.2.).</br></br>Created using Cinema 4D and making use of a low poly style this project was highly successful, answered all KPI’s set by the client, was used for presentation purposes to multiple worldwide organisations and also went on to be published in Rail Infrastructure magazine.",
 		"images":["../img/project_images/3d_illustration/london_underground/london_underground_2.jpg","../img/project_images/3d_illustration/london_underground/london_underground_3.jpg","../img/project_images/3d_illustration/london_underground/london_underground_4.png","../img/project_images/3d_illustration/london_underground/london_underground_5.jpg","../img/project_images/3d_illustration/london_underground/london_underground_6.jpg","../img/project_images/3d_illustration/london_underground/london_underground_7.png","../img/project_images/3d_illustration/london_underground/london_underground_1.jpg"],
@@ -34,62 +34,18 @@
 		"addTo":"project"
 	},
 
-	"actimel":{
-		"head":"Actimel Family Well Being Index",
-		"subHead":"Actimel",
-		"subHeadLink":"http://www.familywellbeingindex.co.uk",
-		"thumb":"../img/project_images/ola/actimel_hero.jpg",
-		"copy":"This project required storyboarding and banner development for nine different creatives. Each creative needed to be available in a minimum of three formats and a couple were required to be served during different weather conditions. For this project I created a flexible AS3 framework capable of delivering multiple creatives at various sizes in as short an amount of time as possible. This was important to ensure an iterative development process and meet the tight delivery deadlines in place. My Framework has since been tested on a number of projects and has received nothing but high appraisal.",
-		"flash":{
-			"weekends":{
-				"mpu":{
-					"swf":"../img/project_images/ola/actimel/weekends_std.swf",
-					"backup":"../img/project_images/ola/actimel/weekends_std.jpg"
-				},
-				"super-sky":{
-					"swf":"../img/project_images/ola/actimel/weekends_tall.swf",
-					"backup":"../img/project_images/ola/actimel/weekends_tall.jpg"
-				},
-				"leaderboard":{
-					"swf":"../img/project_images/ola/actimel/weekends_wide.swf",
-					"backup":"../img/project_images/ola/actimel/weekends_wide.jpg"
-				}
-			},
-			"rainydays":{
-				"mpu":{
-					"swf":"../img/project_images/ola/actimel/rainydays_std.swf",
-					"backup":"../img/project_images/ola/actimel/rainydays_std.jpg"
-				},
-				"super-sky":{
-					"swf":"../img/project_images/ola/actimel/rainydays_tall.swf",
-					"backup":"../img/project_images/ola/actimel/rainydays_tall.jpg"
-				},
-				"leaderboard":{
-					"swf":"../img/project_images/ola/actimel/rainydays_wide.swf",
-					"backup":"../img/project_images/ola/actimel/rainydays_wide.jpg"
-				}
-			},
-			"generic":{
-				"mpu":{
-					"swf":"../img/project_images/ola/actimel/generic_std.swf",
-					"backup":"../img/project_images/ola/actimel/generic_std.jpg"
-				},
-				"super-sky":{
-					"swf":"../img/project_images/ola/actimel/weekends_tall.swf",
-					"backup":"../img/project_images/ola/actimel/generic_tall.jpg"
-				},
-				"leaderboard":{
-					"swf":"../img/project_images/ola/actimel/generic_wide.swf",
-					"backup":"../img/project_images/ola/actimel/generic_wide.jpg"
-				}
-			}
-		},
-		"images":[],
+	"blackrock":{
+		"head":"BlackRock Life Moments",
+		"subHead":"Ogilvy & Mather",
+		"subHeadLink":"http://ogilvy.co.uk",
+		"thumb":"../img/project_images/ola/blackrock_tile.jpg",
+		"copy":"Lead Designer and Brand guardian on the BlackRock Digital Advertising account, responsible for: implementing and maintaining new workflows and processes; managing design output of the design team; communication with internal stakeholders, art directors, account team and retouch.</br></br>Output included 160+ Storyboards with, 3 audiences, 3 creative routes and across 3 languages.",
+		"images":["../img/project_images/ola/blackrock/blackrock_001.jpg","../img/project_images/ola/blackrock/blackrock_002.jpg","../img/project_images/ola/blackrock/blackrock_003.jpg"],
 		"links":[],
-		"href":"actimel",
+		"href":"blackrock",
 		"format":"modal",
 		"addTo":"project"
-	},
+	},	
 
 	"shelterGetInvolved":{
 		"head":"Shelter Get Involved",
@@ -178,8 +134,21 @@
 				"copy":"I have extensive experience story boarding and developing standard and rich banner projects for advertising platforms; Google Double Click, Media Mind and Flash Talking. Clients have been national and international brands including; Cadbury, TSB, Danone, Sony and Adidas. I develop banners mainly using Actionscript (2 or 3) which results in an iterative process with a solid base for amendments, changes and resizes and clean files."
 			},
 			"thumbnailImages":{
+				"blackrock":{
+					"head":"BlackRock Life Moments",
+					"subHead":"Ogilvy & Mather",
+					"subHeadLink":"http://ogilvy.co.uk",
+					"thumb":"../img/project_images/ola/blackrock_tile.jpg",
+					"copy":"Lead Designer and Brand guardian on the BlackRock Digital Advertising account, responsible for: implementing and maintaining new workflows and processes; managing design output of the design team; communication with internal stakeholders, art directors, account team and retouch.</br></br>Output included 160+ Storyboards with, 3 audiences, 3 creative routes and across 3 languages.",
+					"images":["../img/project_images/ola/blackrock/blackrock_001.jpg","../img/project_images/ola/blackrock/blackrock_002.jpg","../img/project_images/ola/blackrock/blackrock_003.jpg"],
+					"links":[],
+					"href":"online-advertising/blackrock",
+					"format":"modal",
+					"addTo":"section"
+				},
+
 				"actimel":{
-					"head":"Actimel Family Well Being Index",
+					"head":"Actimel Family Well Being",
 					"subHead":"Actimel",
 					"subHeadLink":"http://www.familywellbeingindex.co.uk",
 					"thumb":"../img/project_images/ola/actimel_hero.jpg",
@@ -310,7 +279,7 @@
 				},
 				"tempero":{
 					"head":"Tempero",
-					"subHead":"Tempero Social Media Management",
+					"subHead":"Tempero",
 					"subHeadLink":"http://socialroi.tempero.co.uk",
 					"thumb":"../img/project_images/iconography/tempero.jpg",
 					"copy":"These icons were created for the Social ROI Calculator developed by Suburb and Tempero. The ROI calculator is a beta tool developed to automatically calculate the Return on Investment (ROI) of a Facebook page, and compare it against competitors. Icons were designed super flat for clarity and to fit on trend with the rise of social buttons and icons available all over the web at the time of design.",

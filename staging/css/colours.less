@@ -1,0 +1,69 @@
+/* Colours */
+@white: #fff;
+@black:#333;
+@grey: lighten(@black, 45%);
+@pink:#e55c95;
+@blue:#58c8f3;
+@yellow:#eed652;
+
+
+@transparentWhite:fade(@white, 95%);
+@transparentPink:fade(@pink, 85%);
+
+@transparentBlack:fade(@black, 95%);
+@backgroundColor:rgba(0,0,0,0.07);
+
+@btnColour: @pink;
+@green: #f4f4f4;
+
+@bodyFont:"adelle";
+@headerFont:"refrigerator-deluxe";
+
+
+// centering
+/* This parent can be any width and height */
+.block {
+  text-align: center;
+}
+ 
+/* The ghost, nudged to maintain perfect centering */
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+.svgLink{
+  a{
+        svg{
+        position: relative;
+        display: block;
+
+          &::after {
+            content: ""; 
+            position: absolute; 
+            top: 0; 
+            right: 0; 
+            bottom: 0; 
+            left: 0;
+          }
+        }
+      }  
+}
+
+// clearfix for floats
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */

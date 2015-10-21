@@ -1,0 +1,82 @@
+	checkURL:function(){
+		fn.currentUrl = cleanURL();
+		var searchStr = fn.currentUrl[fn.currentUrl.length-1];
+		var pageToLoad;
+		var modal = '';
+		var str;
+		var subStr;
+		trace(fn.currentUrl);
+		
+		if (fn.currentUrl[1]){
+			// is there a modal?
+			if (searchStr.indexOf('modal') != -1){
+				trace(searchStr);
+				lookForAMatch(searchStr);
+			} else{
+				trace('booo');
+			}
+						
+		} else {
+			pageToLoad = [fn.content.homePage, fn.content,''];
+		}
+		pageToLoad = [fn.content.homePage, fn.content,''];
+
+		// if (fn.currentUrl[1]){
+		// 	$.each(fn.content, function (index, section){
+		// 		modalCheck(section);
+		// 		if (fn.currentUrl[1] == (str) && str != 'home-page'){
+		// 			if (fn.currentUrl[2]){
+		// 				$.each(section.main.thumbnailImages, function (index, section){
+		// 					modalCheck(section);
+		// 				});
+		// 			}
+		// 			pageToLoad = [section, section.main.thumbnailImages,modal];
+		// 			return false;
+		// 		}
+		// 	});
+		// } else {
+		// 	pageToLoad = [fn.content.homePage, fn.content,''];
+		// }
+		return pageToLoad;
+
+		function lookForAMatch(query){
+			$.each(fn.content, function (index, section){		
+				if (section.href == query){
+					// trace(section);
+					// return section;
+				} 
+					// $.each(section, function (index, section){
+					// 	trace('>>>>>>>>>>>>');
+					// 	// trace(section);
+				
+				// }
+				if(section.main){
+					if (section.main.thumbnailImages){
+						$.each(section.main.thumbnailImages, function (index, section){
+							trace(section.href);
+							trace(query);
+							// if (section.href.indexOf(query) > -1){
+							// 	trace('nested');
+							// 	trace(section);
+							// 	return section;
+							// } 
+						});
+					}
+					// trace(section.main);
+				}
+				
+			});
+		}
+
+		function modalChecker(section){
+			
+			
+			if (fn.currentUrl[fn.currentUrl.length-2] == 'modal'){
+
+				trace('bingo modal checker');
+				modal = section;
+				return true;
+			}
+			else{return false}
+		}
+	},

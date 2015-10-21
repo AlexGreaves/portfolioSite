@@ -1,0 +1,501 @@
+{	
+	"homePage":{
+		"main":{
+			"hero":"./img/hero-image.jpg",
+			"heroLogo":"./img/hero-logo.png",
+			"section 1":
+				{"head":"My recent projects",
+				"copy":"I am a freelance digital creative who has been working in a digital studio for the last 3 years. Recently my work has involved user experience, app design and illustration. My projects have been for an array of small and large clients with both large and limited budgets. This has required a diverse skill set and knowledge base. Here you can find a snippet of my recent work, or to have a deeper look at a particular specialty please scroll to the next section.",
+				"images":[""]},
+			"section 2":
+				{"head":"What do I do?",
+				"copy": "I prefer to take a top down view when working on projects so I see nurturing a diverse skillset as the key to my craft. This way of thinking enables me to work with a multitude of disciplines, take multiple perspectives, form a more rounded understanding of problems and help to identify possible solutions.</br></br>One skill not featured in this section is front end development. The reason for excluding this is because my purpose for this skill is to form stronger collaboration with developers when designing. A developers workload can be drastically reduced by tackling problems in design and by providing solid files that can be produced both in design and development.</br></br>This site is designed and coded by myself.",
+				"images":[""]},
+			"section 3":
+				{"images":["./img/about-image.jpg"],
+				"head":"who is frankly nonsense?",
+				"copy": "I am a digital interactive designer with 3 years experience working on user experience, web design, online advertising and illustration projects. I have worked with a range of clients from global advertising agencies to small London based startups.</br></br> I currently live in East London and am able to work remotely or from anywhere in the city. If you would like to contact me regarding work or just to say hello please send me an email directly with the button below."}
+		},
+		"format":"homePage",
+		"href":"home-page",
+		"addTo":"project"
+	},
+	"missingPage":{
+		"main":{
+			"hero":"",
+			"head":"This link is a dead",
+			"copy":"Please click the button below or the logo in the header to be redirected to the frankly nonsense home page"
+
+		},
+		"format":"404",
+		"href":"404"
+	},
+	"robotOrphan":{
+		"head":"Robot Orphan",
+		"subHead":"suburb",
+		"subHeadLink":"http://www.wearesuburb.com",
+		"relatedProjects":{
+			"character illustration":"2d-illustration/robot-orphan",
+			"iconography":"iconography/robot-orphan"
+		},
+		"thumb":"../img/project_images/design/robot_orphan.jpg",
+		"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+		"images":["../img/project_images/design/robot_orphan/robot_orphan_5.jpg","../img/project_images/design/robot_orphan/robot_orphan_3.jpg","../img/project_images/design/robot_orphan/robot_orphan_7.jpg","../img/project_images/design/robot_orphan/robot_orphan_1.jpg","../img/project_images/design/robot_orphan/robot_orphan_8.jpg","../img/project_images/design/robot_orphan/robot_orphan_10.png","../img/project_images/design/robot_orphan/robot_orphan_4.jpg"],
+		"links":[],
+		"href":"robot-orphan",
+		"format":"modal",
+		"addTo":"project"
+	},
+
+	"shelterGetInvolved":{
+		"head":"Shelter Get Involved",
+		"subHead":"Shelter",
+		"subHeadLink":"http://england.shelter.org.uk/get_involved",
+		"thumb":"../img/project_images/design/shelter.jpg",
+		"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+		"images":["../img/project_images/design/shelter/shelter_1.jpg","../img/project_images/design/shelter/shelter_4.jpg","../img/project_images/design/shelter/shelter_5.jpg","../img/project_images/design/shelter/shelter_6.jpg","../img/project_images/design/shelter/shelter_3.jpg","../img/project_images/design/shelter/shelter_2.png","../img/project_images/design/shelter/shelter_7.jpg"],
+		"links":[],
+		"href":"shelter-get-involved",
+		"format":"modal",
+		"addTo":"project"
+	},
+
+	"londonUnderground":{
+		"head":"London Underground",
+		"subHead":"Transport For London",
+		"subHeadLink":"http://www.wearesuburb.com",
+		"thumb":"../img/project_images/3d_illustration/london_underground.jpg",
+		"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+		"images":["../img/project_images/3d_illustration/london_underground/london_underground_2.jpg","../img/project_images/3d_illustration/london_underground/london_underground_3.jpg","../img/project_images/3d_illustration/london_underground/london_underground_4.png","../img/project_images/3d_illustration/london_underground/london_underground_5.jpg","../img/project_images/3d_illustration/london_underground/london_underground_6.jpg","../img/project_images/3d_illustration/london_underground/london_underground_7.png","../img/project_images/3d_illustration/london_underground/london_underground_1.jpg"],
+		"links":[],
+		"href":"london-underground-infographic",
+		"format":"modal",
+		"addTo":"project"
+	},
+		
+	"designBranding":{
+		"head": "design & branding",
+		"thumb": "../img/project_images/design/design_tile.jpg",
+		"main":{
+			"hero":{
+				"head":"Design & Branding",
+				"copy":"Digital Design and branding projects undertaken for a variety of brands, often in close collaboration with development teams. Knowledge of front end languages; HTML, CSS, LESS, JAVASCRIPT AND JQUERY has been the key to delivering high quality designs, files and finished products."
+			},
+			"thumbnailImages":{
+				"robotOrphan":{
+					"head":"Robot Orphan",
+					"subHead":"suburb",
+					"subHeadLink":"http://www.wearesuburb.com",
+					"relatedProjects":{
+						"character illustration":"2d-illustration/robot-orphan",
+						"iconography":"iconography/robot-orphan"
+					},
+					"thumb":"../img/project_images/design/robot_orphan.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["../img/project_images/design/robot_orphan/robot_orphan_5.jpg","../img/project_images/design/robot_orphan/robot_orphan_3.jpg","../img/project_images/design/robot_orphan/robot_orphan_7.jpg","../img/project_images/design/robot_orphan/robot_orphan_1.jpg","../img/project_images/design/robot_orphan/robot_orphan_8.jpg","../img/project_images/design/robot_orphan/robot_orphan_10.png","../img/project_images/design/robot_orphan/robot_orphan_4.jpg"],
+					"links":[],
+					"href":"design-branding/robot-orphan",
+					"format":"modal",
+					"addTo":"section"
+				},
+				"tweetYourTeam":{
+					"head":"Tweet Your Team",
+					"subHead":"Suburb",
+					"subHeadLink":"http://www.tweetyourteam2014.com",
+					"thumb":"../img/project_images/design/tweet_your_team.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["../img/project_images/design/tweet_your_team/tweet_your_team_5.jpg","../img/project_images/design/tweet_your_team/tweet_your_team_4.jpg","../img/project_images/design/tweet_your_team/tweet_your_team_1.jpg","../img/project_images/design/tweet_your_team/tweet_your_team_3.jpg","../img/project_images/design/tweet_your_team/tweet_your_team_2.jpg"],
+					"links":[],
+					"href":"design-branding/tweet-your-team",
+					"format":"modal",
+					"addTo":"section"
+				},
+				"synergyRail":{
+					"head":"Synergy Rail Branding",
+					"subHead":"Synergy Rail",
+					"subHeadLink":"http://www.synergyrail.co.uk",
+					"thumb":"../img/project_images/design/synergy_rail.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["../img/project_images/design/synergy_rail/synergy_rail_6.png","../img/project_images/design/synergy_rail/synergy_rail_5.png","../img/project_images/design/synergy_rail/synergy_rail_9.jpg","../img/project_images/design/synergy_rail/synergy_rail_7.jpg","../img/project_images/design/synergy_rail/synergy_rail_1.jpg","../img/project_images/design/synergy_rail/synergy_rail_2.png","../img/project_images/design/synergy_rail/synergy_rail_3.jpg"],
+					"links":[],
+					"href":"design-branding/synergy-rail",
+					"format":"modal",
+					"addTo":"section"
+				},
+				"shelterGetInvolved":{
+					"head":"Shelter Get Involved",
+					"subHead":"Shelter",
+					"subHeadLink":"http://england.shelter.org.uk/get_involved",
+					"thumb":"../img/project_images/design/shelter.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["../img/project_images/design/shelter/shelter_1.jpg","../img/project_images/design/shelter/shelter_4.jpg","../img/project_images/design/shelter/shelter_5.jpg","../img/project_images/design/shelter/shelter_6.jpg","../img/project_images/design/shelter/shelter_3.jpg","../img/project_images/design/shelter/shelter_2.png","../img/project_images/design/shelter/shelter_7.jpg"],
+					"links":[],
+					"href":"design-branding/shelter-get-involved",
+					"format":"modal",
+					"addTo":"section"
+				},
+				"sportLobster":{
+					"head":"Sport Lobster",
+					"subHead":"Sport Lobster",
+					"subHeadLink":"http://www.sportlobster.com",
+					"thumb":"../img/project_images/design/sportLobster.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["../img/project_images/design/sport_lobster/sport_lobster_3.jpg","../img/project_images/design/sport_lobster/sport_lobster_2.jpg","../img/project_images/design/sport_lobster/sport_lobster_1.jpg","../img/project_images/design/sport_lobster/sport_lobster_4.jpg","../img/project_images/design/sport_lobster/sport_lobster_5.png"],
+					"links":[],
+					"href":"design-branding/sport-lobster",
+					"format":"modal",
+					"addTo":"section"
+				}
+			}
+		},
+		"format":"skill",
+		"addTo":"skill",
+		"href":"design-branding"
+	},
+
+	"onlineAdvertising":{
+		"head": "online advertising",
+		"thumb": "../img/project_images/ola/ola_tile.jpg",
+		"main":{
+			"hero":{
+				"head":"Online Advertising",
+				"copy":"I have extensive experience story boarding and developing banner projects for advertising platforms; Google double click, media mind and flash talking. My work takes a code heavy approach and I have developed a platform for rapid creation of standard banners in any number of sizes. I have worked for a number of national and International brands including; Cadbury, lloyds, Danone and Sony."
+			},
+			"thumbnailImages":{
+				"actimel":{
+					"head":"Actimel Family Well Being Index",
+					"subHead":"Actimel",
+					"subHeadLink":"http://www.familywellbeingindex.co.uk",
+					"thumb":"../img/project_images/ola/actimel_hero.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"flash":{
+						"weekends":{
+							"mpu":{
+								"swf":"../img/project_images/ola/actimel/weekends_std.swf",
+								"backup":"../img/project_images/ola/actimel/weekends_std.jpg"
+							},
+							"super-sky":{
+								"swf":"../img/project_images/ola/actimel/weekends_tall.swf",
+								"backup":"../img/project_images/ola/actimel/weekends_tall.jpg"
+							},
+							"leaderboard":{
+								"swf":"../img/project_images/ola/actimel/weekends_wide.swf",
+								"backup":"../img/project_images/ola/actimel/weekends_wide.jpg"
+							}
+						},
+						"rainydays":{
+							"mpu":{
+								"swf":"../img/project_images/ola/actimel/rainydays_std.swf",
+								"backup":"../img/project_images/ola/actimel/rainydays_std.jpg"
+							},
+							"super-sky":{
+								"swf":"../img/project_images/ola/actimel/rainydays_tall.swf",
+								"backup":"../img/project_images/ola/actimel/rainydays_tall.jpg"
+							},
+							"leaderboard":{
+								"swf":"../img/project_images/ola/actimel/rainydays_wide.swf",
+								"backup":"../img/project_images/ola/actimel/rainydays_wide.jpg"
+							}
+						},
+						"generic":{
+							"mpu":{
+								"swf":"../img/project_images/ola/actimel/generic_std.swf",
+								"backup":"../img/project_images/ola/actimel/generic_std.jpg"
+							},
+							"super-sky":{
+								"swf":"../img/project_images/ola/actimel/weekends_tall.swf",
+								"backup":"../img/project_images/ola/actimel/generic_tall.jpg"
+							},
+							"leaderboard":{
+								"swf":"../img/project_images/ola/actimel/generic_wide.swf",
+								"backup":"../img/project_images/ola/actimel/generic_wide.jpg"
+							}
+						}
+					},
+					"images":[],
+					"links":[],
+					"href":"online-advertising/actimel",
+					"format":"modal",
+					"addTo":"section"
+				},
+				"Danio":{
+					"head":"Danio Break Maker",
+					"subHead":"Danone",
+					"subHeadLink":"http://www.danio.co.uk",
+					"thumb":"../img/project_images/ola/danio_hero.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"flash":{
+						"breakmaker":{
+							"mpu":{
+								"swf":"../img/project_images/ola/danio_breakmaker/danio_std.swf",
+								"backup":"../img/project_images/ola/danio_breakmaker/danio_std.jpg"
+							},
+							"super-sky":{
+								"swf":"../img/project_images/ola/danio_breakmaker/danio_tall.swf",
+								"backup":"../img/project_images/ola/danio_breakmaker/danio_tall.jpg"
+							},
+							"leaderboard":{
+								"swf":"../img/project_images/ola/danio_breakmaker/danio_wide.swf",
+								"backup":"../img/project_images/ola/danio_breakmaker/danio_wide.jpg"
+							}
+						}
+					},
+					"images":[],
+					"links":[],
+					"href":"online-advertising/danio-break-maker",
+					"format":"modal",
+					"addTo":"section"
+				},
+				"Cadbury":{
+					"head":"Cadbury Joyville",
+					"subHead":"Cadbury",
+					"subHeadLink":"https://www.cadbury.co.uk",
+					"thumb":"../img/project_images/ola/cadbury_hero.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"video":{
+						"reel-wearesuburb":{
+							"src":"//player.vimeo.com/video/65237196?byline=0&amp;portrait=0"
+						}
+					},
+					"images":[],
+					"links":[],
+					"href":"online-advertising/cadbury-joyville",
+					"format":"modal",
+					"addTo":"section"
+				}
+			}
+		},
+		"format":"skill",
+		"addTo":"skill",
+		"href":"online-advertising"
+	},
+
+	"iconography":{
+		"head": "iconography",
+		"thumb": "../img/project_images/iconography/iconography_tile.jpg",
+		"main":{
+			"hero":{
+				"head":"Iconography",
+				"copy":"Experience illustrating has helped me gain a reputation for developing pixel perfect Iconography for many clients. This has often been to compliment a specific design approach and has meant close collaboration as part of a design team. I have also directed the creation of iconography as lead designer."
+			},
+			"thumbnailImages":{
+				"robotOrphan":{
+					"head":"Robot Orphan",
+					"subHead":"Suburb",
+					"subHeadLink":"http://www.wearesuburb.com",
+					"thumb":"../img/project_images/iconography/robot_orphan.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["../img/project_images/iconography/robot_orphan/robot_orphan_1.png","../img/project_images/iconography/robot_orphan/robot_orphan_2.png"],
+					"links":[],
+					"href":"iconography/robot-orphan",
+					"format":"modal",
+					"addTo":"section"
+				},
+				"shelterGetInvolved":{
+					"head":"Shelter Get Involved",
+					"subHead":"Shelter",
+					"subHeadLink":"http://england.shelter.org.uk/get_involved",
+					"thumb":"../img/project_images/iconography/shelter.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["../img/project_images/iconography/shelter/shelter_1.png","../img/project_images/iconography/shelter/shelter_2.jpg"],
+					"links":[],
+					"href":"iconography/shelter-get-involved",
+					"format":"modal",
+					"addTo":"section"
+				},
+				"tempero":{
+					"head":"Tempero",
+					"subHead":"Tempero Social Media Management",
+					"subHeadLink":"http://socialroi.tempero.co.uk",
+					"thumb":"../img/project_images/iconography/tempero.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["../img/project_images/iconography/tempero/tempero_1.jpg"],
+					"links":[],
+					"href":"iconography/tempero",
+					"format":"modal",
+					"addTo":"section"
+				},
+				"sportLobster":{
+					"head":"Sport Lobster",
+					"subHead":"Sport Lobster",
+					"subHeadLink":"http://www.sportlobster.com",
+					"thumb":"../img/project_images/iconography/sport_lobster.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["../img/project_images/iconography/sport_lobster/sport_lobster_1.jpg","../img/project_images/iconography/sport_lobster/sport_lobster_3.png","../img/project_images/iconography/sport_lobster/sport_lobster_2.jpg"],
+					"links":[],
+					"href":"iconography/sport-lobster",
+					"format":"modal",
+					"addTo":"section"
+				},
+				"hashLondon":{
+					"head":"Hash London",
+					"subHead":"Suburb R&D",
+					"subHeadLink":"http://hashlondon.com",
+					"thumb":"../img/project_images/iconography/hash_london.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["../img/project_images/iconography/hash_london/hash_london_1.jpg"],
+					"links":[],
+					"href":"iconography/hash-london",
+					"format":"modal",
+					"addTo":"section"
+				}
+			}
+		},
+		"format":"skill",
+		"addTo":"skill",
+		"href":"iconography"
+	},
+
+	"userExperience":{
+		"head": "user experience : available on request",
+		"thumb": "../img/project_images/ux/ux_tile.jpg",
+		"main":{
+			"hero":{
+				"head":"user experience",
+				"copy":"As part of a small user experience team at a boutique agency I have had the chance to get my hands dirty on both client and internal user experience projects. This has enabled me to get involved in the preliminary planning and strategy stages of projects, lead projects and also work as part of a group. Typical tasks have included stakeholder interviews, task analysis, userbility testing, personas, scenario planning, user journeys, wire framing and prototyping."
+			},
+			"thumbnailImages":{
+				"robotOrphan":{
+					"head":"robot orphan",
+					"subHead":"suburb",
+					"subHeadLink":"http://www.wearesuburb.com",
+					"thumb":"../img/project_images/robots/robots_tile.jpg",
+					"copy":"",
+					"images":[],
+					"links":[],
+					"href":"design-branding/robot-orphan",
+					"format":"modal",
+					"addTo":"section"
+				}
+			}
+		},
+		"format":"skill",
+		"addTo":"skill",
+		"href":"",
+		"special":"locked"
+	},
+
+	"2dIllustration":{
+		"head": "2d illustration",
+		"thumb": "../img/project_images/2d_illustration/2d_tile.jpg",
+		"main":{
+			"hero":{
+				"head":"2d illustration",
+				"copy":"Illustration has always been a passion. I am inspired by graphic novels and animation from my childhood.  I am looking to expand experience in this area over the coming months so expect this section to grow significantly."
+			},
+			"thumbnailImages":{
+				"colourWheels":{
+					"head":"Colour Wheels",
+					"subHead":"Threadless Competition",
+					"subHeadLink":"https://www.threadless.com",
+					"thumb":"../img/project_images/2d_illustration/colour_wheels.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["../img/project_images/2d_illustration/colour_wheels/colour_wheels_2.png","../img/project_images/2d_illustration/colour_wheels/colour_wheels_1.jpg"],
+					"links":[],
+					"href":"2d-illustration/colour-wheels",
+					"format":"modal",
+					"addTo":"section"
+				},
+				"suburbTeam":{
+					"head":"The Suburb Team",
+					"subHead":"Suburb",
+					"subHeadLink":"http://www.wearesuburb.com",
+					"thumb":"../img/project_images/2d_illustration/suburb_team.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["../img/project_images/2d_illustration/suburb_team/suburb_team_1.jpg","../img/project_images/2d_illustration/suburb_team/suburb_team_2.png","../img/project_images/2d_illustration/suburb_team/suburb_team_3.jpg","../img/project_images/2d_illustration/suburb_team/suburb_team_4.jpg","../img/project_images/2d_illustration/suburb_team/suburb_team_5.jpg","../img/project_images/2d_illustration/suburb_team/suburb_team_6.png","../img/project_images/2d_illustration/suburb_team/suburb_team_7.jpg"],
+					"links":[],
+					"href":"2d-illustration/the-suburb-team",
+					"format":"modal",
+					"addTo":"section"
+				},
+				"robotOrphan":{
+					"head":"Robot Orphan",
+					"subHead":"Suburb",
+					"subHeadLink":"http://www.wearesuburb.com",
+					"thumb":"../img/project_images/2d_illustration/robot_orphan.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["../img/project_images/2d_illustration/robot_orphan/robot_orphan_1.jpg","../img/project_images/2d_illustration/robot_orphan/robot_orphan_2.png","../img/project_images/2d_illustration/robot_orphan/robot_orphan_3.png","../img/project_images/2d_illustration/robot_orphan/robot_orphan_4.png","../img/project_images/2d_illustration/robot_orphan/robot_orphan_5.jpg","../img/project_images/2d_illustration/robot_orphan/robot_orphan_6.png"],
+					"links":[],
+					"href":"2d-illustration/robot-orphan",
+					"format":"modal",
+					"addTo":"section"
+				},
+				"iLoveNewYork":{
+					"head":"I Love New York",
+					"subHead":"myself",
+					"subHeadLink":"http://www.franklynonsense.com",
+					"thumb":"../img/project_images/2d_illustration/i_love_new_york.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["../img/project_images/2d_illustration/i_love_new_york/i_love_new_york_1.jpg","../img/project_images/2d_illustration/i_love_new_york/i_love_new_york_2.jpg","../img/project_images/2d_illustration/i_love_new_york/i_love_new_york_3.jpg","../img/project_images/2d_illustration/i_love_new_york/i_love_new_york_4.jpg","../img/project_images/2d_illustration/i_love_new_york/i_love_new_york_5.png","../img/project_images/2d_illustration/i_love_new_york/i_love_new_york_6.jpg"],
+					"links":[],
+					"href":"2d-illustration/i-love-new-york",
+					"format":"modal",
+					"addTo":"section"
+				},
+				"random":{
+					"head":"Bits & Pieces",
+					"subHead":"myself",
+					"subHeadLink":"http://www.franklynonsense.com",
+					"thumb":"../img/project_images/2d_illustration/random.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["../img/project_images/2d_illustration/random/catch_the_met_tv_1.jpg","../img/project_images/2d_illustration/random/suburb_capabilities_1.gif","../img/project_images/2d_illustration/random/partypus_1.png"],
+					"links":[],
+					"href":"2d-illustration/random",
+					"format":"modal",
+					"addTo":"section"
+				}
+			}
+		},
+		"format":"skill",
+		"addTo":"skill",
+		"href":"2d-illustration"
+	},
+
+	"3dIllustration":{
+		"head": "3d illustration",
+		"thumb": "../img/project_images/3d_illustration/3d_tile.jpg",
+		"main":{
+			"hero":{
+				"head":"3d illustration",
+				"copy":"In my final year of university I made the bold move to change my specialism to 3D animation, fortunately that decision has been paying off recently. I have Art directed and created projects for international brands on a number of web based games and flat graphics."
+			},
+			"thumbnailImages":{
+				"londonUnderground":{
+					"head":"London Underground",
+					"subHead":"Transport For London",
+					"subHeadLink":"http://www.wearesuburb.com",
+					"thumb":"../img/project_images/3d_illustration/london_underground.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":["../img/project_images/3d_illustration/london_underground/london_underground_2.jpg","../img/project_images/3d_illustration/london_underground/london_underground_3.jpg","../img/project_images/3d_illustration/london_underground/london_underground_4.png","../img/project_images/3d_illustration/london_underground/london_underground_5.jpg","../img/project_images/3d_illustration/london_underground/london_underground_6.jpg","../img/project_images/3d_illustration/london_underground/london_underground_7.png","../img/project_images/3d_illustration/london_underground/london_underground_1.jpg"],
+					"links":[],
+					"href":"3d-illustration/london-underground-infographic",
+					"format":"modal",
+					"addTo":"section"
+				},
+				"availableOnRequest":{
+					"head":"available on request",
+					"subHead":"suburb",
+					"subHeadLink":"http://www.wearesuburb.com",
+					"thumb":"../img/project_images/3d_illustration/available_on_request.jpg",
+					"copy":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+					"images":[],
+					"links":[],
+					"href":"",
+					"format":"modal",
+					"addTo":"section",
+					"special":"locked"
+				}
+			}
+		},
+		"format":"skill",
+		"addTo":"skill",
+		"href":"3d-illustration"
+	}
+	
+}
+
+
+
+
+
+	

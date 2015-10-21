@@ -5,10 +5,13 @@ var fn = {
 	currentUrl:'',
 	previousUrl:'',
 	main: $('#main'),
+	scrollPos:0,
+	hasFlash: false,
 
 	init: function(data) {
 		fn.content = data;
-		fn.linking();
+		fn.checkForFlash();
+		fn.historySetup();
 	},
 
 	addThis:function(modal){
@@ -17,7 +20,7 @@ var fn = {
 	},
 
 	// <--history.js-->
-	linking:function(){
+	historySetup:function(){
 		var History = window.History;
 
 		if (History.enabled){
@@ -34,12 +37,22 @@ var fn = {
 		    page = loc.hash ? loc.hash.substring(1) : loc.pathname + loc.search;
 		    ga('send', 'pageview', page);
 			fn.updateContent(fn.checkUrl(),'');
+			if (fn.currentUrl[1] == ''){
+
+				window.scrollTo(0, fn.scrollPos);
+
+			}
 		});
 
 	    $(document).on("click", ".tile ", function(e) {
 	    	// this will have to be different for the type of tile
+	    	if(fn.currentUrl[1] == '') {
+		    	fn.scrollPos = $('body').scrollTop();
+			}
 	    	if(!$(this).hasClass('locked')){
 	    		var $a = $(this).data('content');
+	    		
+	    		// trace(fn.scrollPos);
 		    	e.preventDefault();
 		    	History.pushState('', '', $a.href);	
 	    	} else {
@@ -52,15 +65,13 @@ var fn = {
 	    });
 
 	    $(document).on("click", ".close, .modal", function(e){
-
 	    	e.preventDefault();
 	    	var a = window.location.href;
 	    	var b = a.lastIndexOf('/');
 	    	var c = a.substring(b, a.length);
 	    	var d = a.split(c).join('');
 	    	var newUrl = d;
-    		History.pushState('', '', newUrl);	
-	    	
+    		History.pushState('', '', newUrl);	    	
 	    });
 	    $(document).on("click", ".modal-content", function(e){
 	    	e.stopPropagation();
@@ -117,7 +128,7 @@ var fn = {
 			markup = fn.content.homePage;
 			tiles = fn.content;
 		}
-		trace(fn.currentUrl);
+		// trace(fn.currentUrl);
 		pageToLoad = [markup,tiles,modal];
 		return pageToLoad; // always return object	
 	},
@@ -134,15 +145,14 @@ var fn = {
 		if (initialState == 'true') {
 			//check to see if this is the first load to show body
 			$('body').fadeOut(0, function(){
-				$main.empty().append(fn.loadMarkup(markup)).fadeIn(250);
-				$('body').ScrollTo();
+				// $('body').ScrollTo();
+				$main.empty().append(fn.loadMarkup(markup)).fadeIn(0);		
 				
 				if(tiles != ''){
 					fn.loadWork(tiles);
 				}
-
 				$('body').removeClass('hide');
-				$('body').fadeIn(250);
+				$('body').fadeIn(0);
 			});
 
 		} else {
@@ -150,30 +160,32 @@ var fn = {
 			if(modal != '' || $('.modal').hasClass('show')){
 				
 			} else{
-				$main.fadeOut(250, function(){
+				$main.fadeOut(0, function(){
+					window.scrollTo(0,0);
 					$main.empty().append(fn.loadMarkup(markup)).fadeIn(250);
-					$('body').ScrollTo();
 					fn.loadWork(tiles);
 				});	
 			}
-			
 
 		}
 
 		if (modal != ''){
 
-			$('.modal').empty().append(fn.loadMarkup(modal)).fadeIn();
+			$('body').addClass('noOverflow');
+
+			$('.modal').empty().append(fn.loadMarkup(modal)).fadeIn(0);
 			fn.loadRichContent(modal);	// video needs to be loaded first
 			fn.addThis(modal);
-			$('.modal').addClass('show');
+			$('.modal').addClass('show');	
 			$('.modal-content').ScrollTo();
 
 		} else {
 			$modal.removeClass('show');
+			$('body').removeClass('noOverflow');
 
 			setTimeout(function() {
 			  $('.modal-content').empty();
-			}, 250);
+			}, 500);
 
 			// show or hide back button
 			if(fn.currentUrl[1] != '' && fn.currentUrl[1] != 'home-page'){
@@ -181,10 +193,7 @@ var fn = {
 			} else if ($('.back-holder').hasClass('hide') != true){
 				$('.back-holder').addClass('hide');
 			}
-
 		}
-
-		
 	},
 	// <--?end-->
 	loadWork:function(data) {
@@ -220,7 +229,7 @@ var fn = {
 				// $locked = $('<svg>').addClass('icon').append($lockedIcon);
 
 				// $('.socialLinks').append($locked);
-				trace("we have special content " + content.special);
+				// trace("we have special content " + content.special);
 				$tile.addClass(content.special);
 				
 				if (content.special == "hidden"){
@@ -248,7 +257,8 @@ var fn = {
 	},
 
 	loadRichContent: function(item){
-		if (item.flash){
+
+		if (item.flash && fn.hasFlash == true){
 			$.each(item.flash, function(index,section){
 				var myColours = ['#58c8f3','#e55c95','#eed652'];				
 				$section = $('<div>').addClass('clearfix banner-holder ' + index);
@@ -265,6 +275,13 @@ var fn = {
 				});
 				$('#flash-work').append($section);
 			});
+		} else {
+			$img = $('<img>').attr('src', './img/project_images/noFlash/noFlash.jpg');
+			// $modalImages = $('<div>').addClass('modal-images');
+			// $modalImages.append($img);
+			$('#flash-work').append($img);
+			// alert("please switch to a flash device");
+
 		}
 		if (item.video){
 			var Height = 9*($('#video-work').width()/16);
@@ -302,8 +319,8 @@ var fn = {
 							markup += '<div id="skillTiles" class="tiles two-col"></div></div></div>'
 							break;
 						case 'section 3':
-							markup += '<div id="aboutMe" class="tileSection clearfix"><div class="doubleCol doubleImage"><img src=' + section.images + '></img></div><div class="singleCol about-me"><h1>' + section.head +'</h1><p>' + section.copy + '</p></div>'
-							markup += '<button class="email" href="mailto:alex@franklynonsense.com?subject=Your site is frankly nonsense! I wanted to say hello because..."><h1>send me an email</h1></button></div></div>'
+							markup += '<div id="aboutMe" class="tileSection clearfix"><div class="singleCol about-me"><h1>' + section.head +'</h1><p>' + section.copy + '</p><button class="email" href="mailto:alex@franklynonsense.com?subject=Your site is frankly nonsense! I wanted to say hello because..."><h1>send me an email</h1></button></div>'
+							markup += '<div class="doubleCol doubleImage"><img src=' + section.images + '></img></div></div></div>'
 							break;
 					}
 				});
@@ -331,14 +348,14 @@ var fn = {
 							
 						case 'thumbnailImages':
 							markup += '<div class="tileSection clearfix"><div id="section-tiles" class="tiles three-col"></div></div>';
-							// markup += '<div class="modal hide"></div>';
 							break;
 					}
 				});
 				break;
 			case 'modal':
-				markup += '<div class="modal-content"><h1 class="close">&times</h1><div class="tileSection clearfix"><div class="doubleCol"><h1>' + item.head + '</h1><h2>created for <a target="_blank" href='+item.subHeadLink+'>' + item.subHead + '</a></h2><p>' + item.copy + '</p></div>'
-				markup += '<div class="addthis_toolbox addthis_32x32_style"><a class="addthis_button_facebook social-btn" style="cursor:pointer"></a><a class="addthis_button_twitter social-btn" style="cursor:pointer"></a><a class="addthis_button_linkedin social-btn" style="cursor:pointer"></a><a class="addthis_button_tumblr social-btn" style="cursor:pointer"></a><a class="addthis_button_pinterest_share social-btn" style="cursor:pointer"></a></div>';
+				markup += '<div class="modal-content"><h1 class="close">&times</h1><div class="tileSection clearfix"><div class="doubleCol"><h1>' + item.head + '</h1><h2>created for <a target="_blank" href='+item.subHeadLink+'>' + item.subHead + '</a></h2>';
+				markup +='<div class="addthis_toolbox addthis_32x32_style"><a class="addthis_button_facebook social-btn" style="cursor:pointer"></a><a class="addthis_button_twitter social-btn" style="cursor:pointer"></a><a class="addthis_button_linkedin social-btn" style="cursor:pointer"></a><a class="addthis_button_tumblr social-btn" style="cursor:pointer"></a><a class="addthis_button_pinterest_share social-btn" style="cursor:pointer"></a></div><p>' + item.copy + '</p></div>';
+				
 				if (item.skills){
 					markup += '<div class="skillCol"><div class="skillCloud clearfix"><h2>what skills did i use?</h2>';
 					$.each(item.skills, function(index,text){
@@ -368,6 +385,20 @@ var fn = {
 		}
 		return markup;
 	},
+	checkForFlash:function(){
+		try {
+		  var fo = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
+		  if (fo) {
+		    fn.hasFlash = true;
+		  }
+		} catch (e) {
+		  if (navigator.mimeTypes
+		        && navigator.mimeTypes['application/x-shockwave-flash'] != undefined
+		        && navigator.mimeTypes['application/x-shockwave-flash'].enabledPlugin) {
+		    fn.hasFlash = true;
+		  }
+		}
+	}
 }
 
 function validateEmail(email) {
